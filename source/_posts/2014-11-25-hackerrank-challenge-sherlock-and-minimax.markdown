@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-I have spent my previous co-op workterms mainly working on numerous side projects such as my "moderately" successful [TwitchQuotes](http://www.twitchquotes.com) website, a multiplayer Flappy Bird game aptly named [Flappy BirdS](http://www.github.com/kevinpanxc/flappy-birds), and a [2D electric field simulator](http://http://kevinpan.ca/projects/electric-field-vectors/) built on the HTML5 canvas.
+I have spent my previous co-op workterms mainly working on numerous side projects such as my moderately successful [TwitchQuotes](http://www.twitchquotes.com) website, a multiplayer Flappy Bird game aptly named [Flappy BirdS](http://www.github.com/kevinpanxc/flappy-birds), and a [2D electric field simulator](http://http://kevinpan.ca/projects/electric-field-vectors/) built on the HTML5 canvas.
 
 Working on side projects is fun but they can often be unstimulating. To remedy this, I have adopted the habit of solving one or two [Hackerrank](http://www.hackerrank.com) problems in my spare time (for those who don't know what Hackerrank is, I highly recommend you to check it out). One of the most recent problems I've completed falls under the Arrays and Sorting category called **Sherlock and MiniMax**.
 
