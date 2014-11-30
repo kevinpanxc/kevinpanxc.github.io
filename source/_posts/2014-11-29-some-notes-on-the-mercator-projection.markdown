@@ -20,7 +20,7 @@ The perpendicular distance from the axis of rotation to any point on the globe a
 
 The vertical distance between $P$ and $Q$ can also be explained using the same logic. Since latitudes are measured from the center of the globe and the difference in latitude between $P$ and $Q$ is $\delta\phi$, using the arc length formula again gives us $R \cdot \delta\phi$.
 
-Using this information, we define two scale factors from globe to cylinder:
+With this information, we define two scale factors from globe to cylinder:
 
 $$k(\phi)=\frac{P'M'}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor}$$
 $$h(\phi)=\frac{P'K'}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}$$
@@ -41,7 +41,7 @@ Here $\lambda_0$ is the longitude of an arbitrary central median (this is usuall
 
 ## Mapping from latitudes to y coordinates
 
-Before starting, it is important to understand that the Mercator projection is conformal. This means that the projection of points from the globe to the cylinder preserves the angles. This property can be defined in two ways:
+Before starting, it is important to understand that the Mercator projection is conformal. This means that the projection of points from the globe to the cylinder preserves angles. This property can be defined in two ways:
 
 1. Equality of angles $\beta = \alpha$
 2. Isotropy of scale factors: $h = k$
@@ -63,11 +63,11 @@ $$y = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]$$
 
 But wait, there's more! All this time we've been working with the radius of the globe, $R$, but what exactly is it's value once we put the projection into practice?
 
-Since the Mercator projection is cylindrical, the scale factor between the globe and the cylinder is one only at the equator. This means that the circumference of the cylinder will equal the circumference of the globe and so the horizontal length of the physical map will equal $2 \cdot \pi \cdot R$.
+Since the Mercator projection is cylindrical, the scale factor between the globe and the cylinder equals one only at the equator. This means that the circumference of the cylinder will equal the circumference of the globe and so the horizontal length of the physical map will equal $2 \cdot \pi \cdot R$.
 
 ## Conclusion
 
-Finally, we can define the Mercator projection as with these three equations (where z equals the horizontal length of the physical map):
+Finally, we can define the Mercator projection with these three equations (where z equals the horizontal length of the physical map):
 
 $$\begin{align}
 R & = \frac{z}{2 \cdot \pi} \\
