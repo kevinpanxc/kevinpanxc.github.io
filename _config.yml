@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://kevinpanxc.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Looking Up
+subtitle: A blog on math, programming, and other topics that pique my interest
+author: Kevin Pan
 simple_search: https://www.google.com/search
-description:
+description: Looking Up is a blog on mathematics, computer science, and various other topics by a burgeoning software developer
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
