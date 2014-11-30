@@ -22,8 +22,10 @@ The vertical distance between $P$ and $Q$ can also be explained using the same l
 
 With this information, we define two scale factors from globe to cylinder:
 
-$$k(\phi)=\frac{P'M'}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor}$$
-$$h(\phi)=\frac{P'K'}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}$$
+$$\begin{align}
+k(\phi) & =\frac{P'M'}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor} \\
+h(\phi) & =\frac{P'K'}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}
+\end{align}$$
 
 ## Mapping from longitudes to x coordinates
 
@@ -74,6 +76,16 @@ R & = \frac{z}{2 \cdot \pi} \\
 x & = R(\lambda - \lambda_0) \\
 y & = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
 \end{align}$$
+
+## Inaccuracies with the projection
+
+Interestingly, despite being one of the most popular projections in the world, the Mercator projection is grossly inaccurate in representing the relative sizes of different land masses. In particular, land masses get bloated the closer to the poles you go up to a point where the projection is not even capable of displaying the poles.
+
+![Alt text](http://media.economist.com/sites/default/files/imagecache/original-size/20101113_WOM943.gif)
+
+This weird property of the projection can be understood by examining the parallel scale factor ($k(\phi)=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}$). As we approach the poles, the latitudes approach $\pm 90^o$ and we know that $\cos\phi$ approaches $0$. Since $\cos\phi$ is in the denominator of the scale factor, the factor approaches $\infty$. An accurate projection will require the parallel scale factor to be $1$ everywhere.
+
+This explains why land masses closer to the poles get bloated while the poles cannot be represented since they would technically have infinite width on the projection.
 
 ---
 
