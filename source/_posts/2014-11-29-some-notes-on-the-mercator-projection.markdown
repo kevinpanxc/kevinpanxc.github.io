@@ -88,3 +88,5 @@ $$\begin{aligned}
 \end{aligned}$$
 
 From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.
+
+> Two random variables were talking in a bar. They thought they were being discrete but I heard their chatter continuously
