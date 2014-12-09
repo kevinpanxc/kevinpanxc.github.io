@@ -10,7 +10,7 @@ I first learnt about RSA cryptography during an introductory number theory cours
 
 In RSA cryptography, there are two keys: a public key and a private key. The sender of a message uses the public key to encrypt the message and the idea is that you can only decrypt the message if you have the private key associated with that public key.
 
-# Generating keys
+## Generating keys
 
 1. Select two **large** distinct primes $p$ and $q$. Let $n = pq$
 2. Select $e \in \mathbb{Z}$ such that $GCD(e, \phi(n)) = 1$ and $1 \lt e \lt \phi(n)$, where $GCD$ is the greatest common denominator function
@@ -18,7 +18,7 @@ In RSA cryptography, there are two keys: a public key and a private key. The sen
 
 The public key will be the tuple $(e, n)$ and the private key will be the tuple $(d, n)$. Note, $\phi(n)$ here refers to [Euler's totient function](http://en.wikipedia.org/wiki/Euler%27s_totient_function), which is the number of positive integers less than or equal to n that are coprime with n. It also has the property that if two integers, $m$ and $n$ are coprime, then $\phi(mn) = \phi(m)\phi(n)$. Using this property and the fact that $p$ and $q$ are coprimes (since they are both primes), we note that $\phi(n) = \phi(pq) = \phi(p)\phi(q) = (p - 1)(q - 1)$.
 
-# Encrypting and decrypting messages
+## Encrypting and decrypting messages
 
 Let $M$ be the message we want to encrypt. $M$ is an integer such that $0 \leq M \lt n$. The encrypted message will be $C$ where $C \equiv M^{e} (\textrm{mod}\ n), 0 \leq C \lt n \$.
 
@@ -26,7 +26,7 @@ To decrypt the message, the receiver needs to compute integer $R$ where $R \equi
 
 Overall, we need to prove that $(M^{e})^{d} \equiv M (\textrm{mod}\ n), \forall M \in \mathbb{Z}$.
 
-#Proof
+##Proof
 
 (This proof is really just my version of [this](http://crypto.stackexchange.com/questions/2884/rsa-proof-of-correctness))
 
@@ -110,7 +110,7 @@ $$\begin{align}
 & \equiv M (\textrm{mod}\ q)\tag*{$\square$}
 \end{align}$$
 
-# Why is RSA secure?
+## Why is RSA secure?
 
 The answer to this question lies in the fact that it is nearly impossible (by our current computing capabilities) to determine the private key from its corresponding public key, especially if the primes chosen are sufficiently large.
 
