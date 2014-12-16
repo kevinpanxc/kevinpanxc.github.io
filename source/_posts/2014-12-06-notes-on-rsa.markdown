@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notes on RSA"
+title: "Notes on RSA Cryptography"
 date: 2014-12-06 16:10:31 -0800
 comments: true
 categories: 
