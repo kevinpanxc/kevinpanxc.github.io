@@ -20,4 +20,4 @@ Here is the [link](http://www.kevinpan.ca/projects/rubber-band-simulator/) to th
 
 ![Screenshot](http://imgur.com/1z8pH5x.jpg)
 
-One definite thing I learnt from building this simulation is that using vectors makes everything easier. For my electric field simulation project, I naïvely chose to calculate forces using magnitudes and angles which was several folds more cumbersome to deal with compared to simple vector algebra.
+One definite thing I learnt from building this simulation is that using vectors makes everything easier. For my electric field simulation project, I naïvely chose to calculate forces using magnitudes and angles. This method was several folds more cumbersome to deal with compared to simple vector algebra.
