@@ -39,7 +39,7 @@ x & = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
 & = R(\lambda - \lambda_0)
 \end{align}$$
 
-Here $\lambda_0$ is the longitude of an arbitrary central median (this is usually Greenwich).
+Here $\lambda_0$ is the longitude of an arbitrary central meridian (this is usually Greenwich).
 
 ## Mapping from latitudes to y coordinates
 

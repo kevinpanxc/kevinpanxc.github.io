@@ -8,7 +8,7 @@ categories:
 
 I was part of a hackathon recently where my group wanted to build a game with the main game mechanic being an elastic tether that ties two co-operating players together.
 
-We initially planned to build our own physics engine which means coding the tether ourselves. 10 hours into the hackathon, we realized that this was not feasible and we switched to using Box2D. Despite the late technology switch, the hackathon turned out really well and you can see the code [here](https://github.com/alvinlao/charm).
+We initially planned to build our own physics engine which included coding the tether ourselves. 6 hours into the hackathon, we realized that everything would be a lot easier if we just used Box2D. So we did. Despite the late technology switch, the hackathon turned out really well and you can see the code [here](https://github.com/alvinlao/charm).
 
 Now that everything's over, I decided to revisit the original incomplete tether code and finish it.
 
