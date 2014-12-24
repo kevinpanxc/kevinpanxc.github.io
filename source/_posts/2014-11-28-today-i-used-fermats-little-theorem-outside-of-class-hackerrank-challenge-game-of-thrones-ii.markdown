@@ -66,7 +66,7 @@ Did you also notice that $10^9 + 7$ is a prime number? This is the reason why we
 Starting from the theorem, we multiply both sides by $a^{-1}$ to get us:
 
 $$\begin{aligned}
-a^{p - 2} \equiv a^{-1} \bmod p\tag \\
+a^{p - 2} \equiv a^{-1} \bmod p \\
 a^{-1} \equiv a^{p - 2} \bmod p \\
 \frac{1}{a} \equiv a^{p - 2} \bmod p
 \end{aligned}$$
