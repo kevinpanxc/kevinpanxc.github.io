@@ -24,7 +24,7 @@ Conventional numeral systems often utilize the integer concept of 0 and thus is 
 
 So, given the understanding of $k$-adic notation, the problem can be solved with a character array where index 0 is mapped to nothing and indices start at 1. We then iterate from 1 to $N^M$ and convert each integer from base-10 to the $k$-adic notation equivalent before generating the particular string combination ($N^M + N^{M - 1} + \ldots + N$ is the largest number that has a string representation of length $M$ in $N$-adic). The only question left is how do we convert from base-10 to $k$-adic.
 
-The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the decimal number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:
+The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the base-10 number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:
 
 $$\begin{align}
 a_0 & = x - q_0 k, q_0 = \lceil \frac{x}{k} \rceil - 1 \\
