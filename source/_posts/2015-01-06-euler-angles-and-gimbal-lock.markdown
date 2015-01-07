@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-A couple months ago, a friend of mine wrote a blog [post](http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/) about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested into learning more about Euler angles and exactly how gimbal lock works.
+A couple months ago, a friend of mine wrote a blog [post](http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/) about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested in learning more about Euler angles and exactly how gimbal lock works.
 
 Fundamentally, Euler angles are three angles that are used to describe the orientation of a rigid body in 3D space. The rigid body itself has a local coordinate system that is initially aligned with a fixed global coordinate system. Each Euler angle then represents an elemental rotation of that local coordinate system about one of its three axes. From this, it should be understood that any specific elemental rotation will depend on all prior elemental rotations.
 
