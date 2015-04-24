@@ -10,7 +10,7 @@ This challenge asks you to find the number of possible palindrome anagrams in a 
 
 To answer this question, we need to know two facts:
 
-* We know that a set of characters can be a palindrome if there exists a complete bipartite graph where each vertex represents a character in the set and an edge exists between vertices if two characters are the same (the exception is for a string with an odd number of characters. In this case, it must be true that there exists one character which you can remove from the set so that a complete bipartite graph can be constructed from the rest of the characters in the set).
+* We know that a set of characters can be a palindrome if there exists a bipartite graph where each vertex represents a character in the set and an edge exists between vertices if two characters are the same. Each vertex in this graph must have degree at least 1 (the exception is for a string with an odd number of characters. In this case, it must be true that there exists one character which you can remove from the set so that the aforementioned graph can be constructed from the rest of the characters in the set).
 
 **TLDR:** A palindrome anagram of a string exists if: (1) for strings of even length, every unique character in the string can only occur an even number of times (2) for strings of odd length, there must only be one unique character that occurs in the string an odd number of times
 
@@ -26,7 +26,7 @@ $$x = \frac{n!}{n_1!n_2!n_3!...n_n!}\tag{w/ factorials}$$
 
 $$x = {n \choose n_1}{n - n_1 \choose n_2}{n - n_1 - n_2 \choose n_3}...\tag{w/ binomial coefficients}$$
 
-Explanation for the factorial formula can be found [here](http://cs.stackexchange.com/a/2445). I can try to explain the latter formula briefly. For the first unique character in string, there are ${n \choose n_1}$ to place $n_1$ characters in $n$ spaces. For the next unique character in string, since $n_1$ places are already taken up, there are ${n - n_1 \choose n_2}$ ways to distribute the next $n_2$ characters, and so on.
+Explanation for the factorial formula can be found [here](http://cs.stackexchange.com/a/2445). I can try to explain the latter formula briefly. For the first unique character in the string, there are ${n \choose n_1}$ to place $n_1$ characters in $n$ spaces. For the next unique character in the string, since $n_1$ places are already taken up, there are ${n - n_1 \choose n_2}$ ways to distribute the next $n_2$ characters, and so on.
 
 For my algorithm, I chose to go with the factorial equation.
 
@@ -47,7 +47,7 @@ static long modularMultiplication(long a, long b) {
 }
 ```
 
-We can also define a factorial method using modular arithmetic. For the purposes of the question, $x$ will always be less than $M$ and $factorial$ will always return values less than $M$. As such, we don't need to use modular multiplication here:
+We can also define a factorial method using modular arithmetic. For the purposes of the question, $x$ will always be less than $M$ and `factorial` will always return values less than $M$. As such, we don't need to use modular multiplication here:
 
 ```java
 static long factorial(long x){
