@@ -43,3 +43,9 @@ There are currently [13 root name servers](http://en.wikipedia.org/wiki/Root_nam
 Having to traverse through the entire domain name space tree everytime you type `www.google.com` into your browser address bar is super slow. Again, an age old technique called caching is used to speed things up. Typically, alongside the authoritative name servers making up the domain name space tree are recursive name servers. These servers are often provided by Internet Service Providers (ISP) or other organizations such as Google. These servers are the ones your browser will most likely talk to first when it needs to resolve a domain name.
 
 Recursive name servers provide two essential services. First, they are able to perform a DNS recursion over the domain name space tree to resolve a domain name to an IP address. A DNS recursion is basically a recursive traversal over the domain name space tree using information from the domain name to reach the right authoritative name server and obtain the right IP address. A recursive name server only performs a DNS recursion if its local cache does not contain the IP address mapped to a requested domain name. The second service provided by recursive name servers is caching of successful DNS recursion results so that future queries will not require another expensive DNS recursion. Finally, it is also important to note that IP address caching can also happen at the client level AKA on your computer.
+
+## Useful links
+
+* [How DNS query works](https://technet.microsoft.com/en-ca/library/cc775637%28v=ws.10%29.aspx)
+* [Mechanics Behind the Internet: Authoritative vs. Recursive DNS Servers: What’s The Difference?](http://www.dnsmadeeasy.com/authoritative-vs-recursive-dns-servers-whats-the-difference/)
+* [What Is Authoritative Name Server?](http://www.dnsknowledge.com/whatis/authoritative-name-server/)
