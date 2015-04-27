@@ -4,6 +4,7 @@ title: "Euler Angles and Gimbal Lock"
 date: 2015-01-06 13:09:27 -0500
 comments: true
 categories: 
+description: A quick post on gimbal lock and how it relates to Euler angles. This article explores what exactly is gimbal lock, including how and when it happens.
 ---
 
 A couple months ago, a friend of mine wrote a blog [post](http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/) about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested in learning more about Euler angles and exactly how gimbal lock works.

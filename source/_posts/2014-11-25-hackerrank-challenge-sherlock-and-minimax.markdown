@@ -4,6 +4,7 @@ title: "Hackerrank challenge: Sherlock and MiniMax"
 date: 2014-11-25 01:07:46 -0800
 comments: true
 categories: 
+description: Essentially, you sort A and find the overlap between elements in A and integers within [P, Q]. Next, you iterate through elements of A within the overlap and determine the distance of the halfway point between two adjacent elements.
 ---
 
 I have spent my previous co-op workterms mainly working on numerous side projects such as my moderately successful [TwitchQuotes](http://www.twitchquotes.com) website, a multiplayer Flappy Bird game aptly named [Flappy BirdS](http://www.github.com/kevinpanxc/flappy-birds), and a [2D electric field simulator](http://http://kevinpan.ca/projects/electric-field-vectors/) built on the HTML5 canvas.

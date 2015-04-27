@@ -4,6 +4,7 @@ title: "Some notes on the Mercator projection"
 date: 2014-11-29 22:22:42 -0800
 comments: true
 categories: 
+description: The Mercator projection is a cylindrical map projection. This means that meridians are mapped to equally spaced vertical lines and circles of latitudes are mapped to equally spaced horizontal lines...
 ---
 
 A while back I was investigating on how I would build a Twitter mapping application similar to the [One Million Tweet Map](http://www.onemilliontweetmap.com/) project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.

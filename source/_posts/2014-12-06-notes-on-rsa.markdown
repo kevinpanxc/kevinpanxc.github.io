@@ -4,6 +4,7 @@ title: "Notes on RSA Cryptography"
 date: 2014-12-06 16:10:31 -0800
 comments: true
 categories: 
+description: In RSA cryptography, there are two keys, a public key and a private key. The sender of a message uses the public key to encrypt the message and the idea is that you can only decrypt the message if you have the private key associated with that public key.
 ---
 
 I first learnt about RSA cryptography during an introductory number theory course in my second study term in university. Like many things you learn in class, the details tend to quickly be forgotten once the exam's over. RSA was no exception. However, I've always been strangely annoyed for not fully understanding how this cryptosystem works and so I intend for this post to act as a "reference sheet" for RSA.

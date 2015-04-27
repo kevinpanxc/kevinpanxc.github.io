@@ -4,9 +4,10 @@ title: "Today I used Fermat's little theorem outside of class - Hackerrank Chall
 date: 2014-11-28 02:05:51 -0800
 comments: true
 categories: 
+description: This post provides a solution to the Hackerrank challenge, Game of Thrones II. The solution heavily relies on modular arithmetic. Learn how to perform modular division using Fermat's little theorem.
 ---
 
-This challenge asks you to find the number of possible palindrome anagrams in a word $\bmod 10^9 + 7$.
+This challenge asks you to find the number of possible palindrome anagrams in a word, modulus 10^9 + 7$.
 
 To answer this question, we need to know two facts:
 

@@ -4,6 +4,7 @@ title: "Notes on Binary Indexed Trees (Fenwick Trees)"
 date: 2014-12-27 16:52:31 -0500
 comments: true
 categories: 
+description: A brief overview of what a Binary Indexed Tree, or Fenwick Tree is. Quickly and intuitively learn how this data structure works and how it's implemented
 ---
 
 A binary indexed tree came up in one of the Hackerrank challenges I was working on recently. This is the first time I've ever heard of this data structure and I was interested in learning more. I found this TopCoder [article](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=binaryIndexedTrees) on binary indexed trees a particularly useful resource and below is a concise summary of what I've learnt.

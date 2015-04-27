@@ -4,6 +4,7 @@ title: "My Newbie Experience with SEO"
 date: 2014-12-21 01:52:36 -0800
 comments: true
 categories: 
+use_content_as_description: true
 ---
 
 [TwitchQuotes](http://www.twitchquotes.com) is a website I built slightly under a year ago and which I am currently still maintaining. It has some decent statistics. Over the past few months, the average session duration is at 3 minutes and 45 seconds, with 5.44 pages visited per session. The overall bounce rate is at 45.93%.

@@ -4,6 +4,7 @@ title: "Bijective numeration and length-restricted character permutations"
 date: 2014-12-31 21:37:41 -0500
 comments: true
 categories: 
+description: This post explores how to find the total number of character permutations that have length less than or equal to an integer given a set of characters using bijective numeration.
 ---
 
 Based on this awesome StackOverflow [answer](http://stackoverflow.com/a/15625853)...

@@ -4,6 +4,7 @@ title: "Hackerrank Challenge: Median - when in doubt, use StringBuilder"
 date: 2014-12-23 18:48:51 -0800
 comments: true
 categories: 
+description: This post provides a solution to the Hackerrank challenge, Median. Find out how to quickly maintain a running median of a constantly changing list of numbers using two integer trees.
 ---
 
 In this Hackerrank challenge, you need to calculate a running median of a list of numbers where numbers can be both added and removed. Each time this is done, you need to output the median of the current list. I chose to use Java to solve this challenge.
