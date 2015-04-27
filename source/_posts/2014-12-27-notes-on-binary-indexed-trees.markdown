@@ -13,7 +13,7 @@ Suppose we have a size-$n$ array of values. If we wanted to find the summation o
 
 Internally, we will still be using a size-$n$ array to represent the tree. The **main idea** of a binary indexed tree is that indices that are a power of 2 will have the cumulative frequency of all indices before, including itself. Indices that are half way between two indices that are a power of 2 will have the cumulative frequency of all indices before it starting from, but not including, the lower power of 2 index. This pattern continues down a hierarchical structure until you reach an odd index which will only have the frequency of itself. This can be visualized with the following diagram from the aforementioned article:
 
-![Binary indexed tree visualization](http://community.topcoder.com/i/education/binaryIndexedTrees/bitval.gif)
+<img align="right" src="http://community.topcoder.com/i/education/binaryIndexedTrees/bitval.gif" alt="Binary indexed tree visualization">
 
 Another way to put this is that each index $i$ in a binary indexed tree stores the sum of all frequencies of the indices in the range $(i - 2^r, i]$ where $r$ represents the rightmost set bit of $i$. From this definition, it is easier to tell that an index that is a power of 2 will have the sum of all frequencies of the indices before it while an odd index will just contain the frequency of itself.
 
