@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mango Ice Cream</title>
+  <meta name="author" content="Kevin Pan">
+
+  
+  <meta name="description" content="Mango Ice Cream is a blog on mathematics, computer science, and various other topics by a burgeoning software developer">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kevinpanxc.github.io/posts/2">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mango Ice Cream" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57905192-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/blog/archives">Archives</a></li>
+    
+        <li ><a href="http://www.kevinpan.ca/about">About Me</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    
+    
+    
+    
+    
+    
+
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    
+      Mango Ice Cream
+    
+    <h3 class="tagline">
+      
+        A blog on math, programming, and other topics that pique my interest
+      
+    </h3>
+  </div>
+</div>
+
+
+<div class="blog-index">
+  
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-31T18:37:41-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>6:37 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/">Bijective numeration and length-restricted character permutations</a></h1>
+      <p>Based on this awesome StackOverflow <a href="http://stackoverflow.com/a/15625853">answer</a>…</p>
+
+<p>Consider the problem where you have a size $N$ set of characters and you need to the generate all possible strings from this set that have length less than or equal to $M$.</p>
+
+<p>Let’s represent the set of characters programmatically as a character array. In this array, each character is mapped to an integer index starting from 0 all the way to $N - 1$. Now consider a base-$N$ numeral system. In this system, there are $N$ symbols to represent the $N$ numbers below 10. We also know that in this system, $N^M - 1$ will evaluate to the largest number that has a string representation of length $M$. So to generate all strings with length less than or equal to $M$, we could just enumerate from 0 to $N^M - 1$ in base $N$ and for each base-$N$ integer, we can create a valid string by replacing each digit of the integer with the character that has the same array index.</p>
+
+<p>For example, if the character array was <code>{'a', 'b', 'c', '3'}</code> and a base-4 number was 312, the equivalent string is <code>3bc</code>.</p>
+
+<p>However, there is a slight problem with this. The strings generated are missing strings with multiple leading characters that is the first character in the array (AKA the character mapped to the 0 index). This is because when you’re iterating from 0 to $N^M - 1$, you would never reach $0000$, for example, since this is just 0. From the above example, that means that you’re missing the string <code>aaaa</code>, even though it is a perfectly valid string if 4 is less than or equal to $M$.</p>
+
+<p>This is where a bijective numeration becomes helpful. A bijective numeration, according to <a href="http://en.wikipedia.org/wiki/Bijective_numeration">Wikipedia</a> is: “any numeral system in which every non-negative integer can be represented in exactly one way using a finite string of digits”.</p>
+
+<p>Conventional numeral systems often have multiple ways to represent the same integer and thus are not bijective. For example, in the numeral system that we’re all familiar with, the Hindu-Arabic numeral system, you can represent the integer 1 an infinite number of ways just by tacking any number of 0’s in front of it. A bijective base-k numeration system ($k$-adic notation) circumvents this by getting rid of the symbol 0 altogether. The value 0 is represented with the empty string, $\varepsilon$. A digit-set of {1, 2, …, k} is used to represent the rest of the positive integers. So, for example, 11110 in base-8 would be represented as 8888 in $k$-adic notation.</p>
+
+<h2 id="from-base-10-to-k-adic-notation">From base-10 to $k$-adic notation</h2>
+
+<p>So, given the understanding of $k$-adic notation, the problem can be solved with a character array where index 0 is mapped to nothing and indices start at 1. We then iterate from 1 to $N^M + N^{M - 1} + \ldots + N$ and convert each integer from base-10 to the $k$-adic notation equivalent before generating the particular string ($N^M + N^{M - 1} + \ldots + N$ is the largest number that has a string representation of length $M$ in $N$-adic). The only question left is how do we convert from base-10 to $k$-adic.</p>
+
+<p>The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the base-10 number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+a_0 & = x - q_0 k, q_0 = \lceil \frac{x}{k} \rceil - 1 \\
+a_1 & = q_0 - q_1 k, q_1 = \lceil \frac{q_0}{k} \rceil - 1 \\
+& \ldots \\
+a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
+\end{align} %]]></script>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-27T13:52:31-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:52 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/27/notes-on-binary-indexed-trees/">Notes on Binary Indexed Trees (Fenwick Trees)</a></h1>
+      <p>A binary indexed tree came up in one of the Hackerrank challenges I was working on recently. This is the first time I’ve ever heard of this data structure and I was interested in learning more. I found this TopCoder <a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=binaryIndexedTrees">article</a> on binary indexed trees a particularly useful resource and below is a concise summary of what I’ve learnt.</p>
+
+<p>Suppose we have a size-$n$ array of values. If we wanted to find the summation of all values between two indices, we would need to iterate through the entire interval while maintaining a summation variable. If we then wanted to make $m$ such queries, the time complexity of the whole operation would be $O(mn)$. A binary indexed tree allows us to do this in $O(m\log\ n)$ time. The one trade off is that it takes longer to construct the initial data structure ($O(n \log\ n)$ time instead of $O(n)$ time, which is if we had used an array).</p>
+
+<p>Internally, we will still be using a size-$n$ array to represent the tree. The <strong>main idea</strong> of a binary indexed tree is that indices that are a power of 2 will have the cumulative frequency of all indices before, including itself. Indices that are half way between two indices that are a power of 2 will have the cumulative frequency of all indices before it starting from, but not including, the lower power of 2 index. This pattern continues down a hierarchical structure until you reach an odd index which will only have the frequency of itself. This can be visualized with the following diagram from the aforementioned article:</p>
+
+<p><img align="right" src="http://community.topcoder.com/i/education/binaryIndexedTrees/bitval.gif" alt="Binary indexed tree visualization" /></p>
+
+<p>Another way to put this is that each index $i$ in a binary indexed tree stores the sum of all frequencies of the indices in the range $(i - 2^r, i]$ where $r$ represents the rightmost set bit of $i$. From this definition, it is easier to tell that an index that is a power of 2 will have the sum of all frequencies of the indices before it while an odd index will just contain the frequency of itself.</p>
+
+<p><strong>Note:</strong> for a binary indexed tree, internally, the starting index is $1$ and not $0$</p>
+
+<h2 id="isolating-the-rightmost-set-bit-of-a-number">Isolating the rightmost set bit of a number</h2>
+
+<p>Given the structure of the binary indexed tree, many of its operations will often need to find and isolate the rightmost set bit of a number. As such, we need to be able to do this efficiently.</p>
+
+<p>Any nonzero binary number can be represented in the form $(a)(1)(0..0)$, where $a$ is the rest of the binary number to the left of the rightmost set bit. To isolate the rightmost set bit of one such number (call it $x$), we need to use its two’s complement representation.</p>
+
+<p>To get the two’s complement representation of a number, all we need to do is invert every bit and add $1$ to the result. So if $x = (a)(1)(0..0)$, then the two’s complement representation of $x$ will be $(a^{-})(1)(0..0)$. Bitwise ANDing the two binary numbers together will then result in $(0..0)(1)(0..0)$. This is exactly what we want!</p>
+
+<p>Most computers in the world represent negative integers using two’s complement so all we need to do in code is <code>x &amp; -x</code>.</p>
+
+<h2 id="finding-the-cumulative-frequency-for-a-particular-index">Finding the cumulative frequency for a particular index</h2>
+
+<p>Suppose we want to find the cumulative frequency from index $1$ to a particular index $x$. We know that at index $x$, the tree stores the cumulative frequency of the indices in the interval $(x - 2^r, x]$.</p>
+
+<p>So to find the cumulative frequency of the indices in $[1, x]$, we first add <code>binary_index_tree[x]</code> to a summation variable and subtract the rightmost set bit of $x$ from itself. Now if we query for <code>binary_index_tree[x]</code> again, we get the cumulative frequency of all indices between $(x - 2^r - 2^{r_1}, x - 2^r]$. When we add the new <code>binary_index_tree[x]</code> to the summation variable, we get the cumulative frequencies of indices between $(x - 2^r - 2^{r_1}, x]$. We keep repeating this process until the left endpoint of the interval becomes $0$, which is when we have our answer.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">sum</span> <span class="o">+=</span> <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+</span><span class="line">        <span class="n">i</span> <span class="o">-=</span> <span class="o">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">i</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">sum</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since the max index you can query for is $n$ (which is the total size of the data set) and it can have a maximum of $\log\ n$ set bits, the <code>read</code> function’s time complexity is $O(\log\ n)$.</p>
+
+<h2 id="changing-frequency-of-a-particular-index">Changing frequency of a particular index</h2>
+
+<p>To change a frequency at a particular index $x$, we also need to change the values of all indices that contain it. All such indices will be greater than $x$.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">void</span> <span class="nf">update</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">idx</span><span class="o">]</span> <span class="o">+=</span> <span class="n">val</span><span class="o">;</span>
+</span><span class="line">        <span class="n">idx</span> <span class="o">+=</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">idx</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since we are iterating to $n$ and we’re adding the rightmost set bit of the current index to itself at each iteration, the <code>update</code> function’s time complexity is also $O(\log\ n)$.</p>
+
+<h2 id="other-operations">Other operations</h2>
+
+<p>I’ve only written about the two most basic operations you can do with a binary indexed tree. If you would like to learn more, the TopCoder article I mentioned above provides indepth explanations into many others.</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-23T18:48:51-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/23/hackerrank-challenge-median-when-in-doubt-use-stringbuilder/">Hackerrank Challenge: Median - when in doubt, use StringBuilder</a></h1>
+      <p>In this Hackerrank challenge, you need to calculate a running median of a list of numbers where numbers can be both added and removed. Each time this is done, you need to output the median of the current list. I chose to use Java to solve this challenge.</p>
+
+<p>One way to approach this problem is to maintain a sorted array. You find where you want to insert/delete elements using binary search and the median can be calculated by looking at element(s) at the halfway point of the list. However, the problem with using an array is that insertion/deletion is actually $O(n)$ (where $n$ is the size of the list) since you have to reposition all list elements after the inserted/removed element. It doesn’t matter if searching for where to insert/delete is $O(\log\ n)$. However, you can find the median of the list at any time in $O(1)$ because random access operations for an array is $O(1)$.</p>
+
+<p>You can slightly improve upon this solution by using an ordered data structure that is not a list, such as C++’s <code>std::multiset</code>. Unfortunately, Java’s standard library does not have an equivalent data structure (the closest you get is <code>TreeSet</code> but it forbids repeated elements). You can, however, emulate the behaviour of <code>std::multiset</code> by using a <code>TreeMap</code> where the keys are unique elements in the running list and the values are the number of times they appear. Unfortunately, finding the median still takes $O(n)$.</p>
+
+<h3 id="using-a-completely-different-approach">Using a completely different approach</h3>
+
+<p>The above solution holds promise but there is a completely different and very efficient solution that finds a running median using two data structures instead of one. One data structure holds the bottom half of the <strong>ordered</strong> list (A) while the other holds the top half (B). Each time a number is added to the running list, if it is smaller than the max element of A, then add it to A, else add it to B. The median can be calculated from the two by looking at the max element of A or the min element of B or both if $n$ is even. For this to work, the difference in lengths between A and B must be at most one. If adding or removing a number from the running list causes the lengths to differ by two, you need to balance them by transferring a min/max element between the two structures.</p>
+
+<p>The trick here is to find a type of data structure that allows you to quickly find and remove its max/min element while also allowing you to quickly insert and delete random elements.</p>
+
+<p>One way to do this is to use priority queues. The bottom half of the running list will be stored in a max priority queue while the top half will be stored in a min priority queue. If the priority queues were implemented with a heap, insertion and balancing will have a time complexity of $O(\log\ n)$. Finding the median can be done in constant time. The only problem, though, is that removing a random element from a heap-based priority queue takes $O(n)$. I tried this solution on Hackerrank and sure enough, I get timeout errors.</p>
+
+<p><img src="http://imgur.com/IqzOBvw.jpg" alt="Timeout error" /></p>
+
+<h3 id="almost-a-solution">Almost a solution</h3>
+
+<p>So, if not priority queues, what do we use?</p>
+
+<p>The answer can be found by revisiting the <code>TreeMap</code> solution discussed before. Instead of using two priority queues, we can use two trees! Again, C++’s <code>std::multiset</code> datastructure would be perfect for this but since Java’s standard library doesn’t have the equivalent data structure, we need to use a <code>TreeMap</code> where keys are unique elements in the running list and the values are the number of times they appear.</p>
+
+<ul>
+  <li>Find max/min: $O(\log\ n)$</li>
+  <li>Insertion/deletion: $O(\log\ n)$</li>
+</ul>
+
+<p>This means that each time an element is inserted or removed into the running list, the algorithm will take $O(\log\ n)$ to compute the median, much faster than the $O(n)$ priority queue solution.</p>
+
+<p>At this point, I was sure I solved the challenge…</p>
+
+<p><img src="http://imgur.com/6A7GO1A.jpg" alt="Timeout error again" /></p>
+
+<h3 id="stringbuilder-to-the-rescue">StringBuilder to the rescue!</h3>
+
+<p>I spent a couple hours mulling over what I could possibly optimize before realizing that I have had substantial success in the past when I stopped using a bunch of <code>System.out.println</code> statements and just aggregated all the output in one <code>StringBuilder</code> object. Everything could then be printed with just one <code>println</code> statement. Exhausted and frustrated from spending so much time on this problem, I tried it.</p>
+
+<p>I still can’t believe it’s not butter.</p>
+
+<p><img src="http://imgur.com/8S76uT2.jpg" alt="Success!" /></p>
+
+<blockquote>
+  <p>How much memory does it take to store a dinosaur’s DNA? A Pterobyte</p>
+</blockquote>
+
+<blockquote>
+  <p>What a pteroble joke.</p>
+</blockquote>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+  
+  <div class="pagination">
+    
+    <a class="prev" href="/posts/3">&larr; Older</a>
+    
+
+    
+    <a class="next" href="/index.html">Newer &rarr;</a>
+    
+  </div>
+</div>
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2015 - Kevin Pan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+</p>
+
+
+        </footer>
+      </div>
+  </div>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mangoicecream';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

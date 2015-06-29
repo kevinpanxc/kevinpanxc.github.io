@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Mango Ice Cream]]></title>
+  <link href="http://kevinpanxc.github.io/atom.xml" rel="self"/>
+  <link href="http://kevinpanxc.github.io/"/>
+  <updated>2015-06-28T22:28:31-07:00</updated>
+  <id>http://kevinpanxc.github.io/</id>
+  <author>
+    <name><![CDATA[Kevin Pan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Quick Tips For a Healthier Lifestyle as a College Student]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/"/>
+    <updated>2015-05-17T20:48:56-07:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student</id>
+    <content type="html"><![CDATA[<p>For many of us, going to college means living away from home for the first time. There are many other firsts that come with moving out… you might have to start doing your own laundry for the first time, or start cooking your own dinners. As a third year university student, I’ve been through all these firsts and learned quite a few things along the way.</p>
+
+<p>One of the best things about living away from home is the freedom. You get to do whatever you want now without having parents nosing around. But that also means the possibility of developing unhealthy lifestyle habits, especially dietary habits, that you might regret later on.</p>
+
+<blockquote>
+  <p>What people are not good at, though, is identifying what’s missing in their diet, mainly because people don’t typically think of these things.</p>
+</blockquote>
+
+<p>Let me first focus on dietary habits. When it comes to your diet, it’s important to realize that it doesn’t necessarily have to be what you’re eating that makes it unhealthy, it could also be from what you’re NOT eating. I think everyone’s pretty good at identifying generally unhealthy foods (e.g. greasy, sugary, starchy, …) so I won’t elaborate on this. What people are not good at, though, is identifying what’s missing in their diet, mainly because people don’t typically think of these things. Back home, your parents made your food and you ate it. So my best diet advice for you is to keep in mind what nutrients you might have missed out on in your current diet. When I say nutrients I mean things like calcium, iron, vitamin B, and vitamin D.</p>
+
+<p>An extra comment on diet. It’s always good to keep in mind there are some foods that are just so much more efficient than others at giving you the nutrients you need. For example, nuts and seeds are packed with protein, vitamins, and minerals. Find these foods, eat them regularly.</p>
+
+<blockquote>
+  <p>And you can’t fault people for this; exercise is painful. Cardio is hard on both the mind and the body, weight lifting is strenuous.</p>
+</blockquote>
+
+<p>Besides a healthy diet, a healthy lifestyle also warrants that you stay physically active (I know, how generic, who doesn’t know this?). Truth is, people do know this but many people don’t act on it. And you can’t fault people for this; exercise is painful. Cardio is hard on both the mind and the body, weight lifting is strenuous. Okay, maybe weight lifting is an exception, since having bulging muscles is strong enough motivation to keep many guys going back to the gym. But cardio, in my experience, is something many people shy away from. Like I mentioned, it’s not easy. You’re often uncomfortable physically and bored out of your mind on that treadmill or elliptical. For me personally, I’ve made cardio, specifically running, a key part of my lifestyle. I’ve run enough times to not have to deal with the physical discomfort part but it’s still often quite boring.</p>
+
+<p>But no worries, it doesn’t have to be this way. There’s another form of exercise I learned recently that, apparently, is significantly better than steady-state cardio. It’s called High Intensity Interval Training (HIIT). Most often applied to running, what it means is to break your running sessions into multiple sprinting and resting periods. For example, you would sprint 1 minute, rest 1 minute, and so forth. This type of exercise burns calories at a much faster rate than steady-state cardio and, as claimed by countless resources online, is just plain better. No matter the calorie burning rate, one thing that’s for sure is that HIIT is not boring. You’re constantly changing your pace so it’s not monotonous and segmenting your workout session into 1 or 2 minute increments make it go by a lot faster. This, to me, is one of the best things about HIIT.</p>
+
+<p>Now that you have a wholesome diet and you’re in love with HIIT and exercising frequently, you must think that you’re all set for a healthy lifestyle right? Yes you are. Why are you still reading?</p>
+
+<blockquote>
+  <p>…a healthy lifestyle isn’t all about being physically healthy. You have to be mentally healthy too.</p>
+</blockquote>
+
+<p>No I’m kidding, a healthy lifestyle isn’t all about being physically healthy. You have to be mentally healthy too. What do I mean by this? Well, sometimes, instead of binging on TV shows like Game of Thrones or Breaking Bad or Suits, you might choose to read something that holds more weight, like… the biography of Steve Jobs (Steve Jobs, by Walter Isaacson, great read, I recommend it). I guess the best advice I can give is to make sure you’re PASSIONATE about at least something in life and you’re actively working on improving that thing you’re passionate about. If you aren’t and you find yourself watching too many TV shows or movies or playing too many videos games or partying, maybe you should find that passion.</p>
+
+<p>One of the most common advice I’ve heard from people much older, much wiser than I is to NOT WASTE TIME when you’re young. Time is precious and it might feel like you have a lot now, but it goes by exponentially as you age. And yes, you’ve heard this before, excuse me for being so cliché, but many people simply don’t do anything about it. Don’t be like “many people”, lead a purposeful life.</p>
+
+<p>A middle-aged Vietnamese Uber driver once said to me, <strong>“don’t waste time when you’re young. When you’re young, you have the most energy. Make the most out of it.”</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What the heck is the Domain Name System (DNS)?]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2015/01/16/what-the-heck-is-dns-resolution/"/>
+    <updated>2015-01-16T12:20:09-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2015/01/16/what-the-heck-is-dns-resolution</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>This post was inspired by Monica Dinculescu’s <a href="http://meowni.ca/posts/cat-dns-cascadia/">speech</a> at CUSEC 2015, “The Internet Needs More Cats”.</p>
+</blockquote>
+
+<p>The Internet is so prevalent in our everyday lives but the majority of its users have a very limited understanding of how it works. Admittedly, I am one of them. Recently, I’ve decided to tackle a very small fragment of my Internet ignorance; I wanted to understand how DNS or the Domain Name System works.</p>
+
+<p>DNS is basically the system responsible for translating web addresses such as <code>google.com</code> to IP addresses. These addresses are what’s used internally to identify specific computers among the billions connected over the web. We use domain names instead of IP addresses since the former has a lot more meaning to us as humans and thus are a lot easier to memorize (<code>www.google.com</code> vs <code>http://74.125.224.72/</code>). It’s important to note that DNS, as a service, is not run by any one computer. Instead, the service is offered through an entire network of interconnected computers.</p>
+
+<h2 id="domain-name-syntax">Domain name syntax</h2>
+
+<p>A domain name essentially consists of labels concatenated and delimited by dots. This is just a fancy way to describe the general structure of all the URLs we know and love, like <code>www.facebook.com</code> and <code>www.reddit.com</code>. Each label of a domain name, from right to left, corresponds to a particular level in DNS. For example, the label <code>com</code> is what is generally known as a top level domain or TLD. Other top level domains include <code>ca</code> and <code>cn</code>. Then, the labels <code>facebook</code> or <code>reddit</code> correspond to a lower level in the DNS.</p>
+
+<p>As a side note, there is actually one level above TLDs. This is called the root domain and is represented as a <code>.</code> at the end of all URLs. However, this <code>.</code> is implicit so we usually don’t include it when displaying URLs.</p>
+
+<h2 id="domain-name-space-what-does-all-these-level-stuff-mean">Domain name space (what does all these level stuff mean?)</h2>
+
+<p><img align="right" style="width: 50%" src="http://upload.wikimedia.org/wikipedia/commons/b/b1/Domain_name_space.svg" /></p>
+
+<p>The domain name space can be represented as a tree-like structure. Each node represents one particular label in a domain name. The root node would thus correspond to the aforementioned <code>.</code> that is implicitly tagged on to all URLs. TLDs correspond to child nodes of the root node as expected.</p>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<h2 id="practically">Practically…</h2>
+
+<p>A domain name space tree is represented as a distributed database system. DNS name servers, specifically authoritative name servers, assume responsibility over a particular zone in the name space. A zone consists of one or more connected nodes. Each node contains a resource record holding information associated with the current domain name as well as all its child nodes.</p>
+
+<p>As such, to determine an IP address from a domain name, one needs to parse the domain name into the respective labels and traverse the domain name space tree to reach the particular node with the correct IP address.</p>
+
+<h2 id="where-are-all-these-name-servers">Where are all these name servers?</h2>
+
+<p>There are currently <a href="http://en.wikipedia.org/wiki/Root_name_server#Root_server_addresses">13 root name servers</a> located around the world with the majority in the United States. Responsibility of TLD domains is delegated to specific organizations by the Internet Corporation for Assigned Names and Numbers (ICANN). For example, the <code>com</code> TLD was originally administered by the United States Department of Defense but is now administered by Verisign. Lower level domains are managed by various other organizations and private entities.</p>
+
+<h2 id="speeding-things-up">Speeding things up</h2>
+
+<p>Having to traverse through the entire domain name space tree everytime you type <code>www.google.com</code> into your browser address bar is super slow. Again, an age old technique called caching is used to speed things up. Typically, alongside the authoritative name servers making up the domain name space tree are recursive name servers. These servers are often provided by Internet Service Providers (ISP) or other organizations such as Google. These servers are the ones your browser will most likely talk to first when it needs to resolve a domain name.</p>
+
+<p>Recursive name servers provide two essential services. First, they are able to perform a DNS recursion over the domain name space tree to resolve a domain name to an IP address. A DNS recursion is basically a recursive traversal over the domain name space tree using information from the domain name to reach the right authoritative name server and obtain the right IP address. A recursive name server only performs a DNS recursion if its local cache does not contain the IP address mapped to a requested domain name. The second service provided by recursive name servers is caching of successful DNS recursion results so that future queries will not require another expensive DNS recursion. Finally, it is also important to note that IP address caching can also happen at the client level AKA on your computer.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Euler Angles and Gimbal Lock]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2015/01/06/euler-angles-and-gimbal-lock/"/>
+    <updated>2015-01-06T10:09:27-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2015/01/06/euler-angles-and-gimbal-lock</id>
+    <content type="html"><![CDATA[<p>A couple months ago, a friend of mine wrote a blog <a href="http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/">post</a> about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested in learning more about Euler angles and exactly how gimbal lock works.</p>
+
+<p>Fundamentally, Euler angles are three angles that are used to describe the orientation of a rigid body in 3D space. The rigid body itself has a local coordinate system that is initially aligned with a fixed global coordinate system. Each Euler angle then represents an elemental rotation of that local coordinate system about one of its three axes. From this, it should be understood that any specific elemental rotation will depend on all prior elemental rotations.</p>
+
+<div style="text-align: center">
+    <iframe width="420" height="315" src="//www.youtube.com/embed/Quvb54gttUg" frameborder="0" allowfullscreen=""></iframe> 
+</div>
+
+<p>There are 12 possible sequences of rotation axes for any set of Euler angles; the most popular of which is what’s commonly referred to as the 3-2-1 set of Euler angles. In aeronautical terms, this set of Euler angles describes, in order, the yaw, pitch, and roll of an aircraft.</p>
+
+<div style="text-align: center">
+    <img src="http://www.allstar.fiu.edu/aero/images/pic5-1.gif" />
+</div>
+
+<h2 id="gimbal-lock">Gimbal lock</h2>
+
+<p><img align="right" src="http://upload.wikimedia.org/wikipedia/commons/d/d5/Gyroscope_operation.gif" /></p>
+
+<p>A gimbal is, according to Wikipedia, a “ring that is suspended so [that] it can rotate about an axis” and gimbals are “typically nested one within another to accomodate rotation about multiple axes”. As such, a nested three-gimbal system can be used to physically model any 3D rotation based on Euler angles.</p>
+
+<p>Gimbal lock occurs when the middle gimbal rotates in such a way that causes the outer and inner gimbals to align in a plane. In this case, rotating both these gimbals in effect only rotates the rigid body on one axis. The resulting system can only rotate on two axes and it has lost one degree of freedom.</p>
+
+<h2 id="gimbal-lock-and-matrices">Gimbal lock and matrices</h2>
+
+<p>Any 2D rotation in 3D space can be described using a matrix. For example, the matrix below represents a rotation about the $z$-axis with a counter-clockwise angle of $\theta$ (a positive angle if you use the right-hand rule).</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0\\
+\sin\theta & \cos\theta & 0\\
+0 & 0 & 1
+\end{bmatrix} %]]&gt;</script>
+
+<p>The gimbal lock problem can be shown mathematically by representing a 3D rotation based on Euler angles with matrices. For a 3-2-1 rotation, the corresponding mathematical expression would be:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+R = 
+\begin{bmatrix}1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\\end{bmatrix}
+\begin{bmatrix}\cos\beta & 0 & \sin\beta\\ 0 & 1 & 0\\ -\sin\beta & 0 & \cos\beta\end{bmatrix}
+\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix} %]]&gt;</script>
+
+<p>The rightmost matrix represents a rotation about the $z$-axis (yaw), the middle matrix represents a rotation about the $y$-axis (pitch), and the leftmost matrix represents a rotation about the $x$-axis (roll). If the pitch angle, $\beta$, was set to $\frac{\pi}{2}$, which basically means the aircraft is pointing straight up, we get:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{aligned}
+R & = 
+\begin{bmatrix}
+1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 & 1\\0 & 1 & 0\\-1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1
+\end{bmatrix} \\
+
+& =
+\begin{bmatrix}
+0 & 0 & 1 \\ \sin\alpha\cos\gamma + \cos\alpha\sin\gamma & -\sin\alpha\cos\gamma + \cos\alpha\sin\gamma & 0\\ -\cos\alpha\cos\gamma + \sin\alpha\sin\gamma & \cos\alpha\cos\gamma + \sin\alpha\sin\gamma & 0\\
+\end{bmatrix} \\
+
+& = 
+\begin{bmatrix}
+0 & 0 & 1 \\ \sin(\alpha + \gamma) & \cos(\alpha + \gamma) & 0\\ -\cos(\alpha + \gamma) & \sin(\alpha + \gamma) & 0\\
+\end{bmatrix}
+\end{aligned} %]]&gt;</script>
+
+<p>From the above matrix, you can tell that in this state, there is no distinction between yaw and pitch. Applying one change to the yaw angle has the exact effect on the orientation of the aircraft as applying the same change to the roll angle. The system has lost one degree of freedom.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Although I’ve only mathematically shown how gimbal lock occurs in a 3-2-1 system, it is important to note that there is always the possibility of gimbal lock in any other rotation axes sequence. This is a fundamental problem for Euler angles as the map from Euler angles to rotations is not a covering map. In layman’s terms, this means that it is not possible to use Euler angles to represent every 3D rotation. Specifically, for certain values of the second angle, gimbal lock will occur.</p>
+
+<p>Gimbal lock in Euler angles is of practical concern today particularly in the fields of 3D animations and robotics. When it does occur, it leads to weird and undesirable rotation artifacts. Fortunately, there are multiple solutions to this problem. Mechanically, gimbal lock can be solved by adding a fourth gimbal. For 3D animations, a popular solution is to use quarternions instead of Euler angles in calculating rotations.</p>
+
+<p>If, for any reason, you are still confused about what gimbal lock is or how it works, I definitely recommend watching this <a href="https://www.youtube.com/watch?v=zc8b2Jo7mno">video</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bijective numeration and length-restricted character permutations]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/"/>
+    <updated>2014-12-31T18:37:41-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations</id>
+    <content type="html"><![CDATA[<p>Based on this awesome StackOverflow <a href="http://stackoverflow.com/a/15625853">answer</a>…</p>
+
+<p>Consider the problem where you have a size $N$ set of characters and you need to the generate all possible strings from this set that have length less than or equal to $M$.</p>
+
+<p>Let’s represent the set of characters programmatically as a character array. In this array, each character is mapped to an integer index starting from 0 all the way to $N - 1$. Now consider a base-$N$ numeral system. In this system, there are $N$ symbols to represent the $N$ numbers below 10. We also know that in this system, $N^M - 1$ will evaluate to the largest number that has a string representation of length $M$. So to generate all strings with length less than or equal to $M$, we could just enumerate from 0 to $N^M - 1$ in base $N$ and for each base-$N$ integer, we can create a valid string by replacing each digit of the integer with the character that has the same array index.</p>
+
+<p>For example, if the character array was <code>{'a', 'b', 'c', '3'}</code> and a base-4 number was 312, the equivalent string is <code>3bc</code>.</p>
+
+<p>However, there is a slight problem with this. The strings generated are missing strings with multiple leading characters that is the first character in the array (AKA the character mapped to the 0 index). This is because when you’re iterating from 0 to $N^M - 1$, you would never reach $0000$, for example, since this is just 0. From the above example, that means that you’re missing the string <code>aaaa</code>, even though it is a perfectly valid string if 4 is less than or equal to $M$.</p>
+
+<p>This is where a bijective numeration becomes helpful. A bijective numeration, according to <a href="http://en.wikipedia.org/wiki/Bijective_numeration">Wikipedia</a> is: “any numeral system in which every non-negative integer can be represented in exactly one way using a finite string of digits”.</p>
+
+<p>Conventional numeral systems often have multiple ways to represent the same integer and thus are not bijective. For example, in the numeral system that we’re all familiar with, the Hindu-Arabic numeral system, you can represent the integer 1 an infinite number of ways just by tacking any number of 0’s in front of it. A bijective base-k numeration system ($k$-adic notation) circumvents this by getting rid of the symbol 0 altogether. The value 0 is represented with the empty string, $\varepsilon$. A digit-set of {1, 2, …, k} is used to represent the rest of the positive integers. So, for example, 11110 in base-8 would be represented as 8888 in $k$-adic notation.</p>
+
+<h2 id="from-base-10-to-k-adic-notation">From base-10 to $k$-adic notation</h2>
+
+<p>So, given the understanding of $k$-adic notation, the problem can be solved with a character array where index 0 is mapped to nothing and indices start at 1. We then iterate from 1 to $N^M + N^{M - 1} + \ldots + N$ and convert each integer from base-10 to the $k$-adic notation equivalent before generating the particular string ($N^M + N^{M - 1} + \ldots + N$ is the largest number that has a string representation of length $M$ in $N$-adic). The only question left is how do we convert from base-10 to $k$-adic.</p>
+
+<p>The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the base-10 number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+a_0 & = x - q_0 k, q_0 = \lceil \frac{x}{k} \rceil - 1 \\
+a_1 & = q_0 - q_1 k, q_1 = \lceil \frac{q_0}{k} \rceil - 1 \\
+& \ldots \\
+a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
+\end{align} %]]&gt;</script>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Binary Indexed Trees (Fenwick Trees)]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/27/notes-on-binary-indexed-trees/"/>
+    <updated>2014-12-27T13:52:31-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/27/notes-on-binary-indexed-trees</id>
+    <content type="html"><![CDATA[<p>A binary indexed tree came up in one of the Hackerrank challenges I was working on recently. This is the first time I’ve ever heard of this data structure and I was interested in learning more. I found this TopCoder <a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=binaryIndexedTrees">article</a> on binary indexed trees a particularly useful resource and below is a concise summary of what I’ve learnt.</p>
+
+<p>Suppose we have a size-$n$ array of values. If we wanted to find the summation of all values between two indices, we would need to iterate through the entire interval while maintaining a summation variable. If we then wanted to make $m$ such queries, the time complexity of the whole operation would be $O(mn)$. A binary indexed tree allows us to do this in $O(m\log\ n)$ time. The one trade off is that it takes longer to construct the initial data structure ($O(n \log\ n)$ time instead of $O(n)$ time, which is if we had used an array).</p>
+
+<p>Internally, we will still be using a size-$n$ array to represent the tree. The <strong>main idea</strong> of a binary indexed tree is that indices that are a power of 2 will have the cumulative frequency of all indices before, including itself. Indices that are half way between two indices that are a power of 2 will have the cumulative frequency of all indices before it starting from, but not including, the lower power of 2 index. This pattern continues down a hierarchical structure until you reach an odd index which will only have the frequency of itself. This can be visualized with the following diagram from the aforementioned article:</p>
+
+<p><img align="right" src="http://community.topcoder.com/i/education/binaryIndexedTrees/bitval.gif" alt="Binary indexed tree visualization" /></p>
+
+<p>Another way to put this is that each index $i$ in a binary indexed tree stores the sum of all frequencies of the indices in the range $(i - 2^r, i]$ where $r$ represents the rightmost set bit of $i$. From this definition, it is easier to tell that an index that is a power of 2 will have the sum of all frequencies of the indices before it while an odd index will just contain the frequency of itself.</p>
+
+<p><strong>Note:</strong> for a binary indexed tree, internally, the starting index is $1$ and not $0$</p>
+
+<h2 id="isolating-the-rightmost-set-bit-of-a-number">Isolating the rightmost set bit of a number</h2>
+
+<p>Given the structure of the binary indexed tree, many of its operations will often need to find and isolate the rightmost set bit of a number. As such, we need to be able to do this efficiently.</p>
+
+<p>Any nonzero binary number can be represented in the form $(a)(1)(0..0)$, where $a$ is the rest of the binary number to the left of the rightmost set bit. To isolate the rightmost set bit of one such number (call it $x$), we need to use its two’s complement representation.</p>
+
+<p>To get the two’s complement representation of a number, all we need to do is invert every bit and add $1$ to the result. So if $x = (a)(1)(0..0)$, then the two’s complement representation of $x$ will be $(a^{-})(1)(0..0)$. Bitwise ANDing the two binary numbers together will then result in $(0..0)(1)(0..0)$. This is exactly what we want!</p>
+
+<p>Most computers in the world represent negative integers using two’s complement so all we need to do in code is <code>x &amp; -x</code>.</p>
+
+<h2 id="finding-the-cumulative-frequency-for-a-particular-index">Finding the cumulative frequency for a particular index</h2>
+
+<p>Suppose we want to find the cumulative frequency from index $1$ to a particular index $x$. We know that at index $x$, the tree stores the cumulative frequency of the indices in the interval $(x - 2^r, x]$.</p>
+
+<p>So to find the cumulative frequency of the indices in $[1, x]$, we first add <code>binary_index_tree[x]</code> to a summation variable and subtract the rightmost set bit of $x$ from itself. Now if we query for <code>binary_index_tree[x]</code> again, we get the cumulative frequency of all indices between $(x - 2^r - 2^{r_1}, x - 2^r]$. When we add the new <code>binary_index_tree[x]</code> to the summation variable, we get the cumulative frequencies of indices between $(x - 2^r - 2^{r_1}, x]$. We keep repeating this process until the left endpoint of the interval becomes $0$, which is when we have our answer.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">sum</span> <span class="o">+=</span> <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+</span><span class="line">        <span class="n">i</span> <span class="o">-=</span> <span class="o">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">i</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">sum</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since the max index you can query for is $n$ (which is the total size of the data set) and it can have a maximum of $\log\ n$ set bits, the <code>read</code> function’s time complexity is $O(\log\ n)$.</p>
+
+<h2 id="changing-frequency-of-a-particular-index">Changing frequency of a particular index</h2>
+
+<p>To change a frequency at a particular index $x$, we also need to change the values of all indices that contain it. All such indices will be greater than $x$.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">void</span> <span class="nf">update</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">idx</span><span class="o">]</span> <span class="o">+=</span> <span class="n">val</span><span class="o">;</span>
+</span><span class="line">        <span class="n">idx</span> <span class="o">+=</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">idx</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since we are iterating to $n$ and we’re adding the rightmost set bit of the current index to itself at each iteration, the <code>update</code> function’s time complexity is also $O(\log\ n)$.</p>
+
+<h2 id="other-operations">Other operations</h2>
+
+<p>I’ve only written about the two most basic operations you can do with a binary indexed tree. If you would like to learn more, the TopCoder article I mentioned above provides indepth explanations into many others.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hackerrank Challenge: Median - when in doubt, use StringBuilder]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/23/hackerrank-challenge-median-when-in-doubt-use-stringbuilder/"/>
+    <updated>2014-12-23T18:48:51-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/23/hackerrank-challenge-median-when-in-doubt-use-stringbuilder</id>
+    <content type="html"><![CDATA[<p>In this Hackerrank challenge, you need to calculate a running median of a list of numbers where numbers can be both added and removed. Each time this is done, you need to output the median of the current list. I chose to use Java to solve this challenge.</p>
+
+<p>One way to approach this problem is to maintain a sorted array. You find where you want to insert/delete elements using binary search and the median can be calculated by looking at element(s) at the halfway point of the list. However, the problem with using an array is that insertion/deletion is actually $O(n)$ (where $n$ is the size of the list) since you have to reposition all list elements after the inserted/removed element. It doesn’t matter if searching for where to insert/delete is $O(\log\ n)$. However, you can find the median of the list at any time in $O(1)$ because random access operations for an array is $O(1)$.</p>
+
+<p>You can slightly improve upon this solution by using an ordered data structure that is not a list, such as C++’s <code>std::multiset</code>. Unfortunately, Java’s standard library does not have an equivalent data structure (the closest you get is <code>TreeSet</code> but it forbids repeated elements). You can, however, emulate the behaviour of <code>std::multiset</code> by using a <code>TreeMap</code> where the keys are unique elements in the running list and the values are the number of times they appear. Unfortunately, finding the median still takes $O(n)$.</p>
+
+<h3 id="using-a-completely-different-approach">Using a completely different approach</h3>
+
+<p>The above solution holds promise but there is a completely different and very efficient solution that finds a running median using two data structures instead of one. One data structure holds the bottom half of the <strong>ordered</strong> list (A) while the other holds the top half (B). Each time a number is added to the running list, if it is smaller than the max element of A, then add it to A, else add it to B. The median can be calculated from the two by looking at the max element of A or the min element of B or both if $n$ is even. For this to work, the difference in lengths between A and B must be at most one. If adding or removing a number from the running list causes the lengths to differ by two, you need to balance them by transferring a min/max element between the two structures.</p>
+
+<p>The trick here is to find a type of data structure that allows you to quickly find and remove its max/min element while also allowing you to quickly insert and delete random elements.</p>
+
+<p>One way to do this is to use priority queues. The bottom half of the running list will be stored in a max priority queue while the top half will be stored in a min priority queue. If the priority queues were implemented with a heap, insertion and balancing will have a time complexity of $O(\log\ n)$. Finding the median can be done in constant time. The only problem, though, is that removing a random element from a heap-based priority queue takes $O(n)$. I tried this solution on Hackerrank and sure enough, I get timeout errors.</p>
+
+<p><img src="http://imgur.com/IqzOBvw.jpg" alt="Timeout error" /></p>
+
+<h3 id="almost-a-solution">Almost a solution</h3>
+
+<p>So, if not priority queues, what do we use?</p>
+
+<p>The answer can be found by revisiting the <code>TreeMap</code> solution discussed before. Instead of using two priority queues, we can use two trees! Again, C++’s <code>std::multiset</code> datastructure would be perfect for this but since Java’s standard library doesn’t have the equivalent data structure, we need to use a <code>TreeMap</code> where keys are unique elements in the running list and the values are the number of times they appear.</p>
+
+<ul>
+  <li>Find max/min: $O(\log\ n)$</li>
+  <li>Insertion/deletion: $O(\log\ n)$</li>
+</ul>
+
+<p>This means that each time an element is inserted or removed into the running list, the algorithm will take $O(\log\ n)$ to compute the median, much faster than the $O(n)$ priority queue solution.</p>
+
+<p>At this point, I was sure I solved the challenge…</p>
+
+<p><img src="http://imgur.com/6A7GO1A.jpg" alt="Timeout error again" /></p>
+
+<h3 id="stringbuilder-to-the-rescue">StringBuilder to the rescue!</h3>
+
+<p>I spent a couple hours mulling over what I could possibly optimize before realizing that I have had substantial success in the past when I stopped using a bunch of <code>System.out.println</code> statements and just aggregated all the output in one <code>StringBuilder</code> object. Everything could then be printed with just one <code>println</code> statement. Exhausted and frustrated from spending so much time on this problem, I tried it.</p>
+
+<p>I still can’t believe it’s not butter.</p>
+
+<p><img src="http://imgur.com/8S76uT2.jpg" alt="Success!" /></p>
+
+<blockquote>
+  <p>How much memory does it take to store a dinosaur’s DNA? A Pterobyte</p>
+</blockquote>
+
+<blockquote>
+  <p>What a pteroble joke.</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Newbie Experience with SEO]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/21/from-bust-to-boom/"/>
+    <updated>2014-12-21T01:52:36-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/21/from-bust-to-boom</id>
+    <content type="html"><![CDATA[<p><a href="http://www.twitchquotes.com">TwitchQuotes</a> is a website I built slightly under a year ago and which I am currently still maintaining. It has some decent statistics. Over the past few months, the average session duration is at 3 minutes and 45 seconds, with 5.44 pages visited per session. The overall bounce rate is at 45.93%.</p>
+
+<p>I started building this website as a way to introduce myself to the popular web application framework, Ruby on Rails. After finishing the basic features with a decent looking UI, I deployed it to Heroku and left a few links on Reddit. I thought nothing of it until a couple days later when this happened…</p>
+
+<p><img src="http://i.imgur.com/RvuHKWh.png" alt="Crazy stats" /></p>
+
+<p>When I saw this I knew that I had to keep building this website up.</p>
+
+<h3 id="the-idea">The Idea</h3>
+
+<p>Twitch.tv is a live streaming video platform that is dedicated to video games. This means that most of the time you’ll find people streaming themselves playing video games. This is a relatively new form of entertainment that has already garnered a large following.</p>
+
+<p><img src="http://images.eurogamer.net/2014/usgamer/Twitch-News-02.png" alt="Twitch TV stats" /></p>
+
+<p>These statistics are impressive enough that it’s no surprise that there were rumours both Google and Amazon were vying to buy Twitch earlier this year. In the end, Amazon was able to <a href="http://arstechnica.com/gaming/2014/08/amazon-not-google-reportedly-buying-twitch-for-1-billion/">acquire Twitch.tv</a> for a whopping $970 million.</p>
+
+<p>Part of a stream on Twitch is an IRC chat channel for viewers. On particularly popular streams with thousands of people watching, you can imagine how crazy chat gets. What typically ends up happening is loads and loads of spam. People especially like to copy and paste ridiculous passages of text (AKA <strong>copypastas</strong>) that make no sense but which is exactly why they are funny.</p>
+
+<blockquote>
+  <p>Hello, I am currently 15 years old and I want to become a walrus. I know there’s a million people out there just like me, but I promise you I’m different. On December 14th, I’m moving to Antarctica; home of the greatest walri. I’ve already cut off my arms, and now slide on my stomach everywhere I go as training. I may not be a walrus yet, but I promise you if you give me a chance and the support I need, I will become the greatest walrus ever. Thank you all.</p>
+</blockquote>
+
+<p>I happened to watch Twitch often at the start of this year, especially while working out, and I was witness to spam consisting of very creative and absolutely hilaroius copypastas. This gave me the idea of creating a <a href="www.bash.org">bash.org</a>-like website for Twitch chat. At that time I was still exploring the magical world of Ruby on Rails and TwitchQuotes fit perfectly as a beginner project for the framework.</p>
+
+<h3 id="growth-in-organic-search-traffic">Growth in Organic Search Traffic</h3>
+
+<p>From the initial burst of visits from Reddit, site traffic quieted down for about 2 months hovering around 30-40 visits per day. Traffic from organic search was almost non-existent. From a total of about 2700 visits during that time, only 381 came from organic search.</p>
+
+<p>About halfway through May, the site started to rise in search rankings and organic search visits started rolling in. From a modest start of 40-50 visits from Google each day, the number grew to around 70-100.</p>
+
+<p><img src="http://imgur.com/iAnuWCh.jpg" alt="Organic search traffic" /></p>
+
+<h3 id="google-why">Google… why?</h3>
+
+<p>At around the end of October, TwitchQuotes was getting around 2000 search impressions and around 120-140 visits a day from organic search. This all abruptly ended on October 22nd when TwitchQuotes surprisingly plummeted in search rankings for many important keywords. From 2000 search impressions a day to 200, from 140 organic search visits a day to 20. To say the least, I was surprised and very curious as to why the site was so drastically affected. It is highly probable that this drop in search rankings was related to the rollout of Google Penguin 6 which began on October 17th. Google Penguin is a search engine algorithm that is aimed at decreasing search rankings of websites that utilize black-hat SEO techniques such as link spamming and keyword stuffing to rise in search rankings. I honestly haven’t done anything remotely close to what Google Penguin is looking for so why TwitchQuotes was affected, I have no idea (this is only assuming Penguin 6 was the cause of the search ranking drops).</p>
+
+<p><img src="http://i.imgur.com/tbrikSc.jpg" alt="Dip in traffic" /></p>
+
+<p>I started seriously looking into what is often referred to as SEO or search engine optimization and I did several things to try to get the site back on track.</p>
+
+<ul>
+  <li><strong>Change the meta description tag</strong></li>
+</ul>
+
+<p>The very first thing I looked at was TwitchQuotes’s meta description tag. I realized that the old description was basically the title of the site verbatim. And that description was the same for every, single, page. This resulted in Google completely ignoring the contents of the tag and using other words on the site as the search preview snippets. Not surprisingly, TwitchQuotes didn’t look too good on Google.</p>
+
+<p><img src="http://i.imgur.com/tN7U0Lr.jpg" alt="Old TwitchQuotes search preview snippet" /></p>
+
+<p>After changing it, it looks much better. In addition, I provided a custom meta description for every page that warranted one.</p>
+
+<p><img src="http://imgur.com/OEHrA0a.jpg" alt="New TwitchQuotes search preview snippet" /></p>
+
+<ul>
+  <li><strong>Get a custom domain</strong></li>
+</ul>
+
+<p>I hosted TwitchQuotes on Heroku (it’s really good!) and so the address to the site was a subdomain of herokuapp.com (twitchquotes.herokuapp.com). Given the relatively low visibility twitchquotes.herokuapp.com had on Google anyways, I decided to quickly snatch up a custom domain name for TwitchQuotes (www.twitchquotes.com).</p>
+
+<ul>
+  <li><strong>Censor profane language</strong></li>
+</ul>
+
+<p>Given the nature of copypastas, it was common to have profanities in them. Although I’m not entirely sure how this affects TwitchQuotes’s search rankings, it definitely makes the website appear less professional. So I implemented a profanity filter that hid detected quotes behind an Ajax request.</p>
+
+<p><img src="http://i.imgur.com/EqGDKNe.jpg" alt="Explicit quote" /></p>
+
+<h3 id="climbing-back">Climbing Back</h3>
+
+<p>I barely scratched the surface of SEO but the current changes to TwitchQuotes seem to be working out. In a little over one month, the new domain name was able to rank higher and on more keywords than the old herokuapp subdomain. Total search impressions of TwitchQuotes is now hovering around 3 000 per day which is about 500 more than it was before.</p>
+
+<p><img src="http://imgur.com/tKM52BF.jpg" alt="New stats" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Rubberband Simulation]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/15/basic-rubberband-simulator/"/>
+    <updated>2014-12-15T22:10:07-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/15/basic-rubberband-simulator</id>
+    <content type="html"><![CDATA[<p>I was part of a hackathon recently where my group wanted to build a game with the main game mechanic being an elastic tether that ties two co-operating players together.</p>
+
+<p>We initially planned to build our own physics engine which included coding the tether ourselves. 6 hours into the hackathon, we realized that everything would be a lot easier if we just used Box2D. So we did. Despite the late technology switch, the hackathon turned out really well and you can see the code <a href="https://github.com/alvinlao/charm">here</a>.</p>
+
+<p>Now that everything’s over, I decided to revisit the original incomplete tether code and finish it.</p>
+
+<p>The idea is actually very simple, the rubberband/tether can be simulated as a series of linked nodes connected by springs which are themselves simulated using Hooke’s law. So for each “step in time” of the rubberband, we iterate through every node and apply Hooke’s law between it’s two immediately adjacent nodes to determine the net force and thus the acceleration of the node. We add the acceleration of the node to its current velocity and then we add the velocity to its current position. At this point we are almost done, we just need to apply damping forces so that nodes will not remain in constant motion after a force is applied to it. There are a few ways to model the damping force but since this is supposed to be a “basic” simulation, we will use the simplest, which is linear damping.</p>
+
+<p>Linear damping can be represented mathetically using the equation $F = -cv$ (where $F$ is force, $c$ is the damping coefficient, and $v$ is the velocity of the node).</p>
+
+<p>Here is the <a href="http://www.kevinpan.ca/projects/rubber-band-simulator/">link</a> to the actual simulation being run on the HTML 5 canvas and here is the <a href="https://github.com/kevinpanxc/rubber-band-simulator">link</a> to the GitHub repo.</p>
+
+<p><img src="http://imgur.com/1z8pH5x.jpg" alt="Screenshot" /></p>
+
+<p>One definite thing I learnt from building this simulation is that using vectors makes everything easier. For my electric field simulation project, I naïvely chose to calculate forces using magnitudes and angles. This method was several folds more cumbersome to deal with compared to simple vector algebra.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on RSA Cryptography]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/06/notes-on-rsa/"/>
+    <updated>2014-12-06T16:10:31-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/06/notes-on-rsa</id>
+    <content type="html"><![CDATA[<p>I first learnt about RSA cryptography during an introductory number theory course in my second study term in university. Like many things you learn in class, the details tend to quickly be forgotten once the exam’s over. RSA was no exception. However, I’ve always been strangely annoyed for not fully understanding how this cryptosystem works and so I intend for this post to act as a “reference sheet” for RSA.</p>
+
+<p>In RSA cryptography, there are two keys: a public key and a private key. The sender of a message uses the public key to encrypt the message and the idea is that you can only decrypt the message if you have the private key associated with that public key.</p>
+
+<h2 id="generating-keys">Generating keys</h2>
+
+<ol>
+  <li>Select two <strong>large</strong> distinct primes $p$ and $q$. Let $n = pq$</li>
+  <li>Select $e \in \mathbb{Z}$ such that $GCD(e, \phi(n)) = 1$ and $1 \lt e \lt \phi(n)$, where $GCD$ is the greatest common denominator function</li>
+  <li>Solve congruence $ed \equiv 1 (\textrm{mod}\ \phi(n))$ for $d$ where $d \in \mathbb{Z}, 1 &lt; d &lt; \phi(n)$</li>
+</ol>
+
+<p>The public key will be the tuple $(e, n)$ and the private key will be the tuple $(d, n)$. Note, $\phi(n)$ here refers to <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Euler’s totient function</a>, which is the number of positive integers less than or equal to n that are coprime with n. It also has the property that if two integers, $m$ and $n$ are coprime, then $\phi(mn) = \phi(m)\phi(n)$. Using this property and the fact that $p$ and $q$ are coprimes (since they are both primes), we note that $\phi(n) = \phi(pq) = \phi(p)\phi(q) = (p - 1)(q - 1)$.</p>
+
+<h2 id="encrypting-and-decrypting-messages">Encrypting and decrypting messages</h2>
+
+<p>Let $M$ be the message we want to encrypt. $M$ is an integer such that $0 \leq M \lt n$. The encrypted message will be $C$ where $C \equiv M^{e} (\textrm{mod}\ n), 0 \leq C \lt n $.</p>
+
+<p>To decrypt the message, the receiver needs to compute integer $R$ where $R \equiv C^{d} (\textrm{mod}\ n), 0 \leq R \lt n$. It is actually the case that $R \equiv M (\textrm{mod}\ n)$ and since $0 \leq R \lt n$, $R = M$.</p>
+
+<p>Overall, we need to prove that $(M^{e})^{d} \equiv M (\textrm{mod}\ n), \forall M \in \mathbb{Z}$.</p>
+
+<h2 id="proof">Proof</h2>
+
+<p>(This proof is really just my version of <a href="http://crypto.stackexchange.com/questions/2884/rsa-proof-of-correctness">this</a>)</p>
+
+<p>We can break the proof into two cases, $GCD(M, n) = 1$ and $GCD(M, n) \neq 1$.</p>
+
+<hr />
+
+<p><strong>Case 1 ($GCD(M, n) = 1$):</strong></p>
+
+<p>We start off by using Euler’s totient theorem which states that:</p>
+
+<blockquote>
+  <p>If $GCD(A, B) = 1$ then $A^{\phi(B)} \equiv 1 (\textrm{mod}\ B)$. In our case, since $GCD(M, n) = 1$, then $M^{\phi(n)} \equiv 1 (\textrm{mod}\ n)$.</p>
+</blockquote>
+
+<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that:</p>
+
+<script type="math/tex; mode=display">(M^{e})^{d} = M^{ed} = M^{1 + k\phi(n)} = M(M^{k\phi(n)})</script>
+
+<p>Using the above fact:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+M^{\phi(n)} & \equiv 1 (\textrm{mod}\ n) \\
+M^{k\phi(n)} & \equiv 1^{k} (\textrm{mod}\ n) \\
+M^{k\phi(n)} & \equiv 1 (\textrm{mod}\ n) \\
+M(M^{k\phi(n)}) & \equiv M (\textrm{mod}\ n) \\
+M^{ed} & \equiv M (\textrm{mod}\ n)
+\end{align} %]]&gt;</script>
+
+<hr />
+
+<p><strong>Case 2 ($GCD(M, n) \neq 1$):</strong></p>
+
+<p>We will use the Chinese remainder theorem to prove this.</p>
+
+<blockquote>
+  <p>A more specific version of the theorem states that:</p>
+</blockquote>
+
+<blockquote>
+  <script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+x & \equiv y (\textrm{mod}\ A_1) \\
+& ... \\
+x & \equiv y (\textrm{mod}\ A_k) \\
+\\
+\text{if and only if...} \\
+\\
+x & \equiv y (\textrm{mod}\ A)
+\end{align} %]]&gt;</script>
+</blockquote>
+
+<blockquote>
+  <p>where $A_1, …, A_k$ are <strong>pairwise</strong> coprime and $A = A_1…A_k$.</p>
+</blockquote>
+
+<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$:</p>
+
+<script type="math/tex; mode=display">\begin{align}
+(M^{e})^{d} \equiv M (\textrm{mod}\ p)\tag{1} \\
+(M^{e})^{d} \equiv M (\textrm{mod}\ q)\tag{2}
+\end{align}</script>
+
+<p>Since $GCD(M, n) \neq 1$, it must be true that either $GCD(M, n) = p$ or $GCD(M, n) = q$.</p>
+
+<p>Without loss of generality, let’s assume that $GCD(M, n) = p$. Since $M$ is a multiple of $p$, let $M = kp, k \in \mathbb{Z}, k \gt 0$.</p>
+
+<p>To prove (1):</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+M & \equiv kp (\textrm{mod}\ p) \\
+M & \equiv 0 (\textrm{mod}\ p) \\
+\\
+\text{Using the above fact...} \\
+\\
+(M^{e})^{d} & \equiv M (\textrm{mod}\ p) \\
+((kp)^{e})^{d} & \equiv M (\textrm{mod}\ p) \\
+k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
+0 & \equiv 0 (\textrm{mod}\ p)
+\end{align} %]]&gt;</script>
+
+<p>For (2), we note that since $M = kp$, if $q$ divides $M$, then $q$ must divide either $k$ or $p$. $q$ cannot divide $p$ since they are both primes and $q$ cannot divide $k$. If $q$ does divide $k$, then it implies $M \geq n$ which $M$ cannot be. We reach the conclusion that $GCD(M, q) = 1$. By Euler’s totient theorem, $M^{\phi(q)} = M^{q - 1} \equiv 1 (\textrm{mod}\ q)$.</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+(M^{e})^{d} & = M^{ed} \\
+& = M^{ed - 1}M \\
+& = M^{k\phi(n)}M\tag{from before} \\
+& = (M^{q - 1})^{k(p - 1)}M \\
+& \equiv 1^{k(p - 1)}M (\textrm{mod}\ q) \\
+& \equiv M (\textrm{mod}\ q)\tag*{$\square$}
+\end{align} %]]&gt;</script>
+
+<h2 id="why-is-rsa-secure">Why is RSA secure?</h2>
+
+<p>The answer to this question lies in the fact that it is nearly impossible (by our current computing capabilities) to determine the private key from its corresponding public key, especially if the primes chosen are sufficiently large.</p>
+
+<p>If the public key was $(e, n)$, then remember that to determine the private key you need to solve the congruence $ed \equiv 1 (\textrm{mod}\ \phi(n)), 1 \lt d \lt \phi(n)\ \text{and}\ \phi(n) = (p - 1)(q - 1)$. The best way to do so, without actually knowing what $\phi(n)$ is, is to prime factorize $n$ into its only two prime factors. This, as it turns out, is a very very hard thing to do. There <a href="http://en.wikipedia.org/wiki/Integer_factorization">doesn’t exist an algorithm</a> (with the exception of quantum algorithms) that can solve the problem in polynomial time.</p>
+
+<blockquote>
+  <p>I made a movie about cosmic cookware. It was universally panned.</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Garlic Brussel Sprouts with Bacon and Parmesan]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/12/01/garlic-brussel-sprouts-with-bacon-and-parmesan/"/>
+    <updated>2014-12-01T23:32:03-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/12/01/garlic-brussel-sprouts-with-bacon-and-parmesan</id>
+    <content type="html"><![CDATA[<p>Here’s a recipe I partially adapted from one I found online.</p>
+
+<h2 id="ingredients">Ingredients</h2>
+
+<ol>
+  <li>3 strips of bacon</li>
+  <li>1 cup of brussel sprouts</li>
+  <li>Powdered parmesan cheese</li>
+  <li>4 cloves of diced garlic</li>
+  <li>Salt (half to one teaspoon)</li>
+  <li>Black pepper</li>
+</ol>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>Start by cooking the three strips of bacon (without using oil). While doing so, remove the outer leaves of the brussel sprouts, then cut each in half and wash. Once bacon is done, leave bacon oil in the pan (if it’s too oily, take some out). Start frying the garlic in the pan (use slightly under medium heat) until they turn slightly brown, then throw in the brussel sprouts. Try to keep the flat part down so it absorbs the flavor. Add black pepper and sprinkle salt. While frying, chop the bacon strips into thin slices and throw them in with the brussel sprouts. Continue frying for 3 - 4 minutes. Finally, add parmesan cheese.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some notes on the Mercator projection]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/11/29/some-notes-on-the-mercator-projection/"/>
+    <updated>2014-11-29T22:22:42-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/11/29/some-notes-on-the-mercator-projection</id>
+    <content type="html"><![CDATA[<p>A while back I was investigating on how I would build a Twitter mapping application similar to the <a href="http://www.onemilliontweetmap.com/">One Million Tweet Map</a> project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.</p>
+
+<p>The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of <a href="http://en.wikipedia.org/wiki/Mercator_projection">Wikipedia</a> and here is a concise summary of what I’ve learnt.</p>
+
+<p>The Mercator projection is a cylindrical map projection. This means that meridians are mapped to equally spaced vertical lines and circles of latitudes are mapped to equally spaced horizontal lines. The projection assumes that the Earth is a perfect sphere (in truth the Earth is best modelled by an oblate spheroid). Our map will be a Mercator projection of a scaled down version of the perfectly spherical Earth. This scaled down version of the Earth will be called the globe and it has a radius $R$.</p>
+
+<p>The Mercator projection can be understood using small element geometry. The idea is that if we “unwrap” the globe and spread it flat as best we could, very small elements or sections on the globe can be modelled using a rectangle. The diagram below visualizes this idea ($\lambda$ represents the longitude and $\phi$ represents the latitude).</p>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/d/d0/CylProj_infinitesimals2.svg" alt="Alt text" /></p>
+
+<p>The perpendicular distance from the axis of rotation to any point on the globe at latitude $\phi$ is $R \cdot \cos\phi$ and so we get $R \cdot \cos\phi \cdot \delta\lambda$ as the horizontal distance between $P$ and $Q$ using the arc length formula.</p>
+
+<p>The vertical distance between $P$ and $Q$ can also be explained using the same logic. Since latitudes are measured from the center of the globe and the difference in latitude between $P$ and $Q$ is $\delta\phi$, using the arc length formula again gives us $R \cdot \delta\phi$.</p>
+
+<p>With this information, we define two scale factors from globe to cylinder:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+k(\phi) & =\frac{P'M'}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor} \\
+h(\phi) & =\frac{P'K'}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}
+\end{align} %]]&gt;</script>
+
+<h2 id="mapping-from-longitudes-to-x-coordinates">Mapping from longitudes to x coordinates</h2>
+
+<p>We note that for small $\delta\lambda$, $\delta x = R \cdot \delta\lambda$. From this equation, we can obtain the mapping function from longitudes to x coordinates (one half of the Mercator projection). $\delta x = R \cdot \delta\lambda$ is a very simple rearranged first order linear differential equation and we can solve it quickly.</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+\delta x & = R \cdot \delta\lambda \\
+\int \delta x & = R \cdot \int \delta\lambda \\
+x + c_1 & = R \cdot (\lambda + c_2) \\
+x & = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
+& = R(\lambda - \lambda_0)
+\end{align} %]]&gt;</script>
+
+<p>Here $\lambda_0$ is the longitude of an arbitrary central meridian (this is usually Greenwich).</p>
+
+<h2 id="mapping-from-latitudes-to-y-coordinates">Mapping from latitudes to y coordinates</h2>
+
+<p>Before starting, it is important to understand that the Mercator projection is conformal. This means that the projection of points from the globe to the cylinder preserves angles. This property can be defined in two ways:</p>
+
+<ol>
+  <li>Equality of angles $\beta = \alpha$</li>
+  <li>Isotropy of scale factors: $h = k$</li>
+</ol>
+
+<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us:</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+\frac{1}{\cos\phi} & = k(\phi) \\
+& = h(\phi)\tag{from (2)} \\
+& = \frac{\delta y}{R \cdot \delta\phi} \\
+\frac{\delta y}{\delta\phi} & = R \cdot \sec\phi
+\end{align} %]]&gt;</script>
+
+<p>Solving this differential equation gives us the mapping function from latitudes to y coordinates:</p>
+
+<script type="math/tex; mode=display">y = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]</script>
+
+<h2 id="finding-the-radius-of-the-globe-r">Finding the radius of the globe, $R$</h2>
+
+<p>But wait, there’s more! All this time we’ve been working with the radius of the globe, $R$, but what exactly is it’s value once we put the projection into practice?</p>
+
+<p>Since the Mercator projection is cylindrical, the scale factor between the globe and the cylinder equals one only at the equator. This means that the circumference of the cylinder will equal the circumference of the globe and so the horizontal length of the physical map will equal $2 \cdot \pi \cdot R$.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Finally, we can define the Mercator projection with these three equations (where z equals the horizontal length of the physical map):</p>
+
+<script type="math/tex; mode=display">% &lt;![CDATA[
+\begin{align}
+R & = \frac{z}{2 \cdot \pi} \\
+x & = R(\lambda - \lambda_0) \\
+y & = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
+\end{align} %]]&gt;</script>
+
+<h2 id="inaccuracies-with-the-projection">Inaccuracies with the projection</h2>
+
+<p>Interestingly, despite being one of the most popular projections in the world, the Mercator projection is grossly inaccurate in representing the relative sizes of different land masses. In particular, land masses get bloated the closer to the poles you go up to a point where the projection is not even capable of displaying the poles.</p>
+
+<p><img src="http://media.economist.com/sites/default/files/imagecache/original-size/20101113_WOM943.gif" alt="Alt text" /></p>
+
+<p>This weird property of the projection can be understood by examining the parallel scale factor ($k(\phi)=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}$). As we approach the poles, the latitudes approach $\pm 90^o$ and we know that $\cos\phi$ approaches $0$. Since $\cos\phi$ is in the denominator of the scale factor, the factor approaches $\infty$. An accurate projection will require the parallel scale factor to be $1$ everywhere.</p>
+
+<p>This explains why land masses closer to the poles get bloated while the poles cannot be represented since they would technically have infinite width on the projection.</p>
+
+<hr />
+
+<h5 id="sidenote">Sidenote</h5>
+
+<p>We can derive the latitude mapping function a second way.</p>
+
+<p>For small elements, we note that $\measuredangle PKQ$ is a right angle and so we get the two equations:</p>
+
+<script type="math/tex; mode=display">\begin{aligned}
+\tan\delta = \frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi}, \tan\beta = \frac{\delta x}{\delta y}
+\end{aligned}</script>
+
+<p>From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.</p>
+
+<blockquote>
+  <p>Two random variables were talking in a bar. They thought they were being discrete but I heard their chatter continuously</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Today I used Fermat's little theorem outside of class - Hackerrank Challenge: Game of Thrones II]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/11/28/today-i-used-fermats-little-theorem-outside-of-class-hackerrank-challenge-game-of-thrones-ii/"/>
+    <updated>2014-11-28T02:05:51-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/11/28/today-i-used-fermats-little-theorem-outside-of-class-hackerrank-challenge-game-of-thrones-ii</id>
+    <content type="html"><![CDATA[<p>This challenge asks you to find the number of possible palindrome anagrams in a word, modulus 10^9 + 7$.</p>
+
+<p>To answer this question, we need to know two facts:</p>
+
+<ul>
+  <li>We know that a set of characters can be a palindrome if there exists a bipartite graph where each vertex represents a character in the set and an edge exists between vertices if two characters are the same. Each vertex in this graph must have degree at least 1 (the exception is for a string with an odd number of characters. In this case, it must be true that there exists one character which you can remove from the set so that the aforementioned graph can be constructed from the rest of the characters in the set).</li>
+</ul>
+
+<p><strong>TLDR:</strong> A palindrome anagram of a string exists if: (1) for strings of even length, every unique character in the string can only occur an even number of times (2) for strings of odd length, there must only be one unique character that occurs in the string an odd number of times</p>
+
+<ul>
+  <li>We also note that we only need to know the first half of a palindromic string to know the entire string.</li>
+</ul>
+
+<p>With these two facts in mind, the answer to the challenge will <em>almost</em> be as simple as finding the number of unique permutations of all characters in one of the bipartitions of the aforementioned graph. However, since the question wants the answer to be returned $\bmod 10^9 + 7$ (perfectly reasonable as the actual number can grow insanely large), we will need to use modular arithmetic.</p>
+
+<h2 id="calculating-the-number-of-unique-permutations-of-a-string-without-modular-arithmetic">Calculating the number of unique permutations of a string (without modular arithmetic)</h2>
+
+<p>There are two formulas you can use to do this (note $n$ represents string length and $n_i$ represents number of occurences for one unique character):</p>
+
+<script type="math/tex; mode=display">x = \frac{n!}{n_1!n_2!n_3!...n_n!}\tag{w/ factorials}</script>
+
+<script type="math/tex; mode=display">x = {n \choose n_1}{n - n_1 \choose n_2}{n - n_1 - n_2 \choose n_3}...\tag{w/ binomial coefficients}</script>
+
+<p>Explanation for the factorial formula can be found <a href="http://cs.stackexchange.com/a/2445">here</a>. I can try to explain the latter formula briefly. For the first unique character in the string, there are ${n \choose n_1}$ to place $n_1$ characters in $n$ spaces. For the next unique character in the string, since $n_1$ places are already taken up, there are ${n - n_1 \choose n_2}$ ways to distribute the next $n_2$ characters, and so on.</p>
+
+<p>For my algorithm, I chose to go with the factorial equation.</p>
+
+<h2 id="now-apply-modular-arithmetic">Now apply modular arithmetic</h2>
+
+<p>There are two primary properties of modular arithmetic that is commonly used in programming. They are:</p>
+
+<p><script type="math/tex">(a + b) \% m = ((a \% m) + (b \% m)) \% m\tag{addition}</script>
+<script type="math/tex">(a * b) \% m = ((a \% m) * (b \% m)) \% m\tag{multiplication}</script></p>
+
+<p>We will only need the multiplication property. Using this, we can define a modular multiplication method:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kd">static</span> <span class="kt">long</span> <span class="n">M</span> <span class="o">=</span> <span class="o">((</span><span class="kt">long</span><span class="o">)</span><span class="n">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">9</span><span class="o">))</span> <span class="o">+</span> <span class="mi">7</span><span class="o">;</span>
+</span><span class="line">
+</span><span class="line"><span class="kd">static</span> <span class="kt">long</span> <span class="nf">modularMultiplication</span><span class="o">(</span><span class="kt">long</span> <span class="n">a</span><span class="o">,</span> <span class="kt">long</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="k">return</span> <span class="o">((</span><span class="n">a</span> <span class="o">%</span> <span class="n">M</span><span class="o">)</span> <span class="o">*</span> <span class="o">(</span><span class="n">b</span> <span class="o">%</span> <span class="n">M</span><span class="o">))</span> <span class="o">%</span> <span class="n">M</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>We can also define a factorial method using modular arithmetic. For the purposes of the question, $x$ will always be less than $M$ and <code>factorial</code> will always return values less than $M$. As such, we don’t need to use modular multiplication here:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kd">static</span> <span class="kt">long</span> <span class="nf">factorial</span><span class="o">(</span><span class="kt">long</span> <span class="n">x</span><span class="o">){</span>
+</span><span class="line">    <span class="k">if</span><span class="o">(</span><span class="n">x</span><span class="o">==</span><span class="mi">0</span><span class="o">||</span><span class="n">x</span><span class="o">==</span><span class="mi">1</span><span class="o">)</span>
+</span><span class="line">        <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+</span><span class="line">    <span class="k">else</span> <span class="nf">return</span> <span class="o">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">factorial</span><span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span> <span class="o">%</span> <span class="n">M</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>You might’ve noticed that I left out something crucial that’s needed to solve this question: how do you perform modular division? * gasp * This is where Fermat’s little theorem comes into play (yay more math!). The theorem states that:</p>
+
+<script type="math/tex; mode=display">a^{p - 1} \equiv 1 \bmod p, a \in \mathbb{R}\tag{where p is a prime number}</script>
+
+<p>Did you also notice that $10^9 + 7$ is a prime number? This is the reason why we can apply the theorem to this question.</p>
+
+<p>Starting from the theorem, we multiply both sides by $a^{-1}$ to get us:</p>
+
+<script type="math/tex; mode=display">\begin{aligned}
+a^{p - 2} \equiv a^{-1} \bmod p \\
+a^{-1} \equiv a^{p - 2} \bmod p \\
+\frac{1}{a} \equiv a^{p - 2} \bmod p
+\end{aligned}</script>
+
+<p>This means that all we need to do perform modular division is to find $a^{p - 2} \bmod p$. Then we can modular multiply the result with the dividend. The last final piece to the puzzle is how do we actually find that value quickly and efficiently? Well, fortunately, there is a modular exponentiation technique called binary exponentiation (or exponentiation by squaring) that can do this in logarithmic time (finds $a^n \bmod p$ in $\mathcal{O}(\log n)$).</p>
+
+<p>Here’s the implementation of the algorithm in Java:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kd">static</span> <span class="kt">long</span> <span class="nf">modularPow</span><span class="o">(</span><span class="kt">long</span> <span class="n">base</span><span class="o">,</span> <span class="kt">long</span> <span class="n">exponent</span><span class="o">,</span> <span class="kt">long</span> <span class="n">modulus</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="kt">long</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+</span><span class="line">    <span class="n">base</span> <span class="o">=</span> <span class="n">base</span> <span class="o">%</span> <span class="n">modulus</span><span class="o">;</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">exponent</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="k">if</span> <span class="o">(</span><span class="n">exponent</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">            <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">result</span> <span class="o">*</span> <span class="n">base</span><span class="o">)</span> <span class="o">%</span> <span class="n">modulus</span><span class="o">;</span>
+</span><span class="line">        <span class="o">}</span>
+</span><span class="line">        <span class="n">exponent</span> <span class="o">=</span> <span class="n">exponent</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="o">;</span>
+</span><span class="line">        <span class="n">base</span> <span class="o">=</span> <span class="o">(</span><span class="n">base</span> <span class="o">*</span> <span class="n">base</span><span class="o">)</span> <span class="o">%</span> <span class="n">modulus</span><span class="o">;</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Finally, here’s the implementation of modular division:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kd">static</span> <span class="kt">long</span> <span class="nf">modularDivision</span><span class="o">(</span><span class="kt">long</span> <span class="n">a</span><span class="o">,</span> <span class="kt">long</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="k">return</span> <span class="nf">modularMultiplication</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">modularPow</span><span class="o">(</span><span class="n">b</span><span class="o">,</span> <span class="n">M</span> <span class="o">-</span> <span class="mi">2</span><span class="o">,</span> <span class="n">M</span><span class="o">));</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Knowing all these, we can quickly find the result of $\frac{n!}{n_1!n_2!n_3!…n_n!} \bmod (10^9 + 7)$ and solve the problem.</p>
+
+<blockquote>
+  <p>Mathematical puns are the first sine of madness</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hackerrank challenge: Sherlock and MiniMax]]></title>
+    <link href="http://kevinpanxc.github.io/blog/2014/11/25/hackerrank-challenge-sherlock-and-minimax/"/>
+    <updated>2014-11-25T01:07:46-08:00</updated>
+    <id>http://kevinpanxc.github.io/blog/2014/11/25/hackerrank-challenge-sherlock-and-minimax</id>
+    <content type="html"><![CDATA[<p>I have spent my previous co-op workterms mainly working on numerous side projects such as my moderately successful <a href="http://www.twitchquotes.com">TwitchQuotes</a> website, a multiplayer Flappy Bird game aptly named <a href="http://www.github.com/kevinpanxc/flappy-birds">Flappy BirdS</a>, and a <a href="http://http://kevinpan.ca/projects/electric-field-vectors/">2D electric field simulator</a> built on the HTML5 canvas.</p>
+
+<p>Working on side projects is fun but they can often be unstimulating. To remedy this, I have adopted the habit of solving one or two <a href="http://www.hackerrank.com">Hackerrank</a> problems when I had time (for those who don’t know what Hackerrank is, I highly recommend you to check it out). One of the most recent problems I’ve completed falls under the Arrays and Sorting category called <strong>Sherlock and MiniMax</strong>.</p>
+
+<p>The problem itself is fairly straightforward: you are Watson, and Sherlock (for whatever reason) gives you an array $A$ of size $N$ and integers $P$ and $Q$ and he wants you to find the smallest integer $M$ between $P$ and $Q$ (both inclusive) such that the minimum distance between any array element in A ( $min\{ | A_i - M | \mid 1 \leq i \leq N\} $) is <strong>maximised</strong>.</p>
+
+<p>The solution I developed has a computational complexity of $\Theta(n \log n)$. Essentially, you sort $A$ and find the overlap between elements in $A$ and integers within $[P, Q]$. Next, you iterate through elements of $A$ within the overlap and determine the distance of the halfway point between two adjacent elements. The maximum “halfway distance” is your answer.</p>
+
+<p>The array can be sorted in $\Theta(n \log n)$ time while the overlap can be determined by binary searching integers $P$ and $Q$ within the sorted array $A$ which is $\mathcal{O}(\log n)$. Iterating through the elements of A within the overlap is $\mathcal{O}(n)$.</p>
+
+<blockquote>
+  <p>What do you call a tiny collection of galaxies? A puny-verse</p>
+</blockquote>
+]]></content>
+  </entry>
+  
+</feed>
