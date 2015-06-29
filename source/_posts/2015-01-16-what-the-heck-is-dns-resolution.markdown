@@ -9,11 +9,9 @@ description: A quick summary on how the Domain Name System (DNS) works. This pos
 
 > This post was inspired by Monica Dinculescu's [speech](http://meowni.ca/posts/cat-dns-cascadia/) at CUSEC 2015, "The Internet Needs More Cats".
 
-The Internet is so prevalent in our everyday lives but the majority of Internet users have a very limited understanding of how the whole system works. Admittedly, I am one of them. Recently, I've decided to tackle a very small fragment of my Internet ignorance; I wanted to understand how DNS or the Domain Name System works.
+The Internet is so prevalent in our everyday lives but the majority of its users have a very limited understanding of how it works. Admittedly, I am one of them. Recently, I've decided to tackle a very small fragment of my Internet ignorance; I wanted to understand how DNS or the Domain Name System works.
 
-DNS is basically the system responsible for translating website addresses such as `google.com` to IP addresses. These addresses are what is used internally to identify specific computers among the billions of computers connected over the Internet. We use domain names instead of IP addresses since the former has a lot more meaning to us as humans and thus is a lot easier to memorize (`www.google.com` vs `http://74.125.224.72/`).
-
-What exactly is this system and where is it stored? The DNS service is not run by an one computer. Instead, the service is offered through an entire network of interconnected computers. But before I get into the details of that, there are some other things I need to go over.
+DNS is basically the system responsible for translating web addresses such as `google.com` to IP addresses. These addresses are what's used internally to identify specific computers among the billions connected over the web. We use domain names instead of IP addresses since the former has a lot more meaning to us as humans and thus are a lot easier to memorize (`www.google.com` vs `http://74.125.224.72/`). It's important to note that DNS, as a service, is not run by any one computer. Instead, the service is offered through an entire network of interconnected computers.
 
 ## Domain name syntax
 
