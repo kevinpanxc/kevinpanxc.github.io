@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://kevinpanxc.github.io/sitemap.xml 
+Sitemap: http://kevinpan.me/sitemap.xml 
