@@ -582,7 +582,7 @@ h6 {
     border-radius: 5px;
     -moz-border-radius: 5px; }
     .navbar .nav > li > a:hover {
-      color: $tertiary-color; }
+      color: $white-color; }
   .navbar .nav li {
     position: relative; }
     .navbar .nav li:hover > ul {
@@ -2625,7 +2625,7 @@ hr { display: block; height: 1px;
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .dropdown-menu a:hover,
 .navbar-inverse .dropdown-menu a:focus {
-  background-color: $accent-color1;
+  background-color: $accent-color4;
 }
 
 a > .badge {

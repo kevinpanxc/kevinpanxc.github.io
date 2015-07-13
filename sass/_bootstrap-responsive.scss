@@ -981,7 +981,7 @@
   }
   .nav-collapse .nav {
     float: none;
-    margin: 0 0 10px;
+    margin: 10px 0 10px;
   }
   .nav-collapse .nav > li {
     float: none;
@@ -1028,7 +1028,7 @@
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
-    background-color: $accent-color2;
+    background-color: $accent-color4;
   }
   
   .nav-collapse.in .btn-group {
