@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mango Ice Cream</title>
+  <meta name="author" content="Kevin Pan">
+
+  
+  <meta name="description" content="Mango Ice Cream is a blog on mathematics, computer science, and various other topics by a burgeoning software developer">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kevinpan.me/posts/3">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Mango Ice Cream" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX", "output/HTML-CSS"],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  messageStyle: "none",
+  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57905192-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+          <ul class="nav">
+    
+        <li ><a href="/">Home</a></li>
+    
+        <li ><a href="/blog/archives">Archives</a></li>
+    
+        <li ><a href="http://www.kevinpan.ca/about">About Me</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    
+    
+    
+    
+    
+    
+
+    
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    
+      Mango Ice Cream
+    
+    <h3 class="tagline">
+      
+        A blog on math, programming, and other topics that pique my interest
+      
+    </h3>
+  </div>
+</div>
+
+
+<div class="blog-index">
+  
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-23T18:48:51-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>6:48 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/23/hackerrank-challenge-median-when-in-doubt-use-stringbuilder/">Hackerrank Challenge: Median - when in doubt, use StringBuilder</a></h1>
+      <p>In this Hackerrank challenge, you need to calculate a running median of a list of numbers where numbers can be both added and removed. Each time this is done, you need to output the median of the current list. I chose to use Java to solve this challenge.</p>
+
+<p>One way to approach this problem is to maintain a sorted array. You find where you want to insert/delete elements using binary search and the median can be calculated by looking at element(s) at the halfway point of the list. However, the problem with using an array is that insertion/deletion is actually $O(n)$ (where $n$ is the size of the list) since you have to reposition all list elements after the inserted/removed element. It doesn’t matter if searching for where to insert/delete is $O(\log\ n)$. However, you can find the median of the list at any time in $O(1)$ because random access operations for an array is $O(1)$.</p>
+
+<p>You can slightly improve upon this solution by using an ordered data structure that is not a list, such as C++’s <code>std::multiset</code>. Unfortunately, Java’s standard library does not have an equivalent data structure (the closest you get is <code>TreeSet</code> but it forbids repeated elements). You can, however, emulate the behaviour of <code>std::multiset</code> by using a <code>TreeMap</code> where the keys are unique elements in the running list and the values are the number of times they appear. Unfortunately, finding the median still takes $O(n)$.</p>
+
+<h3 id="using-a-completely-different-approach">Using a completely different approach</h3>
+
+<p>The above solution holds promise but there is a completely different and very efficient solution that finds a running median using two data structures instead of one. One data structure holds the bottom half of the <strong>ordered</strong> list (A) while the other holds the top half (B). Each time a number is added to the running list, if it is smaller than the max element of A, then add it to A, else add it to B. The median can be calculated from the two by looking at the max element of A or the min element of B or both if $n$ is even. For this to work, the difference in lengths between A and B must be at most one. If adding or removing a number from the running list causes the lengths to differ by two, you need to balance them by transferring a min/max element between the two structures.</p>
+
+<p>The trick here is to find a type of data structure that allows you to quickly find and remove its max/min element while also allowing you to quickly insert and delete random elements.</p>
+
+<p>One way to do this is to use priority queues. The bottom half of the running list will be stored in a max priority queue while the top half will be stored in a min priority queue. If the priority queues were implemented with a heap, insertion and balancing will have a time complexity of $O(\log\ n)$. Finding the median can be done in constant time. The only problem, though, is that removing a random element from a heap-based priority queue takes $O(n)$. I tried this solution on Hackerrank and sure enough, I get timeout errors.</p>
+
+<p><img src="http://imgur.com/IqzOBvw.jpg" alt="Timeout error" /></p>
+
+<h3 id="almost-a-solution">Almost a solution</h3>
+
+<p>So, if not priority queues, what do we use?</p>
+
+<p>The answer can be found by revisiting the <code>TreeMap</code> solution discussed before. Instead of using two priority queues, we can use two trees! Again, C++’s <code>std::multiset</code> datastructure would be perfect for this but since Java’s standard library doesn’t have the equivalent data structure, we need to use a <code>TreeMap</code> where keys are unique elements in the running list and the values are the number of times they appear.</p>
+
+<ul>
+  <li>Find max/min: $O(\log\ n)$</li>
+  <li>Insertion/deletion: $O(\log\ n)$</li>
+</ul>
+
+<p>This means that each time an element is inserted or removed into the running list, the algorithm will take $O(\log\ n)$ to compute the median, much faster than the $O(n)$ priority queue solution.</p>
+
+<p>At this point, I was sure I solved the challenge…</p>
+
+<p><img src="http://imgur.com/6A7GO1A.jpg" alt="Timeout error again" /></p>
+
+<h3 id="stringbuilder-to-the-rescue">StringBuilder to the rescue!</h3>
+
+<p>I spent a couple hours mulling over what I could possibly optimize before realizing that I have had substantial success in the past when I stopped using a bunch of <code>System.out.println</code> statements and just aggregated all the output in one <code>StringBuilder</code> object. Everything could then be printed with just one <code>println</code> statement. Exhausted and frustrated from spending so much time on this problem, I tried it.</p>
+
+<p>I still can’t believe it’s not butter.</p>
+
+<p><img src="http://imgur.com/8S76uT2.jpg" alt="Success!" /></p>
+
+<blockquote>
+  <p>How much memory does it take to store a dinosaur’s DNA? A Pterobyte</p>
+</blockquote>
+
+<blockquote>
+  <p>What a pteroble joke.</p>
+</blockquote>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-21T01:52:36-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>1:52 am</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/21/from-bust-to-boom/">My Newbie Experience with SEO</a></h1>
+      <p><a href="http://www.twitchquotes.com">TwitchQuotes</a> is a website I built slightly under a year ago and which I am currently still maintaining. It has some decent statistics. Over the past few months, the average session duration is at 3 minutes and 45 seconds, with 5.44 pages visited per session. The overall bounce rate is at 45.93%.</p>
+
+<p>I started building this website as a way to introduce myself to the popular web application framework, Ruby on Rails. After finishing the basic features with a decent looking UI, I deployed it to Heroku and left a few links on Reddit. I thought nothing of it until a couple days later when this happened…</p>
+
+<p><img src="http://i.imgur.com/RvuHKWh.png" alt="Crazy stats" /></p>
+
+<p>When I saw this I knew that I had to keep building this website up.</p>
+
+<h3 id="the-idea">The Idea</h3>
+
+<p>Twitch.tv is a live streaming video platform that is dedicated to video games. This means that most of the time you’ll find people streaming themselves playing video games. This is a relatively new form of entertainment that has already garnered a large following.</p>
+
+<p><img src="http://images.eurogamer.net/2014/usgamer/Twitch-News-02.png" alt="Twitch TV stats" /></p>
+
+<p>These statistics are impressive enough that it’s no surprise that there were rumours both Google and Amazon were vying to buy Twitch earlier this year. In the end, Amazon was able to <a href="http://arstechnica.com/gaming/2014/08/amazon-not-google-reportedly-buying-twitch-for-1-billion/">acquire Twitch.tv</a> for a whopping $970 million.</p>
+
+<p>Part of a stream on Twitch is an IRC chat channel for viewers. On particularly popular streams with thousands of people watching, you can imagine how crazy chat gets. What typically ends up happening is loads and loads of spam. People especially like to copy and paste ridiculous passages of text (AKA <strong>copypastas</strong>) that make no sense but which is exactly why they are funny.</p>
+
+<blockquote>
+  <p>Hello, I am currently 15 years old and I want to become a walrus. I know there’s a million people out there just like me, but I promise you I’m different. On December 14th, I’m moving to Antarctica; home of the greatest walri. I’ve already cut off my arms, and now slide on my stomach everywhere I go as training. I may not be a walrus yet, but I promise you if you give me a chance and the support I need, I will become the greatest walrus ever. Thank you all.</p>
+</blockquote>
+
+<p>I happened to watch Twitch often at the start of this year, especially while working out, and I was witness to spam consisting of very creative and absolutely hilaroius copypastas. This gave me the idea of creating a <a href="www.bash.org">bash.org</a>-like website for Twitch chat. At that time I was still exploring the magical world of Ruby on Rails and TwitchQuotes fit perfectly as a beginner project for the framework.</p>
+
+<h3 id="growth-in-organic-search-traffic">Growth in Organic Search Traffic</h3>
+
+<p>From the initial burst of visits from Reddit, site traffic quieted down for about 2 months hovering around 30-40 visits per day. Traffic from organic search was almost non-existent. From a total of about 2700 visits during that time, only 381 came from organic search.</p>
+
+<p>About halfway through May, the site started to rise in search rankings and organic search visits started rolling in. From a modest start of 40-50 visits from Google each day, the number grew to around 70-100.</p>
+
+<p><img src="http://imgur.com/iAnuWCh.jpg" alt="Organic search traffic" /></p>
+
+<h3 id="google-why">Google… why?</h3>
+
+<p>At around the end of October, TwitchQuotes was getting around 2000 search impressions and around 120-140 visits a day from organic search. This all abruptly ended on October 22nd when TwitchQuotes surprisingly plummeted in search rankings for many important keywords. From 2000 search impressions a day to 200, from 140 organic search visits a day to 20. To say the least, I was surprised and very curious as to why the site was so drastically affected. It is highly probable that this drop in search rankings was related to the rollout of Google Penguin 6 which began on October 17th. Google Penguin is a search engine algorithm that is aimed at decreasing search rankings of websites that utilize black-hat SEO techniques such as link spamming and keyword stuffing to rise in search rankings. I honestly haven’t done anything remotely close to what Google Penguin is looking for so why TwitchQuotes was affected, I have no idea (this is only assuming Penguin 6 was the cause of the search ranking drops).</p>
+
+<p><img src="http://i.imgur.com/tbrikSc.jpg" alt="Dip in traffic" /></p>
+
+<p>I started seriously looking into what is often referred to as SEO or search engine optimization and I did several things to try to get the site back on track.</p>
+
+<ul>
+  <li><strong>Change the meta description tag</strong></li>
+</ul>
+
+<p>The very first thing I looked at was TwitchQuotes’s meta description tag. I realized that the old description was basically the title of the site verbatim. And that description was the same for every, single, page. This resulted in Google completely ignoring the contents of the tag and using other words on the site as the search preview snippets. Not surprisingly, TwitchQuotes didn’t look too good on Google.</p>
+
+<p><img src="http://i.imgur.com/tN7U0Lr.jpg" alt="Old TwitchQuotes search preview snippet" /></p>
+
+<p>After changing it, it looks much better. In addition, I provided a custom meta description for every page that warranted one.</p>
+
+<p><img src="http://imgur.com/OEHrA0a.jpg" alt="New TwitchQuotes search preview snippet" /></p>
+
+<ul>
+  <li><strong>Get a custom domain</strong></li>
+</ul>
+
+<p>I hosted TwitchQuotes on Heroku (it’s really good!) and so the address to the site was a subdomain of herokuapp.com (twitchquotes.herokuapp.com). Given the relatively low visibility twitchquotes.herokuapp.com had on Google anyways, I decided to quickly snatch up a custom domain name for TwitchQuotes (www.twitchquotes.com).</p>
+
+<ul>
+  <li><strong>Censor profane language</strong></li>
+</ul>
+
+<p>Given the nature of copypastas, it was common to have profanities in them. Although I’m not entirely sure how this affects TwitchQuotes’s search rankings, it definitely makes the website appear less professional. So I implemented a profanity filter that hid detected quotes behind an Ajax request.</p>
+
+<p><img src="http://i.imgur.com/EqGDKNe.jpg" alt="Explicit quote" /></p>
+
+<h3 id="climbing-back">Climbing Back</h3>
+
+<p>I barely scratched the surface of SEO but the current changes to TwitchQuotes seem to be working out. In a little over one month, the new domain name was able to rank higher and on more keywords than the old herokuapp subdomain. Total search impressions of TwitchQuotes is now hovering around 3 000 per day which is about 500 more than it was before.</p>
+
+<p><img src="http://imgur.com/tKM52BF.jpg" alt="New stats" /></p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-15T22:10:07-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:10 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/15/basic-rubberband-simulator/">Basic Rubberband Simulation</a></h1>
+      <p>I was part of a hackathon recently where my group wanted to build a game with the main game mechanic being an elastic tether that ties two co-operating players together.</p>
+
+<p>We initially planned to build our own physics engine which included coding the tether ourselves. 6 hours into the hackathon, we realized that everything would be a lot easier if we just used Box2D. So we did. Despite the late technology switch, the hackathon turned out really well and you can see the code <a href="https://github.com/alvinlao/charm">here</a>.</p>
+
+<p>Now that everything’s over, I decided to revisit the original incomplete tether code and finish it.</p>
+
+<p>The idea is actually very simple, the rubberband/tether can be simulated as a series of linked nodes connected by springs which are themselves simulated using Hooke’s law. So for each “step in time” of the rubberband, we iterate through every node and apply Hooke’s law between it’s two immediately adjacent nodes to determine the net force and thus the acceleration of the node. We add the acceleration of the node to its current velocity and then we add the velocity to its current position. At this point we are almost done, we just need to apply damping forces so that nodes will not remain in constant motion after a force is applied to it. There are a few ways to model the damping force but since this is supposed to be a “basic” simulation, we will use the simplest, which is linear damping.</p>
+
+<p>Linear damping can be represented mathetically using the equation $F = -cv$ (where $F$ is force, $c$ is the damping coefficient, and $v$ is the velocity of the node).</p>
+
+<p>Here is the <a href="http://www.kevinpan.ca/projects/rubber-band-simulator/">link</a> to the actual simulation being run on the HTML 5 canvas and here is the <a href="https://github.com/kevinpanxc/rubber-band-simulator">link</a> to the GitHub repo.</p>
+
+<p><img src="http://imgur.com/1z8pH5x.jpg" alt="Screenshot" /></p>
+
+<p>One definite thing I learnt from building this simulation is that using vectors makes everything easier. For my electric field simulation project, I naïvely chose to calculate forces using magnitudes and angles. This method was several folds more cumbersome to deal with compared to simple vector algebra.</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+  
+  <div class="pagination">
+    
+    <a class="prev" href="/posts/4">&larr; Older</a>
+    
+
+    
+    <a class="next" href="/posts/2">Newer &rarr;</a>
+    
+  </div>
+</div>
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2016 - Kevin Pan -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+</p>
+
+
+        </footer>
+      </div>
+  </div>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'mangoicecream';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

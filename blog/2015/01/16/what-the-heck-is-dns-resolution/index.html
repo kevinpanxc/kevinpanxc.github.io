@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mango Ice Cream</title>
+  <title>What the heck is the Domain Name System (DNS)? - Mango Ice Cream</title>
   <meta name="author" content="Kevin Pan">
 
   
-  <meta name="description" content="Mango Ice Cream is a blog on mathematics, computer science, and various other topics by a burgeoning software developer">
+  <meta name="description" content="A quick summary on how the Domain Name System (DNS) works. This post talks about the general idea behind DNS and how it's practically implemented. &hellip;">
   
   <meta name="keywords" content="">
 
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kevinpan.me">
+  <link rel="canonical" href="http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -102,150 +102,23 @@ MathJax.Hub.Config({
   <div class="container" id="main">
       <div class="row-fluid">
         <div id="content">
-          <div class="jumbotron">
-  <div class="container">
-    
-      Mango Ice Cream
-    
-    <h3 class="tagline">
-      
-        A blog on math, programming, and other topics that pique my interest
-      
-    </h3>
-  </div>
-</div>
-
-
-<div class="blog-index">
+          <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
 
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2016-03-12T02:48:25-08:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:48 am</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2016/03/12/how-i-overcame-anxiety-and-depression/">How I overcame anxiety and depression</a></h1>
-      <p>Test</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2015-05-17T20:48:56-07:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>17</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>8:48 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/">Quick Tips For a Healthier Lifestyle as a College Student</a></h1>
-      <p>For many of us, going to college means living away from home for the first time. There are many other firsts that come with moving out… you might have to start doing your own laundry for the first time, or start cooking your own dinners. As a third year university student, I’ve been through all these firsts and learned quite a few things along the way.</p>
-
-<p>One of the best things about living away from home is the freedom. You get to do whatever you want now without having parents nosing around. But that also means the possibility of developing unhealthy lifestyle habits, especially dietary habits, that you might regret later on.</p>
-
-<blockquote>
-  <p>What people are not good at, though, is identifying what’s missing in their diet, mainly because people don’t typically think of these things.</p>
-</blockquote>
-
-<p>Let me first focus on dietary habits. When it comes to your diet, it’s important to realize that it doesn’t necessarily have to be what you’re eating that makes it unhealthy, it could also be from what you’re NOT eating. I think everyone’s pretty good at identifying generally unhealthy foods (e.g. greasy, sugary, starchy, …) so I won’t elaborate on this. What people are not good at, though, is identifying what’s missing in their diet, mainly because people don’t typically think of these things. Back home, your parents made your food and you ate it. So my best diet advice for you is to keep in mind what nutrients you might have missed out on in your current diet. When I say nutrients I mean things like calcium, iron, vitamin B, and vitamin D.</p>
-
-<p>An extra comment on diet. It’s always good to keep in mind there are some foods that are just so much more efficient than others at giving you the nutrients you need. For example, nuts and seeds are packed with protein, vitamins, and minerals. Find these foods, eat them regularly.</p>
-
-<blockquote>
-  <p>And you can’t fault people for this; exercise is painful. Cardio is hard on both the mind and the body, weight lifting is strenuous.</p>
-</blockquote>
-
-<p>Besides a healthy diet, a healthy lifestyle also warrants that you stay physically active (I know, how generic, who doesn’t know this?). Truth is, people do know this but many people don’t act on it. And you can’t fault people for this; exercise is painful. Cardio is hard on both the mind and the body, weight lifting is strenuous. Okay, maybe weight lifting is an exception, since having bulging muscles is strong enough motivation to keep many guys going back to the gym. But cardio, in my experience, is something many people shy away from. Like I mentioned, it’s not easy. You’re often uncomfortable physically and bored out of your mind on that treadmill or elliptical. For me personally, I’ve made cardio, specifically running, a key part of my lifestyle. I’ve run enough times to not have to deal with the physical discomfort part but it’s still often quite boring.</p>
-
-<p>But no worries, it doesn’t have to be this way. There’s another form of exercise I learned recently that, apparently, is significantly better than steady-state cardio. It’s called High Intensity Interval Training (HIIT). Most often applied to running, what it means is to break your running sessions into multiple sprinting and resting periods. For example, you would sprint 1 minute, rest 1 minute, and so forth. This type of exercise burns calories at a much faster rate than steady-state cardio and, as claimed by countless resources online, is just plain better. No matter the calorie burning rate, one thing that’s for sure is that HIIT is not boring. You’re constantly changing your pace so it’s not monotonous and segmenting your workout session into 1 or 2 minute increments make it go by a lot faster. This, to me, is one of the best things about HIIT.</p>
-
-<p>Now that you have a wholesome diet and you’re in love with HIIT and exercising frequently, you must think that you’re all set for a healthy lifestyle right? Yes you are. Why are you still reading?</p>
-
-<blockquote>
-  <p>…a healthy lifestyle isn’t all about being physically healthy. You have to be mentally healthy too.</p>
-</blockquote>
-
-<p>No I’m kidding, a healthy lifestyle isn’t all about being physically healthy. You have to be mentally healthy too. What do I mean by this? Well, sometimes, instead of binging on TV shows like Game of Thrones or Breaking Bad or Suits, you might choose to read something that holds more weight, like… the biography of Steve Jobs (Steve Jobs, by Walter Isaacson, great read, I recommend it). I guess the best advice I can give is to make sure you’re PASSIONATE about at least something in life and you’re actively working on improving that thing you’re passionate about. If you aren’t and you find yourself watching too many TV shows or movies or playing too many videos games or partying, maybe you should find that passion.</p>
-
-<p>One of the most common advice I’ve heard from people much older, much wiser than I is to NOT WASTE TIME when you’re young. Time is precious and it might feel like you have a lot now, but it goes by exponentially as you age. And yes, you’ve heard this before, excuse me for being so cliché, but many people simply don’t do anything about it. Don’t be like “many people”, lead a purposeful life.</p>
-
-<p>A middle-aged Vietnamese Uber driver once said to me, <strong>“don’t waste time when you’re young. When you’re young, you have the most energy. Make the most out of it.”</strong></p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
+  <header>
+  <div class="jumbotron">
+    What the Heck Is the Domain Name System (DNS)?
+	<h5>
 
 
 
 
 <i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2015-01-16T12:20:09-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:20 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2015/01/16/what-the-heck-is-dns-resolution/">What the heck is the Domain Name System (DNS)?</a></h1>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
       <blockquote>
   <p>This post was inspired by Monica Dinculescu’s <a href="http://meowni.ca/posts/cat-dns-cascadia/">speech</a> at CUSEC 2015, “The Internet Needs More Cats”.</p>
 </blockquote>
@@ -284,24 +157,66 @@ MathJax.Hub.Config({
 
 <p>Recursive name servers provide two essential services. First, they are able to perform a DNS recursion over the domain name space tree to resolve a domain name to an IP address. A DNS recursion is basically a recursive traversal over the domain name space tree using information from the domain name to reach the right authoritative name server and obtain the right IP address. A recursive name server only performs a DNS recursion if its local cache does not contain the IP address mapped to a requested domain name. The second service provided by recursive name servers is caching of successful DNS recursion results so that future queries will not require another expensive DNS recursion. Finally, it is also important to note that IP address caching can also happen at the client level AKA on your computer.</p>
 
-      
-      
     </div>
   </div>
 
 
 
-    </article>
+  <footer>
+    <hr>
     
-  
-  <div class="pagination">
-    
-    <a class="prev" href="/posts/2">&larr; Older</a>
-    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
 
-    
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
   </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2015/01/06/euler-angles-and-gimbal-lock/" title="Previous Post: Euler Angles and Gimbal Lock">&laquo; Euler Angles and Gimbal Lock</a>
+          
+          
+            <a class="basic-alignment right" href="/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/" title="Next Post: Quick Tips For a Healthier Lifestyle as a College Student">Quick Tips For a Healthier Lifestyle as a College Student &raquo;</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
 
 
         </div>
@@ -323,7 +238,10 @@ MathJax.Hub.Config({
       var disqus_shortname = 'mangoicecream';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution/';
+        var disqus_url = 'http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
