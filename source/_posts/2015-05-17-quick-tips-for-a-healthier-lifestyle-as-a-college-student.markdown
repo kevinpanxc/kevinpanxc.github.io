@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-I'm going to preface this post by saying that I even though I write as if I'm an authoritative figure on leading healthy lifestyles, I'm not. The things I mention here worked and is still working for me. At least that's what I'm inclined to believe :p
+I'm going to preface this post by saying that I even though I write as if I'm an authoritative figure on leading healthy lifestyles, I'm not. The things I mention here worked and is still working for me (at least that's what I'm inclined to believe).
 
 ---
 
