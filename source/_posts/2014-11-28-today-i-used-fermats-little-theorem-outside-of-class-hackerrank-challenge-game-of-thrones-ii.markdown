@@ -3,6 +3,7 @@ layout: post
 title: "Today I used Fermat's little theorem outside of class - Hackerrank Challenge: Game of Thrones II"
 date: 2014-11-28 02:05:51 -0800
 comments: true
+published: false
 categories: 
 description: This post provides a solution to the Hackerrank challenge, Game of Thrones II. The solution heavily relies on modular arithmetic. Learn how to perform modular division using Fermat's little theorem.
 ---

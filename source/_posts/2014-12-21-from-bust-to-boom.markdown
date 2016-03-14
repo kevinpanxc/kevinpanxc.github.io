@@ -3,6 +3,7 @@ layout: post
 title: "My Newbie Experience with SEO"
 date: 2014-12-21 01:52:36 -0800
 comments: true
+published: false
 categories: 
 use_content_as_description: true
 ---

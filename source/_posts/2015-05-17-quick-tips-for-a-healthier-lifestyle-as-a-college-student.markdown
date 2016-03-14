@@ -6,6 +6,10 @@ comments: true
 categories: 
 ---
 
+I'm going to preface this post by saying that I even though I write as if I'm an authoritative figure on leading healthy lifestyles, I'm not. The things I mention here worked and is still working for me. At least that's what I'm inclined to believe :p
+
+---
+
 For many of us, going to college means living away from home for the first time. There are many other firsts that come with moving out... you might have to start doing your own laundry for the first time, or start cooking your own dinners. As a third year university student, I've been through all these firsts and learned quite a few things along the way.
 
 One of the best things about living away from home is the freedom. You get to do whatever you want now without having parents nosing around. But that also means the possibility of developing unhealthy lifestyle habits, especially dietary habits, that you might regret later on.
@@ -26,7 +30,7 @@ Now that you have a wholesome diet and you're in love with HIIT and exercising f
 
 > ...a healthy lifestyle isn't all about being physically healthy. You have to be mentally healthy too.
 
-No I'm kidding, a healthy lifestyle isn't all about being physically healthy. You have to be mentally healthy too. What do I mean by this? Well, sometimes, instead of binging on TV shows like Game of Thrones or Breaking Bad or Suits, you might choose to read something that holds more weight, like... the biography of Steve Jobs (Steve Jobs, by Walter Isaacson, great read, I recommend it). I guess the best advice I can give is to make sure you're PASSIONATE about at least something in life and you're actively working on improving that thing you're passionate about. If you aren't and you find yourself watching too many TV shows or movies or playing too many videos games or partying, maybe you should find that passion.
+No I'm kidding, a healthy lifestyle isn't all about being physically healthy. You have to be mentally healthy too. What do I mean by this? Well, sometimes, instead of bingeing on TV shows like Game of Thrones or Breaking Bad or Suits, you might choose to read something that holds more weight... something where you will learn and not just learn for the sake of learning, but learn towards whatever goal you have. I guess the best advice I can give is to make sure you're PASSIONATE about at least something in life and you're actively working on improving that thing you're passionate about. If you aren't and you find yourself watching too many TV shows or movies or playing too many videos games or partying, maybe you should find that passion.
 
 One of the most common advice I've heard from people much older, much wiser than I is to NOT WASTE TIME when you're young. Time is precious and it might feel like you have a lot now, but it goes by exponentially as you age. And yes, you've heard this before, excuse me for being so cliché, but many people simply don't do anything about it. Don't be like "many people", lead a purposeful life.
 
