@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Bijective numeration and length-restricted character permutations - Mango Ice Cream</title>
+  <title>The Great Free Speech Conundrum - Mango Ice Cream</title>
   <meta name="author" content="Kevin Pan">
 
   
-  <meta name="description" content="This post explores how to find the total number of character permutations that have length less than or equal to an integer given a set of characters &hellip;">
+  <meta name="description" content="Mango Ice Cream is a blog on mathematics, computer science, and various other topics by a burgeoning software developer">
   
   <meta name="keywords" content="">
 
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations">
+  <link rel="canonical" href="http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -108,44 +108,36 @@ MathJax.Hub.Config({
 
   <header>
   <div class="jumbotron">
-    Bijective Numeration and Length-restricted Character Permutations
+    The Great Free Speech Conundrum
 	<h5>
 
 
 
 
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-31T18:37:41-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>6:37 pm</span></time></h5>
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2016-03-13T16:34:00-07:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>4:34 pm</span></time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <p>Based on this awesome StackOverflow <a href="http://stackoverflow.com/a/15625853">answer</a>…</p>
+      <p>Freedom of speech is generally defined as “the right to communicate one’s opinions and ideas without fear of government retaliation or censorship”. Sounds perfectly reasonable and perfectly necessary for a modern society. A government that allows it’s citizens to voice their opinions is a government that welcomes innovation, improvement, and very importantly, protects itself from corruption.</p>
 
-<p>Consider the problem where you have a size $N$ set of characters and you need to the generate all possible strings from this set that have length less than or equal to $M$.</p>
+<p>However, reality is infinitely more complex. The modern information age allows people that are tens of thousands of miles away to communicate as if they were right next to each other. Opinions and ideas can be spread to millions of people halfway across the globe in an instant. This obviously comes with a myriad of advantages for civilization at large. The quick distribution of ideas enables collaboration and innovation at a scale never before seen. BUT, it also allows for malicious entities to manipulate millions of people quickly and efficiently.</p>
 
-<p>Let’s represent the set of characters programmatically as a character array. In this array, each character is mapped to an integer index starting from 0 all the way to $N - 1$. Now consider a base-$N$ numeral system. In this system, there are $N$ symbols to represent the $N$ numbers below 10. We also know that in this system, $N^M - 1$ will evaluate to the largest number that has a string representation of length $M$. So to generate all strings with length less than or equal to $M$, we could just enumerate from 0 to $N^M - 1$ in base $N$ and for each base-$N$ integer, we can create a valid string by replacing each digit of the integer with the character that has the same array index.</p>
+<p>Before I continue, I would like to point out how powerful a unified, angry population is. Governments throughout the ages have been created and toppled by the will of the governed. Notable historical Western examples include the French and Russian revolutions where impoverished, passionate peasants tore down monarchies and executed the de facto rulers. More recent examples include the Arab Spring revolutions.</p>
 
-<p>For example, if the character array was <code>{'a', 'b', 'c', '3'}</code> and a base-4 number was 312, the equivalent string is <code>3bc</code>.</p>
+<p>Now let’s shift perspectives. Humans are by nature competitive creatures and this trait is, if I dare say, amplified even further at the level of statehood. Most governments want the best for their population. A happy population makes for a successful government and one of the most direct ways to achieve this is through wealth. But wealth is not an infinite resource and when certain countries adopt foreign policies that directly affects another’s ability to grow in wealth, or stay wealthy, conflicts occur. In many cases, direct, open warfare follows. Fortunately, wars are risky, time consuming, and expensive.</p>
 
-<p>However, there is a slight problem with this. The strings generated are missing strings with multiple leading characters that is the first character in the array (AKA the character mapped to the 0 index). This is because when you’re iterating from 0 to $N^M - 1$, you would never reach $0000$, for example, since this is just 0. From the above example, that means that you’re missing the string <code>aaaa</code>, even though it is a perfectly valid string if 4 is less than or equal to $M$.</p>
+<p>A much more desirable option is to utilize the will of a government’s own people to change said government’s policies. The reasoning is crystal clear here. Why would you send your own citizens to fight wars when you could have the citizens of your enemies fight your wars for you?</p>
 
-<p>This is where a bijective numeration becomes helpful. A bijective numeration, according to <a href="http://en.wikipedia.org/wiki/Bijective_numeration">Wikipedia</a> is: “any numeral system in which every non-negative integer can be represented in exactly one way using a finite string of digits”.</p>
+<p>But how does one government go about turning a significant group of a foreign country’s population against their own government? Ever heard of the term propaganda? Now let’s look at the internet and how incredibly easy it is to voice opinions and spread a message. Let’s be frank here, the internet is truly a perfect medium for propaganda dissemination. Foreign policy makers all over the world are not stupid; they understand the power of the internet and are actively using it to their advantage.</p>
 
-<p>Conventional numeral systems often have multiple ways to represent the same integer and thus are not bijective. For example, in the numeral system that we’re all familiar with, the Hindu-Arabic numeral system, you can represent the integer 1 an infinite number of ways just by tacking any number of 0’s in front of it. A bijective base-k numeration system ($k$-adic notation) circumvents this by getting rid of the symbol 0 altogether. The value 0 is represented with the empty string, $\varepsilon$. A digit-set of {1, 2, …, k} is used to represent the rest of the positive integers. So, for example, 11110 in base-8 would be represented as 8888 in $k$-adic notation.</p>
+<p>This is where the great free speech conundrum manifests itself. In an ideal world, a government would want its population to exercise free speech. What it does not want is to have foreign entities abuse local free speech policies to foster dissent and general social unrest. But how does one go about filtering out the “evil” speech from the “good” speech. When do you cross the line and start encroaching on the free speech rights of your own citizens? This is an incredibly hard problem that deserves more awareness and discussion than it receives today. I am of the opinion that people are quick to shun certain policies that have potential to violate free speech but is at the same time, necessary to protect the population from foreign, malevolent forces.</p>
 
-<h2 id="from-base-10-to-k-adic-notation">From base-10 to $k$-adic notation</h2>
+<blockquote>
+  <p>But how does one go about filtering out the “evil” speech from the “good” speech. When do you cross the line and start encroaching on the free speech rights of your own citizens? This is an incredibly hard problem that deserves more awareness and discussion than it receives today.</p>
+</blockquote>
 
-<p>So, given the understanding of $k$-adic notation, the problem can be solved with a character array where index 0 is mapped to nothing and indices start at 1. We then iterate from 1 to $N^M + N^{M - 1} + \ldots + N$ and convert each integer from base-10 to the $k$-adic notation equivalent before generating the particular string ($N^M + N^{M - 1} + \ldots + N$ is the largest number that has a string representation of length $M$ in $N$-adic). The only question left is how do we convert from base-10 to $k$-adic.</p>
-
-<p>The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the base-10 number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-a_0 & = x - q_0 k, q_0 = \lceil \frac{x}{k} \rceil - 1 \\
-a_1 & = q_0 - q_1 k, q_1 = \lceil \frac{q_0}{k} \rceil - 1 \\
-& \ldots \\
-a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
-\end{align} %]]></script>
+<p>In any case, my main goal for this post is to hopefully get the reader thinking about this issue. As I’ve mentioned before, there is really no easy solution to the free speech conundrum (case in point, the NSA). However, I am hopeful that there is definitely a solution out there that correctly balances free speech and “internet protection” (sorry, I couldn’t think of a better term…) and the more dialogue there is on this issue, the faster we can reach a sensible compromise.</p>
 
     </div>
   </div>
@@ -188,10 +180,8 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" style="float: left" href="/blog/2014/12/27/notes-on-binary-indexed-trees/" title="Previous Post: Notes on Binary Indexed Trees (Fenwick Trees)">&laquo; Notes on Binary Indexed Trees (Fenwick Trees)</a>
+            <a class="basic-alignment left" style="float: left" href="/blog/2016/03/12/on-growing-up-with-anxiety/" title="Previous Post: On growing up with anxiety...">&laquo; On growing up with anxiety&#8230;</a>
           
-          
-            <a class="basic-alignment right" style="float: right" href="/blog/2015/01/06/euler-angles-and-gimbal-lock/" title="Next Post: Euler Angles and Gimbal Lock">Euler Angles and Gimbal Lock &raquo;</a>
           
         </p>
       </div>
@@ -229,8 +219,8 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/';
-        var disqus_url = 'http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/';
+        var disqus_identifier = 'http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/';
+        var disqus_url = 'http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/';
         var disqus_script = 'embed.js';
       
     (function () {
