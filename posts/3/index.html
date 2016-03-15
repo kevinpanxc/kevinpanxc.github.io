@@ -130,6 +130,69 @@ MathJax.Hub.Config({
 
 
 
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-31T18:37:41-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>6:37 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/">Bijective numeration and length-restricted character permutations</a></h1>
+      <p>Based on this awesome StackOverflow <a href="http://stackoverflow.com/a/15625853">answer</a>…</p>
+
+<p>Consider the problem where you have a size $N$ set of characters and you need to the generate all possible strings from this set that have length less than or equal to $M$.</p>
+
+<p>Let’s represent the set of characters programmatically as a character array. In this array, each character is mapped to an integer index starting from 0 all the way to $N - 1$. Now consider a base-$N$ numeral system. In this system, there are $N$ symbols to represent the $N$ numbers below 10. We also know that in this system, $N^M - 1$ will evaluate to the largest number that has a string representation of length $M$. So to generate all strings with length less than or equal to $M$, we could just enumerate from 0 to $N^M - 1$ in base $N$ and for each base-$N$ integer, we can create a valid string by replacing each digit of the integer with the character that has the same array index.</p>
+
+<p>For example, if the character array was <code>{'a', 'b', 'c', '3'}</code> and a base-4 number was 312, the equivalent string is <code>3bc</code>.</p>
+
+<p>However, there is a slight problem with this. The strings generated are missing strings with multiple leading characters that is the first character in the array (AKA the character mapped to the 0 index). This is because when you’re iterating from 0 to $N^M - 1$, you would never reach $0000$, for example, since this is just 0. From the above example, that means that you’re missing the string <code>aaaa</code>, even though it is a perfectly valid string if 4 is less than or equal to $M$.</p>
+
+<p>This is where a bijective numeration becomes helpful. A bijective numeration, according to <a href="http://en.wikipedia.org/wiki/Bijective_numeration">Wikipedia</a> is: “any numeral system in which every non-negative integer can be represented in exactly one way using a finite string of digits”.</p>
+
+<p>Conventional numeral systems often have multiple ways to represent the same integer and thus are not bijective. For example, in the numeral system that we’re all familiar with, the Hindu-Arabic numeral system, you can represent the integer 1 an infinite number of ways just by tacking any number of 0’s in front of it. A bijective base-k numeration system ($k$-adic notation) circumvents this by getting rid of the symbol 0 altogether. The value 0 is represented with the empty string, $\varepsilon$. A digit-set of {1, 2, …, k} is used to represent the rest of the positive integers. So, for example, 11110 in base-8 would be represented as 8888 in $k$-adic notation.</p>
+
+<h2 id="from-base-10-to-k-adic-notation">From base-10 to $k$-adic notation</h2>
+
+<p>So, given the understanding of $k$-adic notation, the problem can be solved with a character array where index 0 is mapped to nothing and indices start at 1. We then iterate from 1 to $N^M + N^{M - 1} + \ldots + N$ and convert each integer from base-10 to the $k$-adic notation equivalent before generating the particular string ($N^M + N^{M - 1} + \ldots + N$ is the largest number that has a string representation of length $M$ in $N$-adic). The only question left is how do we convert from base-10 to $k$-adic.</p>
+
+<p>The algorithm is as complex as the algorithm that converts base-10 to base-$N$. Suppose $x$ is the base-10 number we need to convert from and the $k$-adic equivalent is represented by the digit-string $a_n a_{n_1} \ldots a_1 a_0$, then:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+a_0 & = x - q_0 k, q_0 = \lceil \frac{x}{k} \rceil - 1 \\
+a_1 & = q_0 - q_1 k, q_1 = \lceil \frac{q_0}{k} \rceil - 1 \\
+& \ldots \\
+a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
+\end{align} %]]></script>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
 <i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-27T13:52:31-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:52 pm</span></time></h5>
           <div class="row-fluid">
           
@@ -386,148 +449,10 @@ k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
 
     </article>
     
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-11-29T22:22:42-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:22 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/11/29/some-notes-on-the-mercator-projection/">Some notes on the Mercator projection</a></h1>
-      <p>A while back I was investigating on how I would build a Twitter mapping application similar to the <a href="http://www.onemilliontweetmap.com/">One Million Tweet Map</a> project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.</p>
-
-<p>The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of <a href="http://en.wikipedia.org/wiki/Mercator_projection">Wikipedia</a> and here is a concise summary of what I’ve learnt.</p>
-
-<p>The Mercator projection is a cylindrical map projection. This means that meridians are mapped to equally spaced vertical lines and circles of latitudes are mapped to equally spaced horizontal lines. The projection assumes that the Earth is a perfect sphere (in truth the Earth is best modelled by an oblate spheroid). Our map will be a Mercator projection of a scaled down version of the perfectly spherical Earth. This scaled down version of the Earth will be called the globe and it has a radius $R$.</p>
-
-<p>The Mercator projection can be understood using small element geometry. The idea is that if we “unwrap” the globe and spread it flat as best we could, very small elements or sections on the globe can be modelled using a rectangle. The diagram below visualizes this idea ($\lambda$ represents the longitude and $\phi$ represents the latitude).</p>
-
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/d/d0/CylProj_infinitesimals2.svg" alt="Alt text" /></p>
-
-<p>The perpendicular distance from the axis of rotation to any point on the globe at latitude $\phi$ is $R \cdot \cos\phi$ and so we get $R \cdot \cos\phi \cdot \delta\lambda$ as the horizontal distance between $P$ and $Q$ using the arc length formula.</p>
-
-<p>The vertical distance between $P$ and $Q$ can also be explained using the same logic. Since latitudes are measured from the center of the globe and the difference in latitude between $P$ and $Q$ is $\delta\phi$, using the arc length formula again gives us $R \cdot \delta\phi$.</p>
-
-<p>With this information, we define two scale factors from globe to cylinder:</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-k(\phi) & =\frac{P'M'}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor} \\
-h(\phi) & =\frac{P'K'}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}
-\end{align} %]]></script>
-
-<h2 id="mapping-from-longitudes-to-x-coordinates">Mapping from longitudes to x coordinates</h2>
-
-<p>We note that for small $\delta\lambda$, $\delta x = R \cdot \delta\lambda$. From this equation, we can obtain the mapping function from longitudes to x coordinates (one half of the Mercator projection). $\delta x = R \cdot \delta\lambda$ is a very simple rearranged first order linear differential equation and we can solve it quickly.</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-\delta x & = R \cdot \delta\lambda \\
-\int \delta x & = R \cdot \int \delta\lambda \\
-x + c_1 & = R \cdot (\lambda + c_2) \\
-x & = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
-& = R(\lambda - \lambda_0)
-\end{align} %]]></script>
-
-<p>Here $\lambda_0$ is the longitude of an arbitrary central meridian (this is usually Greenwich).</p>
-
-<h2 id="mapping-from-latitudes-to-y-coordinates">Mapping from latitudes to y coordinates</h2>
-
-<p>Before starting, it is important to understand that the Mercator projection is conformal. This means that the projection of points from the globe to the cylinder preserves angles. This property can be defined in two ways:</p>
-
-<ol>
-  <li>Equality of angles $\beta = \alpha$</li>
-  <li>Isotropy of scale factors: $h = k$</li>
-</ol>
-
-<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us:</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-\frac{1}{\cos\phi} & = k(\phi) \\
-& = h(\phi)\tag{from (2)} \\
-& = \frac{\delta y}{R \cdot \delta\phi} \\
-\frac{\delta y}{\delta\phi} & = R \cdot \sec\phi
-\end{align} %]]></script>
-
-<p>Solving this differential equation gives us the mapping function from latitudes to y coordinates:</p>
-
-<script type="math/tex; mode=display">y = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]</script>
-
-<h2 id="finding-the-radius-of-the-globe-r">Finding the radius of the globe, $R$</h2>
-
-<p>But wait, there’s more! All this time we’ve been working with the radius of the globe, $R$, but what exactly is it’s value once we put the projection into practice?</p>
-
-<p>Since the Mercator projection is cylindrical, the scale factor between the globe and the cylinder equals one only at the equator. This means that the circumference of the cylinder will equal the circumference of the globe and so the horizontal length of the physical map will equal $2 \cdot \pi \cdot R$.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Finally, we can define the Mercator projection with these three equations (where z equals the horizontal length of the physical map):</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-R & = \frac{z}{2 \cdot \pi} \\
-x & = R(\lambda - \lambda_0) \\
-y & = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
-\end{align} %]]></script>
-
-<h2 id="inaccuracies-with-the-projection">Inaccuracies with the projection</h2>
-
-<p>Interestingly, despite being one of the most popular projections in the world, the Mercator projection is grossly inaccurate in representing the relative sizes of different land masses. In particular, land masses get bloated the closer to the poles you go up to a point where the projection is not even capable of displaying the poles.</p>
-
-<p><img src="http://media.economist.com/sites/default/files/imagecache/original-size/20101113_WOM943.gif" alt="Alt text" /></p>
-
-<p>This weird property of the projection can be understood by examining the parallel scale factor ($k(\phi)=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}$). As we approach the poles, the latitudes approach $\pm 90^o$ and we know that $\cos\phi$ approaches $0$. Since $\cos\phi$ is in the denominator of the scale factor, the factor approaches $\infty$. An accurate projection will require the parallel scale factor to be $1$ everywhere.</p>
-
-<p>This explains why land masses closer to the poles get bloated while the poles cannot be represented since they would technically have infinite width on the projection.</p>
-
-<hr />
-
-<h5 id="sidenote">Sidenote</h5>
-
-<p>We can derive the latitude mapping function a second way.</p>
-
-<p>For small elements, we note that $\measuredangle PKQ$ is a right angle and so we get the two equations:</p>
-
-<script type="math/tex; mode=display">\begin{aligned}
-\tan\delta = \frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi}, \tan\beta = \frac{\delta x}{\delta y}
-\end{aligned}</script>
-
-<p>From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.</p>
-
-<blockquote>
-  <p>Two random variables were talking in a bar. They thought they were being discrete but I heard their chatter continuously</p>
-</blockquote>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
   
   <div class="pagination">
+    
+    <a class="prev" href="/posts/4">&larr; Older</a>
     
 
     

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://kevinpan.me/blog/2016/03/14/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/</loc>
+<lastmod>2016-03-14T23:20:14-07:00</lastmod>
+</url>
+<url>
 <loc>http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/</loc>
 <lastmod>2016-03-13T16:34:00-07:00</lastmod>
 </url>
@@ -47,5 +51,8 @@
 </url>
 <url>
 <loc>http://kevinpan.me/posts/3/</loc>
+</url>
+<url>
+<loc>http://kevinpan.me/posts/4/</loc>
 </url>
 </urlset>
