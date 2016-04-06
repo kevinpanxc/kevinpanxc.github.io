@@ -54,4 +54,4 @@ So I paddle and I paddle and the afternoon sun kept beating down on me and I kep
 
 We had no idea things were going to get much, much worse.
 
-PS: I'm not sorry for the title pun ☺
+PS: definitely not sorry for the title pun
