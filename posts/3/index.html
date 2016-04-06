@@ -130,6 +130,118 @@ MathJax.Hub.Config({
 
 
 
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2015-01-06T10:09:27-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:09 am</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2015/01/06/euler-angles-and-gimbal-lock/">Euler Angles and Gimbal Lock</a></h1>
+      <p>A couple months ago, a friend of mine wrote a blog <a href="http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/">post</a> about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested in learning more about Euler angles and exactly how gimbal lock works.</p>
+
+<p>Fundamentally, Euler angles are three angles that are used to describe the orientation of a rigid body in 3D space. The rigid body itself has a local coordinate system that is initially aligned with a fixed global coordinate system. Each Euler angle then represents an elemental rotation of that local coordinate system about one of its three axes. From this, it should be understood that any specific elemental rotation will depend on all prior elemental rotations.</p>
+
+<div style="text-align: center">
+    <iframe width="420" height="315" src="//www.youtube.com/embed/Quvb54gttUg" frameborder="0" allowfullscreen=""></iframe> 
+</div>
+
+<p>There are 12 possible sequences of rotation axes for any set of Euler angles; the most popular of which is what’s commonly referred to as the 3-2-1 set of Euler angles. In aeronautical terms, this set of Euler angles describes, in order, the yaw, pitch, and roll of an aircraft.</p>
+
+<div style="text-align: center">
+    <img src="http://www.allstar.fiu.edu/aero/images/pic5-1.gif" />
+</div>
+
+<h2 id="gimbal-lock">Gimbal lock</h2>
+
+<p><img align="right" src="http://upload.wikimedia.org/wikipedia/commons/d/d5/Gyroscope_operation.gif" /></p>
+
+<p>A gimbal is, according to Wikipedia, a “ring that is suspended so [that] it can rotate about an axis” and gimbals are “typically nested one within another to accomodate rotation about multiple axes”. As such, a nested three-gimbal system can be used to physically model any 3D rotation based on Euler angles.</p>
+
+<p>Gimbal lock occurs when the middle gimbal rotates in such a way that causes the outer and inner gimbals to align in a plane. In this case, rotating both these gimbals in effect only rotates the rigid body on one axis. The resulting system can only rotate on two axes and it has lost one degree of freedom.</p>
+
+<h2 id="gimbal-lock-and-matrices">Gimbal lock and matrices</h2>
+
+<p>Any 2D rotation in 3D space can be described using a matrix. For example, the matrix below represents a rotation about the $z$-axis with a counter-clockwise angle of $\theta$ (a positive angle if you use the right-hand rule).</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0\\
+\sin\theta & \cos\theta & 0\\
+0 & 0 & 1
+\end{bmatrix} %]]></script>
+
+<p>The gimbal lock problem can be shown mathematically by representing a 3D rotation based on Euler angles with matrices. For a 3-2-1 rotation, the corresponding mathematical expression would be:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+R = 
+\begin{bmatrix}1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\\end{bmatrix}
+\begin{bmatrix}\cos\beta & 0 & \sin\beta\\ 0 & 1 & 0\\ -\sin\beta & 0 & \cos\beta\end{bmatrix}
+\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix} %]]></script>
+
+<p>The rightmost matrix represents a rotation about the $z$-axis (yaw), the middle matrix represents a rotation about the $y$-axis (pitch), and the leftmost matrix represents a rotation about the $x$-axis (roll). If the pitch angle, $\beta$, was set to $\frac{\pi}{2}$, which basically means the aircraft is pointing straight up, we get:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+R & = 
+\begin{bmatrix}
+1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\
+\end{bmatrix}
+\begin{bmatrix}
+0 & 0 & 1\\0 & 1 & 0\\-1 & 0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1
+\end{bmatrix} \\
+
+& =
+\begin{bmatrix}
+0 & 0 & 1 \\ \sin\alpha\cos\gamma + \cos\alpha\sin\gamma & -\sin\alpha\cos\gamma + \cos\alpha\sin\gamma & 0\\ -\cos\alpha\cos\gamma + \sin\alpha\sin\gamma & \cos\alpha\cos\gamma + \sin\alpha\sin\gamma & 0\\
+\end{bmatrix} \\
+
+& = 
+\begin{bmatrix}
+0 & 0 & 1 \\ \sin(\alpha + \gamma) & \cos(\alpha + \gamma) & 0\\ -\cos(\alpha + \gamma) & \sin(\alpha + \gamma) & 0\\
+\end{bmatrix}
+\end{aligned} %]]></script>
+
+<p>From the above matrix, you can tell that in this state, there is no distinction between yaw and pitch. Applying one change to the yaw angle has the exact effect on the orientation of the aircraft as applying the same change to the roll angle. The system has lost one degree of freedom.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Although I’ve only mathematically shown how gimbal lock occurs in a 3-2-1 system, it is important to note that there is always the possibility of gimbal lock in any other rotation axes sequence. This is a fundamental problem for Euler angles as the map from Euler angles to rotations is not a covering map. In layman’s terms, this means that it is not possible to use Euler angles to represent every 3D rotation. Specifically, for certain values of the second angle, gimbal lock will occur.</p>
+
+<p>Gimbal lock in Euler angles is of practical concern today particularly in the fields of 3D animations and robotics. When it does occur, it leads to weird and undesirable rotation artifacts. Fortunately, there are multiple solutions to this problem. Mechanically, gimbal lock can be solved by adding a fourth gimbal. For 3D animations, a popular solution is to use quarternions instead of Euler angles in calculating rotations.</p>
+
+<p>If, for any reason, you are still confused about what gimbal lock is or how it works, I definitely recommend watching this <a href="https://www.youtube.com/watch?v=zc8b2Jo7mno">video</a>.</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
 <i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-31T18:37:41-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>6:37 pm</span></time></h5>
           <div class="row-fluid">
           
@@ -276,169 +388,6 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
 <h2 id="other-operations">Other operations</h2>
 
 <p>I’ve only written about the two most basic operations you can do with a binary indexed tree. If you would like to learn more, the TopCoder article I mentioned above provides indepth explanations into many others.</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-06T16:10:31-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:10 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/12/06/notes-on-rsa/">Notes on RSA Cryptography</a></h1>
-      <p>I first learnt about RSA cryptography during an introductory number theory course in my second study term in university. Like many things you learn in class, the details tend to quickly be forgotten once the exam’s over. RSA was no exception. However, I’ve always been strangely annoyed for not fully understanding how this cryptosystem works and so I intend for this post to act as a “reference sheet” for RSA.</p>
-
-<p>In RSA cryptography, there are two keys: a public key and a private key. The sender of a message uses the public key to encrypt the message and the idea is that you can only decrypt the message if you have the private key associated with that public key.</p>
-
-<h2 id="generating-keys">Generating keys</h2>
-
-<ol>
-  <li>Select two <strong>large</strong> distinct primes $p$ and $q$. Let $n = pq$</li>
-  <li>Select $e \in \mathbb{Z}$ such that $GCD(e, \phi(n)) = 1$ and $1 \lt e \lt \phi(n)$, where $GCD$ is the greatest common denominator function</li>
-  <li>Solve congruence $ed \equiv 1 (\textrm{mod}\ \phi(n))$ for $d$ where $d \in \mathbb{Z}, 1 &lt; d &lt; \phi(n)$</li>
-</ol>
-
-<p>The public key will be the tuple $(e, n)$ and the private key will be the tuple $(d, n)$. Note, $\phi(n)$ here refers to <a href="http://en.wikipedia.org/wiki/Euler%27s_totient_function">Euler’s totient function</a>, which is the number of positive integers less than or equal to n that are coprime with n. It also has the property that if two integers, $m$ and $n$ are coprime, then $\phi(mn) = \phi(m)\phi(n)$. Using this property and the fact that $p$ and $q$ are coprimes (since they are both primes), we note that $\phi(n) = \phi(pq) = \phi(p)\phi(q) = (p - 1)(q - 1)$.</p>
-
-<h2 id="encrypting-and-decrypting-messages">Encrypting and decrypting messages</h2>
-
-<p>Let $M$ be the message we want to encrypt. $M$ is an integer such that $0 \leq M \lt n$. The encrypted message will be $C$ where $C \equiv M^{e} (\textrm{mod}\ n), 0 \leq C \lt n $.</p>
-
-<p>To decrypt the message, the receiver needs to compute integer $R$ where $R \equiv C^{d} (\textrm{mod}\ n), 0 \leq R \lt n$. It is actually the case that $R \equiv M (\textrm{mod}\ n)$ and since $0 \leq R \lt n$, $R = M$.</p>
-
-<p>Overall, we need to prove that $(M^{e})^{d} \equiv M (\textrm{mod}\ n), \forall M \in \mathbb{Z}$.</p>
-
-<h2 id="proof">Proof</h2>
-
-<p>(This proof is really just my version of <a href="http://crypto.stackexchange.com/questions/2884/rsa-proof-of-correctness">this</a>)</p>
-
-<p>We can break the proof into two cases, $GCD(M, n) = 1$ and $GCD(M, n) \neq 1$.</p>
-
-<hr />
-
-<p><strong>Case 1 ($GCD(M, n) = 1$):</strong></p>
-
-<p>We start off by using Euler’s totient theorem which states that:</p>
-
-<blockquote>
-  <p>If $GCD(A, B) = 1$ then $A^{\phi(B)} \equiv 1 (\textrm{mod}\ B)$. In our case, since $GCD(M, n) = 1$, then $M^{\phi(n)} \equiv 1 (\textrm{mod}\ n)$.</p>
-</blockquote>
-
-<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that:</p>
-
-<script type="math/tex; mode=display">(M^{e})^{d} = M^{ed} = M^{1 + k\phi(n)} = M(M^{k\phi(n)})</script>
-
-<p>Using the above fact:</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-M^{\phi(n)} & \equiv 1 (\textrm{mod}\ n) \\
-M^{k\phi(n)} & \equiv 1^{k} (\textrm{mod}\ n) \\
-M^{k\phi(n)} & \equiv 1 (\textrm{mod}\ n) \\
-M(M^{k\phi(n)}) & \equiv M (\textrm{mod}\ n) \\
-M^{ed} & \equiv M (\textrm{mod}\ n)
-\end{align} %]]></script>
-
-<hr />
-
-<p><strong>Case 2 ($GCD(M, n) \neq 1$):</strong></p>
-
-<p>We will use the Chinese remainder theorem to prove this.</p>
-
-<blockquote>
-  <p>A more specific version of the theorem states that:</p>
-</blockquote>
-
-<blockquote>
-  <script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-x & \equiv y (\textrm{mod}\ A_1) \\
-& ... \\
-x & \equiv y (\textrm{mod}\ A_k) \\
-\\
-\text{if and only if...} \\
-\\
-x & \equiv y (\textrm{mod}\ A)
-\end{align} %]]></script>
-</blockquote>
-
-<blockquote>
-  <p>where $A_1, …, A_k$ are <strong>pairwise</strong> coprime and $A = A_1…A_k$.</p>
-</blockquote>
-
-<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$:</p>
-
-<script type="math/tex; mode=display">\begin{align}
-(M^{e})^{d} \equiv M (\textrm{mod}\ p)\tag{1} \\
-(M^{e})^{d} \equiv M (\textrm{mod}\ q)\tag{2}
-\end{align}</script>
-
-<p>Since $GCD(M, n) \neq 1$, it must be true that either $GCD(M, n) = p$ or $GCD(M, n) = q$.</p>
-
-<p>Without loss of generality, let’s assume that $GCD(M, n) = p$. Since $M$ is a multiple of $p$, let $M = kp, k \in \mathbb{Z}, k \gt 0$.</p>
-
-<p>To prove (1):</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-M & \equiv kp (\textrm{mod}\ p) \\
-M & \equiv 0 (\textrm{mod}\ p) \\
-\\
-\text{Using the above fact...} \\
-\\
-(M^{e})^{d} & \equiv M (\textrm{mod}\ p) \\
-((kp)^{e})^{d} & \equiv M (\textrm{mod}\ p) \\
-k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
-0 & \equiv 0 (\textrm{mod}\ p)
-\end{align} %]]></script>
-
-<p>For (2), we note that since $M = kp$, if $q$ divides $M$, then $q$ must divide either $k$ or $p$. $q$ cannot divide $p$ since they are both primes and $q$ cannot divide $k$. If $q$ does divide $k$, then it implies $M \geq n$ which $M$ cannot be. We reach the conclusion that $GCD(M, q) = 1$. By Euler’s totient theorem, $M^{\phi(q)} = M^{q - 1} \equiv 1 (\textrm{mod}\ q)$.</p>
-
-<script type="math/tex; mode=display">% <![CDATA[
-\begin{align}
-(M^{e})^{d} & = M^{ed} \\
-& = M^{ed - 1}M \\
-& = M^{k\phi(n)}M\tag{from before} \\
-& = (M^{q - 1})^{k(p - 1)}M \\
-& \equiv 1^{k(p - 1)}M (\textrm{mod}\ q) \\
-& \equiv M (\textrm{mod}\ q)\tag*{$\square$}
-\end{align} %]]></script>
-
-<h2 id="why-is-rsa-secure">Why is RSA secure?</h2>
-
-<p>The answer to this question lies in the fact that it is nearly impossible (by our current computing capabilities) to determine the private key from its corresponding public key, especially if the primes chosen are sufficiently large.</p>
-
-<p>If the public key was $(e, n)$, then remember that to determine the private key you need to solve the congruence $ed \equiv 1 (\textrm{mod}\ \phi(n)), 1 \lt d \lt \phi(n)\ \text{and}\ \phi(n) = (p - 1)(q - 1)$. The best way to do so, without actually knowing what $\phi(n)$ is, is to prime factorize $n$ into its only two prime factors. This, as it turns out, is a very very hard thing to do. There <a href="http://en.wikipedia.org/wiki/Integer_factorization">doesn’t exist an algorithm</a> (with the exception of quantum algorithms) that can solve the problem in polynomial time.</p>
-
-<blockquote>
-  <p>I made a movie about cosmic cookware. It was universally panned.</p>
-</blockquote>
 
       
       
