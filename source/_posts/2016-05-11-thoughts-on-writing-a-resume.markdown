@@ -16,7 +16,7 @@ One way to make a positive impression in a short time frame is to highlight the 
 
 I saw a few resumes last night that had some really impressive achievements listed. For example, this person ranked in the top 2% for some programming competition and had multiple very successful side projects. Unfortunately, these achievements were all near the bottom of the resume and I had to trudge through hefty job descriptions to finally notice them. There were definitely ways to make these achievements more apparent. 
 
-Exceptional achievements are what many recruiter's like to see and should not be underestimated. If you have them, leverage them as much as you can!
+Exceptional achievements are what many recruiters like to see and should not be underestimated. If you have them, leverage them as much as you can!
 
 # LEADERSHIP over INDEPENDENCE
 
