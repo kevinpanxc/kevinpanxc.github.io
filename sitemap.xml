@@ -1,62 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://kevinpan.me/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2/</loc>
-<lastmod>2016-04-04T15:56:16-07:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2016/03/14/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/</loc>
-<lastmod>2016-03-14T23:20:14-07:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/</loc>
-<lastmod>2016-03-13T16:34:00-07:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</loc>
-<lastmod>2016-03-12T02:48:25-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/</loc>
-<lastmod>2015-05-17T20:48:56-07:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution/</loc>
-<lastmod>2015-01-16T12:20:09-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2015/01/06/euler-angles-and-gimbal-lock/</loc>
-<lastmod>2015-01-06T10:09:27-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/</loc>
-<lastmod>2014-12-31T18:37:41-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2014/12/27/notes-on-binary-indexed-trees/</loc>
-<lastmod>2014-12-27T13:52:31-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2014/12/06/notes-on-rsa/</loc>
-<lastmod>2014-12-06T16:10:31-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/</loc>
-<lastmod>2014-11-29T22:22:42-08:00</lastmod>
-</url>
-<url>
-<loc>http://kevinpan.me/blog/archives/</loc>
-</url>
-<url>
-<loc>http://kevinpan.me/</loc>
-</url>
-<url>
-<loc>http://kevinpan.me/posts/2/</loc>
-</url>
-<url>
-<loc>http://kevinpan.me/posts/3/</loc>
-</url>
-<url>
-<loc>http://kevinpan.me/posts/4/</loc>
-</url>
+  <url>
+    <loc>http://kevinpan.me/blog/2016/05/11/thoughts-on-writing-a-resume/</loc>
+    <lastmod>2016-05-11T14:05:37-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2/</loc>
+    <lastmod>2016-04-04T18:56:16-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2016/03/15/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/</loc>
+    <lastmod>2016-03-15T02:20:14-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/</loc>
+    <lastmod>2016-03-13T19:34:00-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</loc>
+    <lastmod>2016-03-12T05:48:25-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/</loc>
+    <lastmod>2015-05-17T23:48:56-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution/</loc>
+    <lastmod>2015-01-16T15:20:09-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2015/01/06/euler-angles-and-gimbal-lock/</loc>
+    <lastmod>2015-01-06T13:09:27-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/</loc>
+    <lastmod>2014-12-31T21:37:41-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2014/12/27/notes-on-binary-indexed-trees/</loc>
+    <lastmod>2014-12-27T16:52:31-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2014/12/06/notes-on-rsa/</loc>
+    <lastmod>2014-12-06T19:10:31-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection/</loc>
+    <lastmod>2014-11-30T01:22:42-05:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/</loc>
+    <lastmod>2016-05-11T23:02:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://kevinpan.me/blog/archives/</loc>
+    <lastmod>2016-05-11T23:02:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

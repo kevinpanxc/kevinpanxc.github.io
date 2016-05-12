@@ -4,7 +4,7 @@
   <title><![CDATA[Mango Ice Cream]]></title>
   <link href="http://kevinpan.me/atom.xml" rel="self"/>
   <link href="http://kevinpan.me/"/>
-  <updated>2016-04-06T00:18:42-07:00</updated>
+  <updated>2016-05-11T23:02:49-04:00</updated>
   <id>http://kevinpan.me/</id>
   <author>
     <name><![CDATA[Kevin Pan]]></name>
@@ -14,43 +14,111 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Thoughts on Writing a Resume]]></title>
+    <link href="http://kevinpan.me/blog/2016/05/11/thoughts-on-writing-a-resume/"/>
+    <updated>2016-05-11T14:05:37-04:00</updated>
+    <id>http://kevinpan.me/blog/2016/05/11/thoughts-on-writing-a-resume</id>
+    <content type="html"><![CDATA[<p>Yesterday I attended a resume critique session for lower year Software Engineers. I was able to critique four or five resumes and noticed a few common mistakes people tended to make. I wish I could’ve gone through more but my time is limited and I hope that through writing this blog post, I can reach out and help significantly more people than I ever could going over resumes one at a time.</p>
+
+<p>When I solve problems, I often prefer to take a step back and tackle them from first principles. How does this apply to resume-writing? Well the fundamental challenge is to successfully advertise yourself to recruiters… recruiters who are often looking through large piles of resumes trying to find the best candidates to interview. I really want to emphasize this point, it is often the case that recruiters do not have significant time to spend reading your resume given how many others they have to go over. Understand this constraint and create a resume that optimizes for it.</p>
+
+<h1 id="highlight-what-makes-you-exceptional">Highlight what makes you exceptional</h1>
+
+<p>One way to make a positive impression in a short time frame is to highlight the achievements that distinguish you from the crowd. Highlight them as aggressively as you can within aesthetic and organizational boundaries. These achievements could include programming competition awards, a mobile app getting X amount of downloads, basically anything that you did that someone else most likely couldn’t have done as well. Optimally, they should be able to be seen and understood with one cursory scan of the resume. Consider experimenting with your friends to see how noticeable they are.</p>
+
+<p>I saw a few resumes last night that had some really impressive achievements listed. For example, this person ranked in the top 2% for some programming competition and had multiple very successful side projects. Unfortunately, these achievements were all near the bottom of the resume and I had to trudge through hefty job descriptions to finally notice them. There were definitely ways to make these achievements more apparent. </p>
+
+<p>Exceptional achievements are what many recruiter’s like to see and should not be underestimated. If you have them, leverage them as much as you can!</p>
+
+<h1 id="leadership-over-independence">LEADERSHIP over INDEPENDENCE</h1>
+
+<p>A common trend I noticed last night was that people really liked highlighting that they were the sole developer on a project, that they “independently” built this piece of software. What they’re trying to say here is that they did a lot of work and have the technical capabilities to build something without significant help.</p>
+
+<p>Those are all great things to have, don’t get me wrong, but there is a much better way to phrase things. Recruiters are often looking for developers that are great communicators and team players. Emphasizing independent work does not attest to how great of a team player you might be and almost makes it seem like you worked as a separate entity from your team. Regardless if that’s true or not, you want to show the best of yourself on your resume.</p>
+
+<p>So instead of writing…</p>
+
+<blockquote>
+  <p>Independently built this feature or software…</p>
+</blockquote>
+
+<p>I suggest writing this…</p>
+
+<blockquote>
+  <p>Lead the development of this feature or software…</p>
+</blockquote>
+
+<p>Leadership is a very positive quality that all companies value highly. It does not rule out working well independently nor does it rule out being a great team player. In fact, it makes it sound as if you’re great at both!</p>
+
+<h1 id="be-concise-and-easily-understood">Be concise and easily understood</h1>
+
+<p>Some of the resumes I critiqued last night had many bloated bullet points. These points spanned multiple lines and discussed in great detail the technical aspects of the project. It seemed like the authors were trying to express the fact that they did a lot of work. They decided to do so by cramming as much information into a bullet point as it was stylistically acceptable.</p>
+
+<p>The reality is, a recruiter usually has a limited technical background and likely wouldn’t be able to appreciate the technical details of a project. Even for developers, if they were short on time, they are unlikely to put in the effort to read and fully understand the details. Sure they could infer that you must have worked hard from the amount you wrote, but they are left confused as to what you actually built and how important the work was.</p>
+
+<p>I think the best way to approach this is to split the point into two. Use the first point to describe, concisely and at a high level, what your project is about and why it is significant. Use the second point to state directly that you worked hard, that you did a lot of things behind the scenes to make your project a success.</p>
+
+<p>For example, instead of saying…</p>
+
+<ul>
+  <li>Learned Node.js and PostgreSQL to build an application that blah blah blah</li>
+</ul>
+
+<p>Break it into these points…</p>
+
+<ul>
+<li style="margin-bottom: 8px">Built an application that does this and is important because blah blah blah</li>
+<li>Learned Node.js and PostgreSQL for project. Researched and implemented these algorithms to make these features of the application possible etc.</li>
+</ul>
+
+<p>Now, your recruiter not only has a good idea about what you worked on, but also doesn’t have to infer that you are hardworking and capable. You took the initiative and expressed confidence by stating it directly.</p>
+
+<h1 id="what-over-how">WHAT over HOW</h1>
+
+<p>This point is somewhat related to the previous point. Some resumes last night had the tendency to prioritise technical details over what the work was able to accomplish. For example, the technical aspects were either elaborated on first or bolded. As software engineers, we tend to get caught up in the details of the underlying design and the code. This is perfectly reasonable, writing software is not easy and it’s these details that result in technical success. Unfortunately, as mentioned before, it is often the case that the resume screener either does not have a strong technical background or does not have the time to understand these details, especially if it was outside of their domain. You are much better off describing the results of your work and their importance before following up with the technical elements. The reader will have an easier time understanding your work and you will more likely hold their interest.</p>
+
+<p>I’m also going to go on a whim here and say that people are generally more interested in the results rather than how the results were achieved. Do car commercials ever spend significant time showing off how a car was built or how they were able to achieve that high mileage?</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Santa Cruz-ing down Carillo Highway (Part 2)]]></title>
     <link href="http://kevinpan.me/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2/"/>
-    <updated>2016-04-04T15:56:16-07:00</updated>
+    <updated>2016-04-04T18:56:16-04:00</updated>
     <id>http://kevinpan.me/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2</id>
-    <content type="html"><![CDATA[<p>Having biked 10 miles down Highway 1 from Half Moon Bay, Google Maps wanted us to veer off the highway onto a small road known as Stage Road. Apparently the next stretch of highway was hazardous enough for biking to warrant going into the mountains again. At the time, I had no idea this was the case since Michelle was the one with the offline map downloaded. In any case, looking at the route now, the detour consisted of several hundred meter climbs, up and down, up and down… Definitely not ideal for biking. Why Google Maps would ever suggest going through this route versus the alternative of heading straight south on Highway 1 is a mystery to me.</p>
+    <content type="html"><![CDATA[<p>Having biked 10 miles down Highway 1 from Half Moon Bay, Google Maps wanted us to veer off the highway onto a small road known as Stage Road. Apparently the next stretch of highway was hazardous enough for biking to warrant going into the mountains again. At the time, I had no idea this was the case since Michelle was the one with the offline map downloaded. In any case, looking at the route now, the detour consisted of several hundred meter climbs, up and down, up and down… Definitely not ideal for biking. Why Google Maps would ever suggest going through this route versus the alternative of heading straight south on Highway 1 is a mystery to me.  </p>
 
 <div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/PJDTzoX.jpg" /></div>
 
-<p>We were met with a steep downhill as we entered Stage Road. As fun as downhill cycling is, I was quite worried. Another downhill meant another uphill if we ever decided to head back to Half Moon Bay and that was more than possible given my current state. The downhill ended at an intersection between Stage Road and La Honda Road and here was a quaint and rather large store known as the San Gregario General Store. I had a sinking suspicion that this store was the largest concentration of civilization we would encounter for miles from here on out and told Michelle we should stop here. It was somewhere between turning into Stage Road and stopping here that I decided I couldn’t go on any further. I told Michelle so and suggested that we should find a motel nearby and call it a day. Coming off our bikes, the first thing I checked was whether I could hail an Uber. This was a completely futile attempt. First of all, we were basically in the middle of nowhere and no sane Uber driver would ever expect any business here. Second, even if there was an Uber driver out there ready to rescue two stranded cyclists, we had no phone signal so that was the end of that.</p>
+<p>We were met with a steep downhill as we entered Stage Road. As fun as downhill cycling is, I was quite worried. Another downhill meant another uphill if we ever decided to head back to Half Moon Bay and that was more than possible given my current state. The downhill ended at an intersection between Stage Road and La Honda Road and here was a quaint and rather large store known as the San Gregario General Store. I had a sinking suspicion that this store was the largest concentration of civilization we would encounter for miles from here on out and told Michelle we should stop here. It was somewhere between turning into Stage Road and stopping here that I decided I couldn’t go on any further. I told Michelle so and suggested that we should find a motel nearby and call it a day. Coming off our bikes, the first thing I checked was whether I could hail an Uber. This was a completely futile attempt. First of all, we were basically in the middle of nowhere and no sane Uber driver would ever expect any business here. Second, even if there was an Uber driver out there ready to rescue two stranded cyclists, we had no phone signal so that was the end of that.  </p>
 
 <div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/9zjFEDt.jpg" /></div>
 
-<p>The next logical thing to do was to ask for help in the store. At the very least we get to take a break and plan our next moves. Walking into the store, I definitely felt like this was no ordinary roadside shop. The San Gregario General Store has what some Americans would refer to as an “old-country-store atmosphere”. What made it “old-country” for me was perhaps the myriad of small paintings, trinkets and ornaments on display combined with a gentle prevalence of wood. The store had an air of antiqueness to it. It exuded a sense of history.</p>
+<p>The next logical thing to do was to ask for help in the store. At the very least we get to take a break and plan our next moves. Walking into the store, I definitely felt like this was no ordinary roadside shop. The San Gregario General Store has what some Americans would refer to as an “old-country-store atmosphere”. What made it “old-country” for me was perhaps the myriad of small paintings, trinkets and ornaments on display combined with a gentle prevalence of wood. The store had an air of antiqueness to it. It exuded a sense of history.  </p>
 
-<p>The San Gregario General Store sold a wide assortment of very general things. You could find all the usual convenience store items like cold pop, energy bars, and candy. You could also find things you would expect in a souvenir store, like t-shirts, lapel pins, calendars, and mugs. The store also sold a large variety of books. There were books from all sorts of genres; paperback novels, history books, books on religion, books on geography, what have you. The store apparently sold “hardware” as well, though probably further back as I didn’t see any.</p>
+<p>The San Gregario General Store sold a wide assortment of very general things. You could find all the usual convenience store items like cold pop, energy bars, and candy. You could also find things you would expect in a souvenir store, like t-shirts, lapel pins, calendars, and mugs. The store also sold a large variety of books. There were books from all sorts of genres; paperback novels, history books, books on religion, books on geography, what have you. The store apparently sold “hardware” as well, though probably further back as I didn’t see any.  </p>
 
-<p>On a sunny Saturday afternoon, there were very many people here. It was generally a mix of bikers (the leather jacket, combustion engine kind) and weekend road-tripping families. I caught the bartender in one of the brief moments she had between taking orders and pouring drinks and inquired about lodging options nearby. “The nearest ones are 10 miles up north by Half Moon Bay, or you could also go 10 miles south. There’s a small hostel by the lighthouse.” Both options sounded terrible to me.</p>
+<p>On a sunny Saturday afternoon, there were very many people here. It was generally a mix of bikers (the leather jacket, combustion engine kind) and weekend road-tripping families. I caught the bartender in one of the brief moments she had between taking orders and pouring drinks and inquired about lodging options nearby. “The nearest ones are 10 miles up north by Half Moon Bay, or you could also go 10 miles south. There’s a small hostel by the lighthouse.” Both options sounded terrible to me.  </p>
 
-<p>Michelle was keen on the lighthouse hostel since, at the very least, we didn’t have to head back and lose progress. She had a weak signal on her phone and we tried to connect to the hostel’s website. It took ages. Completely frustrating. When the website finally loaded and we found a number to call, nothing comes up. The connection was so poor we gave up trying to find an address and directions.</p>
+<p>Michelle was keen on the lighthouse hostel since, at the very least, we didn’t have to head back and lose progress. She had a weak signal on her phone and we tried to connect to the hostel’s website. It took ages. Completely frustrating. When the website finally loaded and we found a number to call, nothing comes up. The connection was so poor we gave up trying to find an address and directions.  </p>
 
-<p>10 minutes later we found ourselves sitting by one of the tables in front of the bar. A few men with guitars and banjos walk up to the corner of the store and started setting up mic stands. Apparently there was going to be live music in the middle of the afternoon. How quaint. Michelle and I were in no mood to appreciate this though. Earlier, she had asked the bartender about getting a cab back to Half Moon Bay and was dismissively told that was not possible. The bartender grumpily mumbled something about “trying our Ubers”. Her attempts at asking for WiFi next were also handily denied.</p>
+<p>10 minutes later we found ourselves sitting by one of the tables in front of the bar. A few men with guitars and banjos walk up to the corner of the store and started setting up mic stands. Apparently there was going to be live music in the middle of the afternoon. How quaint. Michelle and I were in no mood to appreciate this though. Earlier, she had asked the bartender about getting a cab back to Half Moon Bay and was dismissively told that was not possible. The bartender grumpily mumbled something about “trying our Ubers”. Her attempts at asking for WiFi next were also handily denied.  </p>
 
-<p>Our options dwindled down to the most unattractive. Head back to Half Moon Bay or camp out somewhere in the middle of the road for the night? You can imagine how terrible I felt. On the one hand, I was exhausted and drowsy and on the other, I was disappointed at having let Michelle down. The men with the instruments had finished setting up and started their performance. Country music. I’m not surprised.</p>
+<p>Our options dwindled down to the most unattractive. Head back to Half Moon Bay or camp out somewhere in the middle of the road for the night? You can imagine how terrible I felt. On the one hand, I was exhausted and drowsy and on the other, I was disappointed at having let Michelle down. The men with the instruments had finished setting up and started their performance. Country music. I’m not surprised.  </p>
 
 <div style="text-align: center"><img style="width: 80%; margin-bottom: 20px;" src="http://imgur.com/7R7FWS0.jpg" /></div>
 
-<p>After what seemed like hours compressed into several minutes, Michelle and I decided we should just keep biking until we find a place by the road to sleep. What terrible circumstances we have found ourselves in… and it was all my fault. Exhaustion and guilt do not make for good companions, especially when you’re stranded in rural South Bay.</p>
+<p>After what seemed like hours compressed into several minutes, Michelle and I decided we should just keep biking until we find a place by the road to sleep. What terrible circumstances we have found ourselves in… and it was all my fault. Exhaustion and guilt do not make for good companions, especially when you’re stranded in rural South Bay.  </p>
 
-<p>Before heading out, I decided to buy more water just in case our current supply doesn’t last. Heading back to the store, I spot a middle-aged Asian lady by the counter. She was the only other Asian person we’ve met in our whole time here and I don’t know what came over me but I walked up to her, explained our situation, and asked whether she could give us a ride back to Half Moon Bay. With a look that was a clear mix of bewilderment and compassion, she told me she needed to consult with her husband first. Long story short. He agreed.</p>
+<p>Before heading out, I decided to buy more water just in case our current supply doesn’t last. Heading back to the store, I spot a middle-aged Asian lady by the counter. She was the only other Asian person we’ve met in our whole time here and I don’t know what came over me but I walked up to her, explained our situation, and asked whether she could give us a ride back to Half Moon Bay. With a look that was a clear mix of bewilderment and compassion, she told me she needed to consult with her husband first. Long story short. He agreed.  </p>
 
-<p>What a godsend. At the very last minute before heading out towards the mountains, we find a couple willing to cut their day trip short to drive us back to Half Moon Bay. I was incredibly relieved.</p>
+<p>What a godsend. At the very last minute before heading out towards the mountains, we find a couple willing to cut their day trip short to drive us back to Half Moon Bay. I was incredibly relieved.  </p>
 
-<p>George and Thida, as we would later learn of their names, drove a medium-sized BMW sedan and we were doubtful at first whether it would fit both our bikes. With a good deal of shuffling, the bikes eventually settled into the trunk in a rather haphazard fashion as half of the bikes dangled off the end. The bikes were secure, nevertheless, and soon we were well on our way back to town. I tried filling the ride back with small talk that was motivated almost entirely by guilt since I was the sole reason this was all happening in the first place. The side effect from this was that Michelle and I had to hide the fact that we were well off tech interns in the Bay Area. We made up companies, made up salaries, and made up living situations. It was unfortunate that there was even a morsel of a need to fuzzle information, especially for two people that were so gracious to help us. However, given our experience with the staff at the San Gregario General Store, I figured it was better to stay on the safe side.</p>
+<p>George and Thida, as we would later learn of their names, drove a medium-sized BMW sedan and we were doubtful at first whether it would fit both our bikes. With a good deal of shuffling, the bikes eventually settled into the trunk in a rather haphazard fashion as half of the bikes dangled off the end. The bikes were secure, nevertheless, and soon we were well on our way back to town. I tried filling the ride back with small talk that was motivated almost entirely by guilt since I was the sole reason this was all happening in the first place. The side effect from this was that Michelle and I had to hide the fact that we were well off tech interns in the Bay Area. We made up companies, made up salaries, and made up living situations. It was unfortunate that there was even a morsel of a need to fuzzle information, especially for two people that were so gracious to help us. However, given our experience with the staff at the San Gregario General Store, I figured it was better to stay on the safe side.  </p>
 
-<p>We were back in Half Moon Bay in no time and George and Thida dropped us off at a Comfort Inn. They gave us their contact information and bid farewell. I cannot put to words how grateful I am for their generosity. Honestly, there were times back in the store where I did not believe this was possible. Life can be such an emotional rollercoaster some times.</p>
+<p>We were back in Half Moon Bay in no time and George and Thida dropped us off at a Comfort Inn. They gave us their contact information and bid farewell. I cannot put to words how grateful I am for their generosity. Honestly, there were times back in the store where I did not believe this was possible. Life can be such an emotional rollercoaster some times.  </p>
 
-<p>After hours on end of biking, I have never been happier lying on a bed. For all I care, all my troubles were left behind back by that table in the San Gregario General Store. Tomorrow was going to be a better day!</p>
+<p>After hours on end of biking, I have never been happier lying on a bed. For all I care, all my troubles were left behind back by that table in the San Gregario General Store. Tomorrow was going to be a better day!  </p>
 
 <div style="text-align: center"><img style="width: 80%;" src="http://imgur.com/wESgFAK.jpg" /></div>
 ]]></content>
@@ -58,9 +126,9 @@
   
   <entry>
     <title type="html"><![CDATA[Santa Cruz-ing down Carillo Highway (Part 1)]]></title>
-    <link href="http://kevinpan.me/blog/2016/03/14/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/"/>
-    <updated>2016-03-14T23:20:14-07:00</updated>
-    <id>http://kevinpan.me/blog/2016/03/14/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits</id>
+    <link href="http://kevinpan.me/blog/2016/03/15/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/"/>
+    <updated>2016-03-15T02:20:14-04:00</updated>
+    <id>http://kevinpan.me/blog/2016/03/15/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits</id>
     <content type="html"><![CDATA[<p>Michelle and I decided to bike to Santa Cruz on President’s Day Weekend. The distance from San Francisco to Santa Cruz, if you stick to the west coast down Cabrillo Highway, is about 130km, or 80 miles for the imperially inclined. I’ve biked relatively long distances before in a day but never this long. In my last internship in the Bay Area, I had biked from Palo Alto to San Francisco downtown which is about 60km and there was another bike trip this term up north in Marin County where I biked for a bit more than 60km. Maybe it was 70, I don’t remember. In any case, for experienced bikers, this is not too bad but for a fledgling one like myself, this is a significant undertaking.</p>
 
 <div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/RQd0aYO.jpg" /></div>
@@ -77,7 +145,7 @@
 
 <p>The first few kilometres as we cut through the city were quite tiring honestly. I’ve never biked with this much weight on my back. Two full water bottles, a bike lock, a change of clothes, and energy bars made for a sore back. The iota of sleep I had the night before didn’t help either. Most bikers distribute this weight on little pouches around the bike which not only keeps the centre of gravity low, but also puts less strain on the body and more so on the legs. Me, being a complete newbie to long distance biking, had a backpack.</p>
 
-<p>It was quite surprising to me, after around 15 km of biking when we reached Skyline Drive, that my mind and body seemingly did a complete 360 and I felt like I had all the energy in the world. Perhaps it’s the cardio I’ve been doing for so long, or perhaps it’s the delicious McDonald’s™ Sausage McMuffin with Egg sandwich I devoured for breakfast. In any case, the sore back, the all around tiredness from before, it was all gone once we reached this quiet, quaint neighbourhood road that was right by the coast. Unfortunately, most of the ocean view was blocked by the houses lining the west side of the road.</p>
+<p>It was quite surprising to me, after around 15 km of biking when we reached Skyline Drive, that my mind and body seemingly did a complete 360 and I felt like I had all the energy in the world. Perhaps it’s the cardio I’ve been doing for so long, or perhaps it’s the delicious McDonald’s™ Sausage McMuffin with Egg sandwich I devoured for breakfast. In any case, the sore back, the all around tiredness from before, it was all gone once we reached this quiet, quaint neighbourhood road that was right by the coast. Unfortunately, most of the ocean view was blocked by the houses lining the west side of the road. </p>
 
 <p><img align="left" style="width: 50%; margin-right: 10px;" src="http://imgur.com/1xzayV6.jpg" /></p>
 
@@ -120,7 +188,7 @@
   <entry>
     <title type="html"><![CDATA[The Great Free Speech Conundrum]]></title>
     <link href="http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum/"/>
-    <updated>2016-03-13T16:34:00-07:00</updated>
+    <updated>2016-03-13T19:34:00-04:00</updated>
     <id>http://kevinpan.me/blog/2016/03/13/the-great-free-speech-conundrum</id>
     <content type="html"><![CDATA[<p>Freedom of speech is generally defined as “the right to communicate one’s opinions and ideas without fear of government retaliation or censorship”. Sounds perfectly reasonable and perfectly necessary for a modern society. A government that allows it’s citizens to voice their opinions is a government that welcomes innovation, improvement, and very importantly, protects itself from corruption.</p>
 
@@ -147,7 +215,7 @@
   <entry>
     <title type="html"><![CDATA[On growing up with anxiety...]]></title>
     <link href="http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/"/>
-    <updated>2016-03-12T02:48:25-08:00</updated>
+    <updated>2016-03-12T05:48:25-05:00</updated>
     <id>http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety</id>
     <content type="html"><![CDATA[<p>To be honest I’m not completely comfortable with writing this post. I guess it’s probably because I’m sharing something about myself that I’m not entirely proud of… sort of like a secret, personal weakness that I’m exposing to the reader. I’ve long been able to cope and even overcome, if I daresay, most of these issues but there is this mysterious mental health stigma that pervades society and is definitely affecting me as I write this. However, I’m quite sure that many people can relate to at least some of my experiences and I hope that by sharing my anxiety story, I can somehow, in some way, help those that are still silently struggling against their inner beast.</p>
 
@@ -182,7 +250,7 @@
   <entry>
     <title type="html"><![CDATA[Quick Tips For a Healthier Lifestyle as a College Student]]></title>
     <link href="http://kevinpan.me/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student/"/>
-    <updated>2015-05-17T20:48:56-07:00</updated>
+    <updated>2015-05-17T23:48:56-04:00</updated>
     <id>http://kevinpan.me/blog/2015/05/17/quick-tips-for-a-healthier-lifestyle-as-a-college-student</id>
     <content type="html"><![CDATA[<p>I’m going to preface this post by saying that I even though I write as if I’m an authoritative figure on leading healthy lifestyles, I’m not. The things I mention here worked and is still working for me (at least that’s what I’m inclined to believe).</p>
 
@@ -225,7 +293,7 @@
   <entry>
     <title type="html"><![CDATA[What the heck is the Domain Name System (DNS)?]]></title>
     <link href="http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution/"/>
-    <updated>2015-01-16T12:20:09-08:00</updated>
+    <updated>2015-01-16T15:20:09-05:00</updated>
     <id>http://kevinpan.me/blog/2015/01/16/what-the-heck-is-dns-resolution</id>
     <content type="html"><![CDATA[<blockquote>
   <p>This post was inspired by Monica Dinculescu’s <a href="http://meowni.ca/posts/cat-dns-cascadia/">speech</a> at CUSEC 2015, “The Internet Needs More Cats”.</p>
@@ -270,7 +338,7 @@
   <entry>
     <title type="html"><![CDATA[Euler Angles and Gimbal Lock]]></title>
     <link href="http://kevinpan.me/blog/2015/01/06/euler-angles-and-gimbal-lock/"/>
-    <updated>2015-01-06T10:09:27-08:00</updated>
+    <updated>2015-01-06T13:09:27-05:00</updated>
     <id>http://kevinpan.me/blog/2015/01/06/euler-angles-and-gimbal-lock</id>
     <content type="html"><![CDATA[<p>A couple months ago, a friend of mine wrote a blog <a href="http://luckytoilet.wordpress.com/2014/11/24/visualizing-quaternions-with-unity/">post</a> about how quarternions solve the problem of gimbal lock in 3D animations (which happens when you use Euler angles). This got me interested in learning more about Euler angles and exactly how gimbal lock works.</p>
 
@@ -308,10 +376,12 @@
 <p>The gimbal lock problem can be shown mathematically by representing a 3D rotation based on Euler angles with matrices. For a 3-2-1 rotation, the corresponding mathematical expression would be:</p>
 
 <script type="math/tex; mode=display">% &lt;![CDATA[
+
 R = 
 \begin{bmatrix}1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\\end{bmatrix}
 \begin{bmatrix}\cos\beta & 0 & \sin\beta\\ 0 & 1 & 0\\ -\sin\beta & 0 & \cos\beta\end{bmatrix}
-\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix} %]]&gt;</script>
+\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix}
+ %]]&gt;</script>
 
 <p>The rightmost matrix represents a rotation about the $z$-axis (yaw), the middle matrix represents a rotation about the $y$-axis (pitch), and the leftmost matrix represents a rotation about the $x$-axis (roll). If the pitch angle, $\beta$, was set to $\frac{\pi}{2}$, which basically means the aircraft is pointing straight up, we get:</p>
 
@@ -354,7 +424,7 @@ R & =
   <entry>
     <title type="html"><![CDATA[Bijective numeration and length-restricted character permutations]]></title>
     <link href="http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations/"/>
-    <updated>2014-12-31T18:37:41-08:00</updated>
+    <updated>2014-12-31T21:37:41-05:00</updated>
     <id>http://kevinpan.me/blog/2014/12/31/bijective-numeration-and-length-restricted-character-permuations</id>
     <content type="html"><![CDATA[<p>Based on this awesome StackOverflow <a href="http://stackoverflow.com/a/15625853">answer</a>…</p>
 
@@ -389,7 +459,7 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
   <entry>
     <title type="html"><![CDATA[Notes on Binary Indexed Trees (Fenwick Trees)]]></title>
     <link href="http://kevinpan.me/blog/2014/12/27/notes-on-binary-indexed-trees/"/>
-    <updated>2014-12-27T13:52:31-08:00</updated>
+    <updated>2014-12-27T16:52:31-05:00</updated>
     <id>http://kevinpan.me/blog/2014/12/27/notes-on-binary-indexed-trees</id>
     <content type="html"><![CDATA[<p>A binary indexed tree came up in one of the Hackerrank challenges I was working on recently. This is the first time I’ve ever heard of this data structure and I was interested in learning more. I found this TopCoder <a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=binaryIndexedTrees">article</a> on binary indexed trees a particularly useful resource and below is a concise summary of what I’ve learnt.</p>
 
@@ -468,7 +538,7 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
   <entry>
     <title type="html"><![CDATA[Notes on RSA Cryptography]]></title>
     <link href="http://kevinpan.me/blog/2014/12/06/notes-on-rsa/"/>
-    <updated>2014-12-06T16:10:31-08:00</updated>
+    <updated>2014-12-06T19:10:31-05:00</updated>
     <id>http://kevinpan.me/blog/2014/12/06/notes-on-rsa</id>
     <content type="html"><![CDATA[<p>I first learnt about RSA cryptography during an introductory number theory course in my second study term in university. Like many things you learn in class, the details tend to quickly be forgotten once the exam’s over. RSA was no exception. However, I’ve always been strangely annoyed for not fully understanding how this cryptosystem works and so I intend for this post to act as a “reference sheet” for RSA.</p>
 
@@ -508,7 +578,7 @@ a_n & = q_{n-1} - 0k, q_n = \lceil \frac{q_{n-1}}{k} \rceil - 1 = 0
   <p>If $GCD(A, B) = 1$ then $A^{\phi(B)} \equiv 1 (\textrm{mod}\ B)$. In our case, since $GCD(M, n) = 1$, then $M^{\phi(n)} \equiv 1 (\textrm{mod}\ n)$.</p>
 </blockquote>
 
-<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that:</p>
+<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that: </p>
 
 <script type="math/tex; mode=display">(M^{e})^{d} = M^{ed} = M^{1 + k\phi(n)} = M(M^{k\phi(n)})</script>
 
@@ -527,7 +597,7 @@ M^{ed} & \equiv M (\textrm{mod}\ n)
 
 <p><strong>Case 2 ($GCD(M, n) \neq 1$):</strong></p>
 
-<p>We will use the Chinese remainder theorem to prove this.</p>
+<p>We will use the Chinese remainder theorem to prove this. </p>
 
 <blockquote>
   <p>A more specific version of the theorem states that:</p>
@@ -550,7 +620,7 @@ x & \equiv y (\textrm{mod}\ A)
   <p>where $A_1, …, A_k$ are <strong>pairwise</strong> coprime and $A = A_1…A_k$.</p>
 </blockquote>
 
-<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$:</p>
+<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$: </p>
 
 <script type="math/tex; mode=display">\begin{align}
 (M^{e})^{d} \equiv M (\textrm{mod}\ p)\tag{1} \\
@@ -602,9 +672,9 @@ k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
   
   <entry>
     <title type="html"><![CDATA[Some notes on the Mercator projection]]></title>
-    <link href="http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/"/>
-    <updated>2014-11-29T22:22:42-08:00</updated>
-    <id>http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection</id>
+    <link href="http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection/"/>
+    <updated>2014-11-30T01:22:42-05:00</updated>
+    <id>http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection</id>
     <content type="html"><![CDATA[<p>A while back I was investigating on how I would build a Twitter mapping application similar to the <a href="http://www.onemilliontweetmap.com/">One Million Tweet Map</a> project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.</p>
 
 <p>The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of <a href="http://en.wikipedia.org/wiki/Mercator_projection">Wikipedia</a> and here is a concise summary of what I’ve learnt.</p>
@@ -651,7 +721,7 @@ x & = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
   <li>Isotropy of scale factors: $h = k$</li>
 </ol>
 
-<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us:</p>
+<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us: </p>
 
 <script type="math/tex; mode=display">% &lt;![CDATA[
 \begin{align}

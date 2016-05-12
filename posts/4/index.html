@@ -130,7 +130,114 @@ MathJax.Hub.Config({
 
 
 
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-06T16:10:31-08:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:10 pm</span></time></h5>
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-27T16:52:31-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>4:52 pm</span></time></h5>
+          <div class="row-fluid">
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10 post-container">
+      <h1 class="link"><a href="/blog/2014/12/27/notes-on-binary-indexed-trees/">Notes on Binary Indexed Trees (Fenwick Trees)</a></h1>
+      <p>A binary indexed tree came up in one of the Hackerrank challenges I was working on recently. This is the first time I’ve ever heard of this data structure and I was interested in learning more. I found this TopCoder <a href="http://community.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=binaryIndexedTrees">article</a> on binary indexed trees a particularly useful resource and below is a concise summary of what I’ve learnt.</p>
+
+<p>Suppose we have a size-$n$ array of values. If we wanted to find the summation of all values between two indices, we would need to iterate through the entire interval while maintaining a summation variable. If we then wanted to make $m$ such queries, the time complexity of the whole operation would be $O(mn)$. A binary indexed tree allows us to do this in $O(m\log\ n)$ time. The one trade off is that it takes longer to construct the initial data structure ($O(n \log\ n)$ time instead of $O(n)$ time, which is if we had used an array).</p>
+
+<p>Internally, we will still be using a size-$n$ array to represent the tree. The <strong>main idea</strong> of a binary indexed tree is that indices that are a power of 2 will have the cumulative frequency of all indices before, including itself. Indices that are half way between two indices that are a power of 2 will have the cumulative frequency of all indices before it starting from, but not including, the lower power of 2 index. This pattern continues down a hierarchical structure until you reach an odd index which will only have the frequency of itself. This can be visualized with the following diagram from the aforementioned article:</p>
+
+<p><img align="right" src="http://community.topcoder.com/i/education/binaryIndexedTrees/bitval.gif" alt="Binary indexed tree visualization" /></p>
+
+<p>Another way to put this is that each index $i$ in a binary indexed tree stores the sum of all frequencies of the indices in the range $(i - 2^r, i]$ where $r$ represents the rightmost set bit of $i$. From this definition, it is easier to tell that an index that is a power of 2 will have the sum of all frequencies of the indices before it while an odd index will just contain the frequency of itself.</p>
+
+<p><strong>Note:</strong> for a binary indexed tree, internally, the starting index is $1$ and not $0$</p>
+
+<h2 id="isolating-the-rightmost-set-bit-of-a-number">Isolating the rightmost set bit of a number</h2>
+
+<p>Given the structure of the binary indexed tree, many of its operations will often need to find and isolate the rightmost set bit of a number. As such, we need to be able to do this efficiently.</p>
+
+<p>Any nonzero binary number can be represented in the form $(a)(1)(0..0)$, where $a$ is the rest of the binary number to the left of the rightmost set bit. To isolate the rightmost set bit of one such number (call it $x$), we need to use its two’s complement representation.</p>
+
+<p>To get the two’s complement representation of a number, all we need to do is invert every bit and add $1$ to the result. So if $x = (a)(1)(0..0)$, then the two’s complement representation of $x$ will be $(a^{-})(1)(0..0)$. Bitwise ANDing the two binary numbers together will then result in $(0..0)(1)(0..0)$. This is exactly what we want!</p>
+
+<p>Most computers in the world represent negative integers using two’s complement so all we need to do in code is <code>x &amp; -x</code>.</p>
+
+<h2 id="finding-the-cumulative-frequency-for-a-particular-index">Finding the cumulative frequency for a particular index</h2>
+
+<p>Suppose we want to find the cumulative frequency from index $1$ to a particular index $x$. We know that at index $x$, the tree stores the cumulative frequency of the indices in the interval $(x - 2^r, x]$.</p>
+
+<p>So to find the cumulative frequency of the indices in $[1, x]$, we first add <code>binary_index_tree[x]</code> to a summation variable and subtract the rightmost set bit of $x$ from itself. Now if we query for <code>binary_index_tree[x]</code> again, we get the cumulative frequency of all indices between $(x - 2^r - 2^{r_1}, x - 2^r]$. When we add the new <code>binary_index_tree[x]</code> to the summation variable, we get the cumulative frequencies of indices between $(x - 2^r - 2^{r_1}, x]$. We keep repeating this process until the left endpoint of the interval becomes $0$, which is when we have our answer.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">int</span> <span class="nf">read</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">sum</span> <span class="o">+=</span> <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+</span><span class="line">        <span class="n">i</span> <span class="o">-=</span> <span class="o">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">i</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line">    <span class="k">return</span> <span class="n">sum</span><span class="o">;</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since the max index you can query for is $n$ (which is the total size of the data set) and it can have a maximum of $\log\ n$ set bits, the <code>read</code> function’s time complexity is $O(\log\ n)$.</p>
+
+<h2 id="changing-frequency-of-a-particular-index">Changing frequency of a particular index</h2>
+
+<p>To change a frequency at a particular index $x$, we also need to change the values of all indices that contain it. All such indices will be greater than $x$.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="kt">void</span> <span class="nf">update</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">val</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">    <span class="k">while</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+</span><span class="line">        <span class="n">binary_index_tree</span><span class="o">[</span><span class="n">idx</span><span class="o">]</span> <span class="o">+=</span> <span class="n">val</span><span class="o">;</span>
+</span><span class="line">        <span class="n">idx</span> <span class="o">+=</span> <span class="o">(</span><span class="n">idx</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">idx</span><span class="o">);</span>
+</span><span class="line">    <span class="o">}</span>
+</span><span class="line"><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Since we are iterating to $n$ and we’re adding the rightmost set bit of the current index to itself at each iteration, the <code>update</code> function’s time complexity is also $O(\log\ n)$.</p>
+
+<h2 id="other-operations">Other operations</h2>
+
+<p>I’ve only written about the two most basic operations you can do with a binary indexed tree. If you would like to learn more, the TopCoder article I mentioned above provides indepth explanations into many others.</p>
+
+      
+      
+    </div>
+  </div>
+
+
+
+    </article>
+    
+    <hr>
+    
+  
+  
+    <article>
+      
+
+  <div class="row-fluid">
+    <div class="span2 post-meta">
+	  <h5 class="date-time">
+
+
+
+
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-12-06T19:10:31-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:10 pm</span></time></h5>
           <div class="row-fluid">
           
           </div>
@@ -180,7 +287,7 @@ MathJax.Hub.Config({
   <p>If $GCD(A, B) = 1$ then $A^{\phi(B)} \equiv 1 (\textrm{mod}\ B)$. In our case, since $GCD(M, n) = 1$, then $M^{\phi(n)} \equiv 1 (\textrm{mod}\ n)$.</p>
 </blockquote>
 
-<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that:</p>
+<p>Since $ed \equiv 1 (\textrm{mod}\ \phi(n))$, then let $ed = 1 + k\phi(n)$ where $k \in \mathbb{Z}$. From this, we get that: </p>
 
 <script type="math/tex; mode=display">(M^{e})^{d} = M^{ed} = M^{1 + k\phi(n)} = M(M^{k\phi(n)})</script>
 
@@ -199,7 +306,7 @@ M^{ed} & \equiv M (\textrm{mod}\ n)
 
 <p><strong>Case 2 ($GCD(M, n) \neq 1$):</strong></p>
 
-<p>We will use the Chinese remainder theorem to prove this.</p>
+<p>We will use the Chinese remainder theorem to prove this. </p>
 
 <blockquote>
   <p>A more specific version of the theorem states that:</p>
@@ -222,7 +329,7 @@ x & \equiv y (\textrm{mod}\ A)
   <p>where $A_1, …, A_k$ are <strong>pairwise</strong> coprime and $A = A_1…A_k$.</p>
 </blockquote>
 
-<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$:</p>
+<p>By the Chinese remainder theorem, we only need to prove the two congruences below to prove $(M^{e})^{d} \equiv M (\textrm{mod}\ n)$: </p>
 
 <script type="math/tex; mode=display">\begin{align}
 (M^{e})^{d} \equiv M (\textrm{mod}\ p)\tag{1} \\
@@ -293,7 +400,7 @@ k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
 
 
 
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-11-29T22:22:42-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>10:22 pm</span></time></h5>
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2014-11-30T01:22:42-05:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:22 am</span></time></h5>
           <div class="row-fluid">
           
           </div>
@@ -304,7 +411,7 @@ k^{ed}p^{ed} & \equiv 0 (\textrm{mod}\ p) \\
           
     </div>
     <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/11/29/some-notes-on-the-mercator-projection/">Some notes on the Mercator projection</a></h1>
+      <h1 class="link"><a href="/blog/2014/11/30/some-notes-on-the-mercator-projection/">Some notes on the Mercator projection</a></h1>
       <p>A while back I was investigating on how I would build a Twitter mapping application similar to the <a href="http://www.onemilliontweetmap.com/">One Million Tweet Map</a> project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.</p>
 
 <p>The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of <a href="http://en.wikipedia.org/wiki/Mercator_projection">Wikipedia</a> and here is a concise summary of what I’ve learnt.</p>
@@ -351,7 +458,7 @@ x & = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
   <li>Isotropy of scale factors: $h = k$</li>
 </ol>
 
-<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us:</p>
+<p>From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us: </p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{align}

@@ -114,7 +114,7 @@ MathJax.Hub.Config({
 
 
 
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2015-01-06T10:09:27-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>10:09 am</span></time></h5>
+<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2015-01-06T13:09:27-05:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:09 pm</span></time></h5>
   </div>
 </header>
   <div class="row-fluid">
@@ -155,10 +155,12 @@ MathJax.Hub.Config({
 <p>The gimbal lock problem can be shown mathematically by representing a 3D rotation based on Euler angles with matrices. For a 3-2-1 rotation, the corresponding mathematical expression would be:</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
+
 R = 
 \begin{bmatrix}1 & 0 & 0 \\ 0 & \cos\alpha & -\sin\alpha\\ 0 & \sin\alpha & \cos\alpha\\\end{bmatrix}
 \begin{bmatrix}\cos\beta & 0 & \sin\beta\\ 0 & 1 & 0\\ -\sin\beta & 0 & \cos\beta\end{bmatrix}
-\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix} %]]></script>
+\begin{bmatrix}\cos\gamma & -\sin\gamma & 0\\\sin\gamma & \cos\gamma & 0\\0 & 0 & 1\end{bmatrix}
+ %]]></script>
 
 <p>The rightmost matrix represents a rotation about the $z$-axis (yaw), the middle matrix represents a rotation about the $y$-axis (pitch), and the leftmost matrix represents a rotation about the $x$-axis (roll). If the pitch angle, $\beta$, was set to $\frac{\pi}{2}$, which basically means the aircraft is pointing straight up, we get:</p>
 
