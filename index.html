@@ -1,435 +1,200 @@
-
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
+<html>
+
+  <head>
   <meta charset="utf-8">
-  <title>Mango Ice Cream</title>
-  <meta name="author" content="Kevin Pan">
-
-  
-  <meta name="description" content="I build products. I also like mango ice cream.">
-  
-  <meta name="keywords" content="">
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <link rel="canonical" href="http://kevinpan.me">
+  <title>Mango Ice Cream</title>
+  <meta name="description" content="Avid road cyclist. Aspiring product manager. Passionate software developer. Armchair political scientist.
+">
   <link href="/favicon.png" rel="icon">
-  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Mango Ice Cream" type="application/atom+xml">
-  <script src="/js/jquery.js"></script>
-  <script src="/js/bootstrap-collapse.js"></script>
-  <script src="/js/modernizr-2.0.js"></script>
-  <script src="/js/octopress.js" type="text/javascript"></script>
-  <script src="/js/application.js"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kevinpan.me/">
+  <link rel="alternate" type="application/rss+xml" title="Mango Ice Cream" href="http://kevinpan.me/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- mathjax config similar to math.stackexchange -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-57905192-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  jax: ["input/TeX", "output/HTML-CSS"],
-  tex2jax: {
-    inlineMath: [ ['$', '$'] ],
-    displayMath: [ ['$$', '$$']],
-    processEscapes: true,
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  },
-  messageStyle: "none",
-  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-});
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-57905192-1', 'auto');
-  ga('send', 'pageview');
+  <body>
 
-</script>
-<body   >
-  <div class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="fui-menu-24"></span>
-        </a>
-        <div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
-          <ul class="nav">
-    
-        <li ><a href="/">Home</a></li>
-    
-        <li ><a href="/blog/archives">Archives</a></li>
-    
-        <li ><a href="http://www.kevinpan.ca/about">About Me</a></li>
-    
-</ul>
+    <header class="site-header">
 
-<ul class="nav pull-right">
-    
-    
-    
-    
-    
-    
-    
+  <div class="wrapper">
 
-    
-</ul>
-
+    <div class="site-title">
+      <a href="/">
+        <div>
+          M
         </div>
-      </div>
+      </a>
     </div>
-  </div>
-  <div class="container" id="main">
-      <div class="row-fluid">
-        <div id="content">
-          <div class="jumbotron">
-  <div class="container">
-    
-      Mango Ice Cream
-    
-    <h3 class="tagline">
-      
-        So deep, you&#8217;ll drown your ankles
-      
-    </h3>
-  </div>
-</div>
 
-
-<div class="blog-index">
-  
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2016-05-11T14:05:37-04:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>11</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:05 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2016/05/11/thoughts-on-writing-a-resume/">Thoughts on Writing a Resume</a></h1>
-      <p>Yesterday I attended a resume critique session for lower year Software Engineers. I was able to critique four or five resumes and noticed a few common mistakes people tended to make. I wish I could’ve gone through more but my time is limited and I hope that through writing this blog post, I can reach out and help significantly more people than I ever could going over resumes one at a time.</p>
-
-<p>When I solve problems, I often prefer to take a step back and tackle them from first principles. How does this apply to resume-writing? Well the fundamental challenge is to successfully advertise yourself to recruiters… recruiters who are often looking through large piles of resumes trying to find the best candidates to interview. I really want to emphasize this point, it is often the case that recruiters do not have significant time to spend reading your resume given how many others they have to go over. Understand this constraint and create a resume that optimizes for it.</p>
-
-<h1 id="highlight-what-makes-you-exceptional">Highlight what makes you exceptional</h1>
-
-<p>One way to make a positive impression in a short time frame is to highlight the achievements that distinguish you from the crowd. Highlight them as aggressively as you can within aesthetic and organizational boundaries. These achievements could include programming competition awards, a mobile app getting X amount of downloads, basically anything that you did that someone else most likely couldn’t have done as well. Optimally, they should be able to be seen and understood with one cursory scan of the resume. Consider experimenting with your friends to see how noticeable they are.</p>
-
-<p>I saw a few resumes last night that had some really impressive achievements listed. For example, this person ranked in the top 2% for some programming competition and had multiple very successful side projects. Unfortunately, these achievements were all near the bottom of the resume and I had to trudge through hefty job descriptions to finally notice them. There were definitely ways to make these achievements more apparent. </p>
-
-<p>Exceptional achievements are what many recruiters like to see and should not be underestimated. If you have them, leverage them as much as you can!</p>
-
-<h1 id="leadership-over-independence">LEADERSHIP over INDEPENDENCE</h1>
-
-<p>A common trend I noticed last night was that people really liked highlighting that they were the sole developer on a project, that they “independently” built this piece of software. What they’re trying to say here is that they did a lot of work and have the technical capabilities to build something without significant help.</p>
-
-<p>Those are all great things to have, don’t get me wrong, but there is a much better way to phrase things. Recruiters are often looking for developers that are great communicators and team players. Emphasizing independent work does not attest to how great of a team player you might be and almost makes it seem like you worked as a separate entity from your team. Regardless if that’s true or not, you want to show the best of yourself on your resume.</p>
-
-<p>So instead of writing…</p>
-
-<blockquote>
-  <p>Independently built this feature or software…</p>
-</blockquote>
-
-<p>I suggest writing this…</p>
-
-<blockquote>
-  <p>Lead the development of this feature or software…</p>
-</blockquote>
-
-<p>Leadership is a very positive quality that all companies value highly. It does not rule out working well independently nor does it rule out being a great team player. In fact, it makes it sound as if you’re great at both!</p>
-
-<h1 id="be-concise-and-easily-understood">Be concise and easily understood</h1>
-
-<p>Some of the resumes I critiqued last night had many bloated bullet points. These points spanned multiple lines and discussed in great detail the technical aspects of the project. It seemed like the authors were trying to express the fact that they did a lot of work. They decided to do so by cramming as much information into a bullet point as it was stylistically acceptable.</p>
-
-<p>The reality is, a recruiter usually has a limited technical background and likely wouldn’t be able to appreciate the technical details of a project. Even for developers, if they were short on time, they are unlikely to put in the effort to read and fully understand the details. Sure they could infer that you must have worked hard from the amount you wrote, but they are left confused as to what you actually built and how important the work was.</p>
-
-<p>I think the best way to approach this is to split the point into two. Use the first point to describe, concisely and at a high level, what your project is about and why it is significant. Use the second point to state directly that you worked hard, that you did a lot of things behind the scenes to make your project a success.</p>
-
-<p>For example, instead of saying…</p>
-
-<ul>
-  <li>Learned Node.js and PostgreSQL to build an application that blah blah blah</li>
-</ul>
-
-<p>Break it into these points…</p>
-
-<ul>
-<li style="margin-bottom: 8px">Built an application that does this and is important because blah blah blah</li>
-<li>Learned Node.js and PostgreSQL for project. Researched and implemented these algorithms to make these features of the application possible etc.</li>
-</ul>
-
-<p>Now, your recruiter not only has a good idea about what you worked on, but also doesn’t have to infer that you are hardworking and capable. You took the initiative and expressed confidence by stating it directly.</p>
-
-<h1 id="what-over-how">WHAT over HOW</h1>
-
-<p>This point is somewhat related to the previous point. Some resumes last night had the tendency to prioritise technical details over what the work was able to accomplish. For example, the technical aspects were either elaborated on first or bolded. As software engineers, we tend to get caught up in the details of the underlying design and the code. This is perfectly reasonable, writing software is not easy and it’s these details that result in technical success. Unfortunately, as mentioned before, it is often the case that the resume screener either does not have a strong technical background or does not have the time to understand these details, especially if it was outside of their domain. You are much better off describing the results of your work and their importance before following up with the technical elements. The reader will have an easier time understanding your work and you will more likely hold their interest.</p>
-
-<p>I’m also going to go on a whim here and say that people are generally more interested in the results rather than how the results were achieved. Do car commercials ever spend significant time showing off how a car was built or how they were able to achieve that high mileage?</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2016-04-04T18:56:16-04:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>4</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>6:56 pm</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2/">Santa Cruz-ing down Carillo Highway (Part 2)</a></h1>
-      <p>Having biked 10 miles down Highway 1 from Half Moon Bay, Google Maps wanted us to veer off the highway onto a small road known as Stage Road. Apparently the next stretch of highway was hazardous enough for biking to warrant going into the mountains again. At the time, I had no idea this was the case since Michelle was the one with the offline map downloaded. In any case, looking at the route now, the detour consisted of several hundred meter climbs, up and down, up and down… Definitely not ideal for biking. Why Google Maps would ever suggest going through this route versus the alternative of heading straight south on Highway 1 is a mystery to me.  </p>
-
-<div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/PJDTzoX.jpg" /></div>
-
-<p>We were met with a steep downhill as we entered Stage Road. As fun as downhill cycling is, I was quite worried. Another downhill meant another uphill if we ever decided to head back to Half Moon Bay and that was more than possible given my current state. The downhill ended at an intersection between Stage Road and La Honda Road and here was a quaint and rather large store known as the San Gregario General Store. I had a sinking suspicion that this store was the largest concentration of civilization we would encounter for miles from here on out and told Michelle we should stop here. It was somewhere between turning into Stage Road and stopping here that I decided I couldn’t go on any further. I told Michelle so and suggested that we should find a motel nearby and call it a day. Coming off our bikes, the first thing I checked was whether I could hail an Uber. This was a completely futile attempt. First of all, we were basically in the middle of nowhere and no sane Uber driver would ever expect any business here. Second, even if there was an Uber driver out there ready to rescue two stranded cyclists, we had no phone signal so that was the end of that.  </p>
-
-<div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/9zjFEDt.jpg" /></div>
-
-<p>The next logical thing to do was to ask for help in the store. At the very least we get to take a break and plan our next moves. Walking into the store, I definitely felt like this was no ordinary roadside shop. The San Gregario General Store has what some Americans would refer to as an “old-country-store atmosphere”. What made it “old-country” for me was perhaps the myriad of small paintings, trinkets and ornaments on display combined with a gentle prevalence of wood. The store had an air of antiqueness to it. It exuded a sense of history.  </p>
-
-<p>The San Gregario General Store sold a wide assortment of very general things. You could find all the usual convenience store items like cold pop, energy bars, and candy. You could also find things you would expect in a souvenir store, like t-shirts, lapel pins, calendars, and mugs. The store also sold a large variety of books. There were books from all sorts of genres; paperback novels, history books, books on religion, books on geography, what have you. The store apparently sold “hardware” as well, though probably further back as I didn’t see any.  </p>
-
-<p>On a sunny Saturday afternoon, there were very many people here. It was generally a mix of bikers (the leather jacket, combustion engine kind) and weekend road-tripping families. I caught the bartender in one of the brief moments she had between taking orders and pouring drinks and inquired about lodging options nearby. “The nearest ones are 10 miles up north by Half Moon Bay, or you could also go 10 miles south. There’s a small hostel by the lighthouse.” Both options sounded terrible to me.  </p>
-
-<p>Michelle was keen on the lighthouse hostel since, at the very least, we didn’t have to head back and lose progress. She had a weak signal on her phone and we tried to connect to the hostel’s website. It took ages. Completely frustrating. When the website finally loaded and we found a number to call, nothing comes up. The connection was so poor we gave up trying to find an address and directions.  </p>
-
-<p>10 minutes later we found ourselves sitting by one of the tables in front of the bar. A few men with guitars and banjos walk up to the corner of the store and started setting up mic stands. Apparently there was going to be live music in the middle of the afternoon. How quaint. Michelle and I were in no mood to appreciate this though. Earlier, she had asked the bartender about getting a cab back to Half Moon Bay and was dismissively told that was not possible. The bartender grumpily mumbled something about “trying our Ubers”. Her attempts at asking for WiFi next were also handily denied.  </p>
-
-<p>Our options dwindled down to the most unattractive. Head back to Half Moon Bay or camp out somewhere in the middle of the road for the night? You can imagine how terrible I felt. On the one hand, I was exhausted and drowsy and on the other, I was disappointed at having let Michelle down. The men with the instruments had finished setting up and started their performance. Country music. I’m not surprised.  </p>
-
-<div style="text-align: center"><img style="width: 80%; margin-bottom: 20px;" src="http://imgur.com/7R7FWS0.jpg" /></div>
-
-<p>After what seemed like hours compressed into several minutes, Michelle and I decided we should just keep biking until we find a place by the road to sleep. What terrible circumstances we have found ourselves in… and it was all my fault. Exhaustion and guilt do not make for good companions, especially when you’re stranded in rural South Bay.  </p>
-
-<p>Before heading out, I decided to buy more water just in case our current supply doesn’t last. Heading back to the store, I spot a middle-aged Asian lady by the counter. She was the only other Asian person we’ve met in our whole time here and I don’t know what came over me but I walked up to her, explained our situation, and asked whether she could give us a ride back to Half Moon Bay. With a look that was a clear mix of bewilderment and compassion, she told me she needed to consult with her husband first. Long story short. He agreed.  </p>
-
-<p>What a godsend. At the very last minute before heading out towards the mountains, we find a couple willing to cut their day trip short to drive us back to Half Moon Bay. I was incredibly relieved.  </p>
-
-<p>George and Thida, as we would later learn of their names, drove a medium-sized BMW sedan and we were doubtful at first whether it would fit both our bikes. With a good deal of shuffling, the bikes eventually settled into the trunk in a rather haphazard fashion as half of the bikes dangled off the end. The bikes were secure, nevertheless, and soon we were well on our way back to town. I tried filling the ride back with small talk that was motivated almost entirely by guilt since I was the sole reason this was all happening in the first place. The side effect from this was that Michelle and I had to hide the fact that we were well off tech interns in the Bay Area. We made up companies, made up salaries, and made up living situations. It was unfortunate that there was even a morsel of a need to fuzzle information, especially for two people that were so gracious to help us. However, given our experience with the staff at the San Gregario General Store, I figured it was better to stay on the safe side.  </p>
-
-<p>We were back in Half Moon Bay in no time and George and Thida dropped us off at a Comfort Inn. They gave us their contact information and bid farewell. I cannot put to words how grateful I am for their generosity. Honestly, there were times back in the store where I did not believe this was possible. Life can be such an emotional rollercoaster some times.  </p>
-
-<p>After hours on end of biking, I have never been happier lying on a bed. For all I care, all my troubles were left behind back by that table in the San Gregario General Store. Tomorrow was going to be a better day!  </p>
-
-<div style="text-align: center"><img style="width: 80%;" src="http://imgur.com/wESgFAK.jpg" /></div>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-    <hr>
-    
-  
-  
-    <article>
-      
-
-  <div class="row-fluid">
-    <div class="span2 post-meta">
-	  <h5 class="date-time">
-
-
-
-
-<i class="icon-calendar-empty"></i> <time class='entry-date' datetime='2016-03-15T02:20:14-04:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:20 am</span></time></h5>
-          <div class="row-fluid">
-          
-          </div>
-          
-          <div class="row-fluid">
-          
-          </div>
-          
-    </div>
-    <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2016/03/15/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/">Santa Cruz-ing down Carillo Highway (Part 1)</a></h1>
-      <p>Michelle and I decided to bike to Santa Cruz on President’s Day Weekend. The distance from San Francisco to Santa Cruz, if you stick to the west coast down Cabrillo Highway, is about 130km, or 80 miles for the imperially inclined. I’ve biked relatively long distances before in a day but never this long. In my last internship in the Bay Area, I had biked from Palo Alto to San Francisco downtown which is about 60km and there was another bike trip this term up north in Marin County where I biked for a bit more than 60km. Maybe it was 70, I don’t remember. In any case, for experienced bikers, this is not too bad but for a fledgling one like myself, this is a significant undertaking.</p>
-
-<div style="text-align: center"><img style="width: 60%; margin-bottom: 20px;" src="http://imgur.com/RQd0aYO.jpg" /></div>
-
-<p>My bike is a used 2015 Raleigh Revenio 1.0, the most beginner of beginner road bikes. However, compared to the old hybrid bike I was using last work term, a road bike is a tremendous improvement. I really like the colour scheme it has going for it too. White handle bars, white tires, and a silvery-white frame that has drawn praise where praise is not deserved. Yes, to the inexperienced observer, this bike was definitely not crappy (not that I would call my bike crappy, even though it’s not something to write home about). Michelle’s bike, on the other hand, is a really nice and new Specialized Dolce.</p>
-
-<blockquote>
-  <p>The biggest mistake I made before this trip was ever commiting to the 130km in one day, specifically because I had nowhere near enough sleep for me to push through.</p>
-</blockquote>
-
-<p>The biggest mistake I made before this trip was ever commiting to the 130km in one day, specifically because I had nowhere near enough sleep for me to push through. I had a bout of insomnia a couple days before the trip for whatever reason. I wasn’t nervous, I ate well, I exercised, and yet my mind ran circles around me when it was time to sleep. As such, I slept a grand total of 2 hours the night before the big trip. Yes, 2 hours. Not 4, not 3, but 2. The last time I did this I was mercilessly butchered by a Stats exam (and no, it was not because I wasn’t prepared, or so I would like to think). In any case, people that know me know that I need sleep. I can hardly survive on 6 hours or less of sleep and that is without hours on end of rigorous biking. 2 hours of sleep and 130km of biking made for an insurmountable goal.</p>
-
-<p>Hindsight is 20/20 and I mistakenly commit to this goal. Was I worried? Yes. Was I foolish? Doubly so. But where’s the fun in life without the risks? So I woke up at 6 in the morning feeling like a zombie fresh out of a coffin, cleaned myself up, picked up my packed gear, and headed out to meet Michelle. Our plan was to stay in Santa Cruz for a couple nights before biking back on Monday.</p>
-
-<p>The first few kilometres as we cut through the city were quite tiring honestly. I’ve never biked with this much weight on my back. Two full water bottles, a bike lock, a change of clothes, and energy bars made for a sore back. The iota of sleep I had the night before didn’t help either. Most bikers distribute this weight on little pouches around the bike which not only keeps the centre of gravity low, but also puts less strain on the body and more so on the legs. Me, being a complete newbie to long distance biking, had a backpack.</p>
-
-<p>It was quite surprising to me, after around 15 km of biking when we reached Skyline Drive, that my mind and body seemingly did a complete 360 and I felt like I had all the energy in the world. Perhaps it’s the cardio I’ve been doing for so long, or perhaps it’s the delicious McDonald’s™ Sausage McMuffin with Egg sandwich I devoured for breakfast. In any case, the sore back, the all around tiredness from before, it was all gone once we reached this quiet, quaint neighbourhood road that was right by the coast. Unfortunately, most of the ocean view was blocked by the houses lining the west side of the road. </p>
-
-<p><img align="left" style="width: 50%; margin-right: 10px;" src="http://imgur.com/1xzayV6.jpg" /></p>
-
-<p>All this changed when we hit a right and turned onto Palmetto Avenue. Right there in front of us was the Pacific coast, blue ocean that stretched across the horizon, the faint smell of salt in the gentle breeze, and the soft rumble of distant waves crashing against the shore. This ride was going to be breathtaking, and this was just a preview for what lay ahead.</p>
-
-<div style="clear: both"></div>
-
-<hr />
-
-<p>The first significant landmark was the Pacifica State Beach of which the following BEAUTIFUL and ARTISTIC photo was taken (Michelle doesn’t think so but she’s wrong ;)). We continued hugging the coast, riding south for a few kilometres before veering off to the right on Crespi Drive to head for the mountains. Yes. That’s right, mountains, because apparently this is much more preferred than biking down the next stretch of highway.</p>
-
-<div style="text-align: center"><img style="width: 80%; margin-bottom: 20px;" src="http://imgur.com/wPGO3qd.jpg" /></div>
-
-<p>In any case, the mountain road was quite steep, we needed to climb around 300 metres of elevation in 3-4 kilometers. The road was poorly maintained, although we did see quite a few bikers on road bikes climbing with us. And here lies the third mistake. I have never learned the proper form to climbing whilst biking and I think I unnecessarily expanded a large amount of energy going up. I mean, I felt great but we still had around a 100km more to bike for the rest of the day, and definitely many more climbs. It was naïve of me to spend any significant amount of energy here.</p>
-
-<p>The road down the mountain was even worse than the way up. It was basically a glorified stretch of dirt and rocks. Definitely not road bike territory. There were tons of holes and ridges in the path that made for a jarring ride down. At least the view was nice. We could see the ocean again.</p>
-
-<p><img align="right" style="width: 50%; margin-left: 10px" src="http://imgur.com/Djpbh3A.jpg" /></p>
-
-<p>It was going down this mountain road that I had the first fall I can ever remember in a long while. And it was terrible. There was this ridge in the dirt path that my front tire slid on and I careened off the bike. My left elbow and knees suffered pretty large scrapes, especially my elbow. It was a mess of torn skin, tissue, blood, and dirt. Man, why didn’t I bring any sort of first aid supplies on this trip. THANKFULLY, Michelle, being the ever cautious, ever wise friend, had polysporin. I was quite worried about a terrible infection since the next pharmacy was miles south in Half Moon Bay. This is me here with a poorly washed wound and makeshift gauze that comprised of my spare boxers and a rubber hair band. Marvelous.</p>
-
-<p>This fall hit my drive hard. By the time we reached Half Moon Bay, the 2 hours of sleep really started to get to me. I had a hard time keeping my eyes open in the blazing noon sun. I really just wanted to turn that flaming ball of hydrogen off. Half Moon Bay, despite it’s name, was NOT the halfway point to Santa Cruz. There was still a whopping 80km to our destination. 80 KILOMETRES and I’m already in this state. Kevin, why didn’t you just stop?</p>
-
-<blockquote>
-  <p>Half Moon Bay, despite it’s name, was NOT the halfway point to Santa Cruz. There was still a whopping 80km to our destination. 80 KILOMETRES and I’m already in this state. Kevin, why didn’t you just stop?</p>
-</blockquote>
-
-<div style="text-align: center"><img style="width: 80%; margin-bottom: 20px;" src="http://imgur.com/2dLCHBR.jpg" /></div>
-
-<p>We stopped by a plaza to get some first aid and food. At this point, I was really starting to feel the drowsiness. Could I make it? Could I ride another 80km? Perhaps it was because of this sad state that I couldn’t make a rational decision. We were only 50km into the bike ride! How could we stop now? Little did I know the next motel past Half Moon Bay was miles, miles south. Kevin, why didn’t you check?</p>
-
-<p>So I paddle and I paddle and the afternoon sun kept beating down on me and I kept fighting off the doubt. At one point in time, I started closing my eyes even as we biked down the relatively busy highway. A little past Half Moon Bay were two pretty massive climbs, 150 metres of elevation each and it was here that I knew I couldn’t go any further. Poor climbing form, an intense drowsiness, and a badly injured elbow made for a potent combination. At one point, I remember having to stop at a rather large highway shoulder halfway up a climb to lie down and rest by the grass. The large shoulder was not a coincidence, the view of the Pacific coast here was incredible but all I wanted was a cozy bed and a roof above. At the top of the second climb, we decided to pump my bike tires of my bike since this really helps with the speed of the bike. What a disaster this was! The janky $20 portable bike pump I got online coughed and wheezed air into the tires and it was definitely a workout pumping that thing. At one point we completely deflated the back tire because a little rubbery ring came off the tip of the pump and we had no idea what it was for. So we foolishly attached the nozzle to the tire, the typical loud wheezing sound occurs but never subsides. As the gauge hand of the pump swung left at an ever accelerating rate, panic ensued. Luckily it was just a matter of pushing and proding the ring back into the pump nozzle. Anyways, I drained a large amount of what remained of my energy because of this pumping debacle and I was ready to call it quits.</p>
-
-<p>We had no idea things were going to get much, much worse.</p>
-
-<p>PS: definitely not sorry for the title pun</p>
-
-      
-      
-    </div>
-  </div>
-
-
-
-    </article>
-    
-  
-  <div class="pagination">
-    
-    <a class="prev" href="/posts/2">&larr; Older</a>
-    
-
-    
-  </div>
-</div>
-
-
-        </div>
-      </div>
-      <div class="row-fluid">
-        <footer class="footer-page" role="contentinfo">
-          <p>
-  Copyright &copy; 2016 - Kevin Pan -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
-</p>
-
-
-        </footer>
-      </div>
-  </div>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'mangoicecream';
-      
+    <nav class="site-nav">
+      <div class="trigger">
         
-        var disqus_script = 'count.js';
+          
+          <a class="page-link" href="/about/">About Me</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div style="width: 100%; background-image: url('http://i.imgur.com/VdzvwJy.jpg'); height: 420px; position: relative; background-size: cover; background-position: 50% 50%">
+      <div style="text-align: center; position: absolute; top: 50%; margin-top: -64px; width: 100%;">
+        <h1 style="font-size: 56px; line-height: 56px; color: white; font-family: 'Roboto Slab'; font-weight: bold; text-shadow: rgba(0, 0, 0, 0.670588) 0px 2px 1px;">Mango Ice Cream</h1>
+        <h2 style="color: white; font-style: italic; font-family: 'Roboto Slab'; text-shadow: rgba(0, 0, 0, 0.670588) 0px 2px 1px;">So deep, you’ll drown your ankles</h2>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="wrapper">
+
+  <div class="home">
+
+    <ul class="post-list">
       
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
+        <li>
+          <span class="post-meta">Jul 18, 2016</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2016/07/18/in-and-around-livermore/">Road Cycling Around Livermore</a>
+          </h2>
+          <section>
+            <p>This was the last significant bike trip that I went on during my internship in San Francisco earlier this year. Up till then, my bike trips have mostly involved biking directly from my Financial District apartment and this meant that I wasn’t able to venture too far from the city...</p>
+          </section>
+        </li>
+      
+        <li>
+          <span class="post-meta">May 11, 2016</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2016/05/11/thoughts-on-writing-a-resume/">Thoughts on Writing a Resume</a>
+          </h2>
+          <section>
+            <p>Yesterday I attended a resume critique session for lower year Software Engineers. I was able to critique four or five resumes and noticed a few common mistakes people tended to make. I wish I could’ve gone through more but my time is limited and I hope that through writing this...</p>
+          </section>
+        </li>
+      
+        <li>
+          <span class="post-meta">Apr 4, 2016</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2016/04/04/santa-cruz-ing-down-carillo-highway-part-2/">Santa Cruz-ing down Carillo Highway (Part 2)</a>
+          </h2>
+          <section>
+            <p>Having biked 10 miles down Highway 1 from Half Moon Bay, Google Maps wanted us to veer off the highway onto a small road known as Stage Road. Apparently the next stretch of highway was hazardous enough for biking to warrant going into the mountains again. At the time, I...</p>
+          </section>
+        </li>
+      
+        <li>
+          <span class="post-meta">Mar 15, 2016</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2016/03/15/santa-cruz-ing-down-highway-1-and-how-i-discovered-my-limits/">Santa Cruz-ing down Carillo Highway (Part 1)</a>
+          </h2>
+          <section>
+            <p>Michelle and I decided to bike to Santa Cruz on President’s Day Weekend. The distance from San Francisco to Santa Cruz, if you stick to the west coast down Cabrillo Highway, is about 130km, or 80 miles for the imperially inclined. I’ve biked relatively long distances before in a day...</p>
+          </section>
+        </li>
+      
+        <li>
+          <span class="post-meta">Mar 12, 2016</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2016/03/12/on-growing-up-with-anxiety/">On growing up with anxiety...</a>
+          </h2>
+          <section>
+            <p>To be honest I’m not completely comfortable with writing this post. I guess it’s probably because I’m sharing something about myself that I’m not entirely proud of… sort of like a secret, personal weakness that I’m exposing to the reader. I’ve long been able to cope and even overcome, if...</p>
+          </section>
+        </li>
+      
+        <li>
+          <span class="post-meta">Nov 30, 2014</span>
+
+          <h2>
+            <a class="post-link" href="/blog/2014/11/30/some-notes-on-the-mercator-projection/">Some notes on the Mercator projection</a>
+          </h2>
+          <section>
+            <p>A while back I was investigating on how I would build a Twitter mapping application similar to the One Million Tweet Map project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google...</p>
+          </section>
+        </li>
+      
+    </ul>
+
+  <!--   <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mango Ice Cream</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:kevinpanxc@gmail.com">kevinpanxc@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Avid road cyclist. Aspiring product manager. Passionate software developer. Armchair political scientist.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
 
 
+  </body>
 
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
 </html>
