@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Some notes on the Mercator projection</title>
+  <title>Notes on the Mercator projection</title>
   <meta name="description" content="A while back I was investigating on how I would build a Twitter mapping application similar to the One Million Tweet Map project. One of the first topics I l...">
   <link href="/favicon.png" rel="icon">
 
@@ -89,7 +89,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Some notes on the Mercator projection</h1>
+    <h1 class="post-title" itemprop="name headline">Notes on the Mercator projection</h1>
     <p class="post-meta"><time datetime="2014-11-30T01:22:42-05:00" itemprop="datePublished">Nov 30, 2014</time></p>
   </header>
 
@@ -194,10 +194,6 @@ y & = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
 \end{aligned}</script>
 
 <p>From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.</p>
-
-<blockquote>
-  <p>Two random variables were talking in a bar. They thought they were being discrete but I heard their chatter continuously</p>
-</blockquote>
 
   </div>
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jul 2016 06:57:48 -0400</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 06:57:48 -0400</lastBuildDate>
+    <pubDate>Wed, 20 Jul 2016 21:31:20 -0400</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 21:31:20 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -273,7 +273,7 @@
       </item>
     
       <item>
-        <title>Some notes on the Mercator projection</title>
+        <title>Notes on the Mercator projection</title>
         <description>&lt;p&gt;A while back I was investigating on how I would build a Twitter mapping application similar to the &lt;a href=&quot;http://www.onemilliontweetmap.com/&quot;&gt;One Million Tweet Map&lt;/a&gt; project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.&lt;/p&gt;
 
 &lt;p&gt;The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of &lt;a href=&quot;http://en.wikipedia.org/wiki/Mercator_projection&quot;&gt;Wikipedia&lt;/a&gt; and here is a concise summary of what I’ve learnt.&lt;/p&gt;
@@ -374,10 +374,6 @@ y &amp; = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
 \end{aligned}&lt;/script&gt;
 
 &lt;p&gt;From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Two random variables were talking in a bar. They thought they were being discrete but I heard their chatter continuously&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 30 Nov 2014 01:22:42 -0500</pubDate>
         <link>http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection/</link>
