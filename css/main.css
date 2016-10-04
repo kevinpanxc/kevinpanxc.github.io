@@ -345,18 +345,30 @@ pre {
     margin: 80px 0; }
     .post-content .wide-image img {
       width: 100%; }
+    @media screen and (max-width: 800px) {
+      .post-content .wide-image {
+        margin: 0 0 20px 0; } }
   .post-content .wide-image-adj-top {
     margin: 80px 0 48px 0; }
     .post-content .wide-image-adj-top img {
       width: 100%; }
+    @media screen and (max-width: 800px) {
+      .post-content .wide-image-adj-top {
+        margin: 0 0 20px 0; } }
   .post-content .wide-image-adj-bottom {
     margin: 48px 0 80px 0; }
     .post-content .wide-image-adj-bottom img {
       width: 100%; }
+    @media screen and (max-width: 800px) {
+      .post-content .wide-image-adj-bottom {
+        margin: 0 0 20px 0; } }
   .post-content .fit-image {
     margin-bottom: 20px; }
     .post-content .fit-image img {
       width: 100%; }
+    @media screen and (max-width: 800px) {
+      .post-content .fit-image {
+        padding: 0px !important; } }
 
 /**
  * Syntax highlighting styles
