@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CS488 Project: Extended Ray Tracer</title>
+  <meta name="description" content="I’m currently taking the course, CS488: Introduction to Computer Graphics, at the University of Waterloo. The course’s final project is open-ended and you’re...">
+  <link href="/favicon.png" rel="icon">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kevinpan.me/blog/2017/03/28/cs488-project-extended-ray-tracer/">
+  <link rel="alternate" type="application/rss+xml" title="Mango Ice Cream" href="http://kevinpan.me/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- mathjax config similar to math.stackexchange -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57905192-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <div class="site-title">
+      <a href="/">
+        <div>
+          M
+        </div>
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About Me</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header wrapper">
+    <h1 class="post-title" itemprop="name headline">CS488 Project: Extended Ray Tracer</h1>
+    <p class="post-meta"><time datetime="2017-03-28T02:55:48-04:00" itemprop="datePublished">Mar 28, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I’m currently taking the course, <em>CS488: Introduction to Computer Graphics</em>, at the University of Waterloo. The course’s final project is open-ended and you’re expected to create a set of objectives, within reasonable constraints, and implement them into one cohesive graphics program. This post provides a brief overview of the ray tracer I wrote as my final project.</p>
+
+<p>Ray tracing is fundamentally a computer image generation technique where simulated light rays are fired from a virtual camera into a virtual scene. The light rays might intersect with objects in the scene and these intersections determine the final image’s pixel colours. Ray tracing is generally very slow but it can create photorealistic images. This is why it’s often used in film and rarely used in video games.</p>
+
+<p>For my final project, I had to choose and implement 10 different ray tracer features. I’ve provided a brief description for each of them below, and also included sample renderings.</p>
+
+<p>The ray tracer is written in C++ and Lua is used as the modelling language.</p>
+
+<h2 id="objective-1-cone-and-cylinder-primitives">Objective 1: Cone and Cylinder primitives</h2>
+
+<p>This ray tracer is an extension of the ray tracer built in assignment 4. The previous ray tracer supports sphere, cube, and mesh primitives. I’ve added cone and cylinder primitives in this version.</p>
+
+<div class="fit-image"><img src="http://imgur.com/X7ydXcs.png" /></div>
+
+<h2 id="objective-2-reflection-and-refraction">Objective 2: Reflection and Refraction</h2>
+
+<p>Reflection is implemented by generating a secondary reflection ray when a light ray hits a reflective object. The direction of the reflected ray is determined through the law of reflection. Reflection rays can generate more reflection rays if they also hit reflective objects.</p>
+
+<p>Implementation-wise, refraction is similar to reflection. The only difference is the direction of secondary rays is determined through Snell’s Law instead of the law of reflection. The law takes into account the indices of refraction between the two mediums.</p>
+
+<p>In this ray tracer, refractive objects are also slightly reflective and fresnel coefficients are used to determine how much light is refracted and how much light is reflected at different points on the object.</p>
+
+<div class="fit-image"><img src="http://imgur.com/KRh1U6T.png" /></div>
+
+<h2 id="objective-3-glossy-reflection-and-refraction">Objective 3: Glossy reflection and refraction</h2>
+
+<p>Glossiness is implemented by generating multiple secondary reflection/refraction rays per intersection and averaging the results. The direction of each ray is randomly perturbed by an amount proportional to the object’s glossiness.</p>
+
+<p>The number of glossy samples taken per ray intersection determines how noisy the glossy effect is. The more samples, the less noise.</p>
+
+<p>The sharpness of the glossy effect can be adjusted using the material’s phong exponent. The larger the phong exponent, the sharper the image. As the phong exponent approaches infinity, glossiness turns into mirror reflection.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/Xhcy5Rr.png" />
+  <div class="caption wide-caption">
+    Cylinder on the left is refractive and cylinder on the right is glossy refractive and slightly reflective.
+  </div>
+</div>
+
+<div class="fit-image">
+  <img src="http://imgur.com/iaL85xC.png" />
+  <div class="caption wide-caption">
+    Sphere on the left is glossy with 3 samples taken per intersection while the right is glossy with 20 samples taken per intersection. Phong exponent is 20.
+  </div>
+</div>
+
+<div class="fit-image">
+  <img src="http://imgur.com/gTdvyvh.png" />
+  <div class="caption wide-caption">
+    Sphere on the left is glossy with 3 samples taken per intersection while the right is glossy with 20 samples taken per intersection. Phong exponent is 500.
+  </div>
+</div>
+
+<h2 id="objective-4-texture-mapping">Objective 4: Texture mapping</h2>
+
+<p>Texture mapping is implemented by mapping surface coordinates on an object to texture coordinates. The texture coordinates are then used to query a texture (rectangular image) to determine the object’s colour.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/FTcO01v.png" />
+  <div class="caption wide-caption">
+    Earth, demonstrating spherical texture mapping.
+  </div>
+</div>
+
+<div class="fit-image">
+  <img src="http://imgur.com/sJHkxJD.png" />
+  <div class="caption wide-caption">
+    F-15C Eagle fighter aircraft, demonstrating texture mapping for meshes.
+  </div>
+</div>
+
+<div class="fit-image"><img src="http://imgur.com/wPIy530.png" /></div>
+
+<h2 id="objective-5-bump-mapping">Objective 5: Bump mapping</h2>
+
+<p>Like texture mapping, bump mapping also requires mapping object surface coordinates to texture coordinates. However, instead of using texture colours to colour the object’s surface, we use them to determine how normals on the surface are perturbed. Perturbing surface normals creates different lighting patterns that simulate the appearance of a bumpy surface.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/uQ9CkiC.png" />
+  <div class="caption wide-caption">
+    Earth, demonstrating spherical bump mapping.
+  </div>
+</div>
+
+<h2 id="objective-6-phong-shading">Objective 6: Phong shading</h2>
+
+<p>Phong shading is implemented by interpolating vertex normals across a triangle’s surface to create the appearance of a smooth surface.</p>
+
+<div class="fit-image"><img src="http://imgur.com/bHhtgNr.png" /></div>
+
+<h2 id="objective-7-soft-shadows">Objective 7: Soft shadows</h2>
+
+<p>Soft shadows are implemented by sending multiple shadow rays to different sections of a spherical area light. The shadow intensity is determined by the number of shadow rays that are blocked over the total number of shadow rays sent. Area lights are partitioned using a uniform grid and a shadow ray is sent to a random location in each cell. This randomness creates local noise and removes an unnatural “banding” effect in the shadow.</p>
+
+<p>The number of shadow ray samples taken determine global noisiness of the soft shadow. The more samples, the less noise.</p>
+
+<div class="half-images">
+  <div class="fit-image">
+    <img src="http://imgur.com/1NqO1K6.png" />
+    <div class="caption half-caption">
+      Shadow from a point light.
+    </div>
+  </div>
+  <div class="fit-image">
+    <img src="http://imgur.com/rpO0kZ7.png" />
+    <div class="caption half-caption">
+      Soft shadow from a wide area light. Rendered using 9 shadow ray samples per intersection.
+    </div>
+  </div>
+</div>
+
+<div class="half-images">
+  <div class="fit-image">
+    <img src="http://imgur.com/H20Z8nV.png" />
+    <div class="caption half-caption">
+      Soft shadow from a narrower area light. Rendered using 9 shadow ray samples per intersection.
+    </div>
+  </div>
+  <div class="fit-image">
+    <img src="http://imgur.com/YE3LTLC.png" />
+    <div class="caption half-caption">
+      Soft shadow from the same area light, but rendered using 4 shadow ray samples per intersection. Notice the increased noise on the shadow.
+    </div>
+  </div>
+</div>
+
+<h2 id="objective-8-adaptive-anti-aliasing">Objective 8: Adaptive anti-aliasing</h2>
+
+<p>Anti-aliasing eliminates an image artifact known as “jaggies” where straight lines appear to have a staircase like effect.</p>
+
+<p>Anti-aliasing is performed by partitioning a pixel into uniformly sized subpixels and sending rays into the center of each subpixel. The final colour of a pixel is the average of the colours returned by its subpixel rays. The more samples taken per pixel, the smoother the final image looks.</p>
+
+<p>In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that require anti-aliasing are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is just a normal ray trace. An edge detection algorithm is run over the first pass image to detect edge pixels and the second pass retraces detected edge pixels using anti-aliasing.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/ecxjBSi.png" />
+  <div class="caption wide-caption">
+    Image before anti-aliasing. Notice the jaggies.
+  </div>
+</div>
+
+<div class="fit-image"><img src="http://imgur.com/V5vOc4E.png" />
+  <div class="caption wide-caption">
+    Edge pixels detected through edge detection algorithm.
+  </div>
+</div>
+
+<div class="fit-image">
+  <img src="http://imgur.com/3q6dyQN.png" />
+  <div class="caption wide-caption">
+    Image after anti-aliasing using 9 samples per anti-aliased pixel.
+  </div>
+</div>
+
+<h2 id="objective-9-bounding-volume-hierarchy-bvh">Objective 9: Bounding Volume Hierarchy (BVH)</h2>
+
+<p>This feature optimizes the speed of the ray tracer by eliminating unnecessary intersection checks. The algorithm starts out by bounding all objects in a scene in one Axis Aligned Bolume Box (AABB) and storing this AABB and the objects it contains in a root node. It then splits these objects into three groups based on location. An AABB and a corresponding child node are created for each group. This process is repeated recursively for each child node and stops when a node contains only one object. The resulting data structure is a tree.</p>
+
+<p>We can speed up intersection checking using BVH through the observation that if a ray fails to intersect with a node’s AABB, it will fail to intersect any of the nodes descendent nodes. Because of the tree structure, BVH allows intersection testing of one ray to be run on $x$ number of model objects, where $x$ is logarithmic in the total number of model objects.</p>
+
+<p>BVH’s performance is highly dependent on the object partitioning algorithm (i.e. tree balancing algorithm) used to create the BVH tree.</p>
+
+<p>To demonstrate the performance increase through BVH, I generated scenes with 1000, 20000, and 50000 spheres. I rendered each scene using non-BVH mode and BVH mode and recorded render times. Here are the results.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Spheres</th>
+      <th style="text-align: center">non-BVH</th>
+      <th style="text-align: right">BVH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1000</td>
+      <td style="text-align: center">5s</td>
+      <td style="text-align: right">0s</td>
+    </tr>
+    <tr>
+      <td>20000</td>
+      <td style="text-align: center">150s</td>
+      <td style="text-align: right">4s</td>
+    </tr>
+    <tr>
+      <td>50000</td>
+      <td style="text-align: center">542s</td>
+      <td style="text-align: right">13s</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="relaxed-image"><img src="http://imgur.com/PQIaBsX.png" /></div>
+
+<h2 id="objective-10-final-scene">Objective 10: Final scene</h2>
+
+<div class="fit-image"><img src="http://imgur.com/qx2lIWN.png" /></div>
+
+<div style="margin-top: 80px"></div>
+<p><em>Special thanks goes towards Professor Baranoski for being a great teacher and for entertaining all the questions I had after class and during office hours. I thoroughly enjoyed CS488 and learned a great deal.</em></p>
+
+  </div>
+
+</article>
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mango Ice Cream</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:kevinpanxc@gmail.com">kevinpanxc@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Avid road cyclist. Aspiring product manager. Passionate software developer. Armchair political scientist. Couch economist.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

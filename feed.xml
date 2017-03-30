@@ -6,9 +6,218 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Mar 2017 02:55:00 -0400</pubDate>
-    <lastBuildDate>Tue, 28 Mar 2017 02:55:00 -0400</lastBuildDate>
+    <pubDate>Thu, 30 Mar 2017 15:25:06 -0400</pubDate>
+    <lastBuildDate>Thu, 30 Mar 2017 15:25:06 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>CS488 Project: Extended Ray Tracer</title>
+        <description>&lt;p&gt;I’m currently taking the course, &lt;em&gt;CS488: Introduction to Computer Graphics&lt;/em&gt;, at the University of Waterloo. The course’s final project is open-ended and you’re expected to create a set of objectives, within reasonable constraints, and implement them into one cohesive graphics program. This post provides a brief overview of the ray tracer I wrote as my final project.&lt;/p&gt;
+
+&lt;p&gt;Ray tracing is fundamentally a computer image generation technique where simulated light rays are fired from a virtual camera into a virtual scene. The light rays might intersect with objects in the scene and these intersections determine the final image’s pixel colours. Ray tracing is generally very slow but it can create photorealistic images. This is why it’s often used in film and rarely used in video games.&lt;/p&gt;
+
+&lt;p&gt;For my final project, I had to choose and implement 10 different ray tracer features. I’ve provided a brief description for each of them below, and also included sample renderings.&lt;/p&gt;
+
+&lt;p&gt;The ray tracer is written in C++ and Lua is used as the modelling language.&lt;/p&gt;
+
+&lt;h2 id=&quot;objective-1-cone-and-cylinder-primitives&quot;&gt;Objective 1: Cone and Cylinder primitives&lt;/h2&gt;
+
+&lt;p&gt;This ray tracer is an extension of the ray tracer built in assignment 4. The previous ray tracer supports sphere, cube, and mesh primitives. I’ve added cone and cylinder primitives in this version.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/X7ydXcs.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-2-reflection-and-refraction&quot;&gt;Objective 2: Reflection and Refraction&lt;/h2&gt;
+
+&lt;p&gt;Reflection is implemented by generating a secondary reflection ray when a light ray hits a reflective object. The direction of the reflected ray is determined through the law of reflection. Reflection rays can generate more reflection rays if they also hit reflective objects.&lt;/p&gt;
+
+&lt;p&gt;Implementation-wise, refraction is similar to reflection. The only difference is the direction of secondary rays is determined through Snell’s Law instead of the law of reflection. The law takes into account the indices of refraction between the two mediums.&lt;/p&gt;
+
+&lt;p&gt;In this ray tracer, refractive objects are also slightly reflective and fresnel coefficients are used to determine how much light is refracted and how much light is reflected at different points on the object.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/KRh1U6T.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-3-glossy-reflection-and-refraction&quot;&gt;Objective 3: Glossy reflection and refraction&lt;/h2&gt;
+
+&lt;p&gt;Glossiness is implemented by generating multiple secondary reflection/refraction rays per intersection and averaging the results. The direction of each ray is randomly perturbed by an amount proportional to the object’s glossiness.&lt;/p&gt;
+
+&lt;p&gt;The number of glossy samples taken per ray intersection determines how noisy the glossy effect is. The more samples, the less noise.&lt;/p&gt;
+
+&lt;p&gt;The sharpness of the glossy effect can be adjusted using the material’s phong exponent. The larger the phong exponent, the sharper the image. As the phong exponent approaches infinity, glossiness turns into mirror reflection.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/Xhcy5Rr.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Cylinder on the left is refractive and cylinder on the right is glossy refractive and slightly reflective.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/iaL85xC.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Sphere on the left is glossy with 3 samples taken per intersection while the right is glossy with 20 samples taken per intersection. Phong exponent is 20.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/gTdvyvh.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Sphere on the left is glossy with 3 samples taken per intersection while the right is glossy with 20 samples taken per intersection. Phong exponent is 500.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-4-texture-mapping&quot;&gt;Objective 4: Texture mapping&lt;/h2&gt;
+
+&lt;p&gt;Texture mapping is implemented by mapping surface coordinates on an object to texture coordinates. The texture coordinates are then used to query a texture (rectangular image) to determine the object’s colour.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/FTcO01v.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Earth, demonstrating spherical texture mapping.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/sJHkxJD.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    F-15C Eagle fighter aircraft, demonstrating texture mapping for meshes.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/wPIy530.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-5-bump-mapping&quot;&gt;Objective 5: Bump mapping&lt;/h2&gt;
+
+&lt;p&gt;Like texture mapping, bump mapping also requires mapping object surface coordinates to texture coordinates. However, instead of using texture colours to colour the object’s surface, we use them to determine how normals on the surface are perturbed. Perturbing surface normals creates different lighting patterns that simulate the appearance of a bumpy surface.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/uQ9CkiC.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Earth, demonstrating spherical bump mapping.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-6-phong-shading&quot;&gt;Objective 6: Phong shading&lt;/h2&gt;
+
+&lt;p&gt;Phong shading is implemented by interpolating vertex normals across a triangle’s surface to create the appearance of a smooth surface.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/bHhtgNr.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-7-soft-shadows&quot;&gt;Objective 7: Soft shadows&lt;/h2&gt;
+
+&lt;p&gt;Soft shadows are implemented by sending multiple shadow rays to different sections of a spherical area light. The shadow intensity is determined by the number of shadow rays that are blocked over the total number of shadow rays sent. Area lights are partitioned using a uniform grid and a shadow ray is sent to a random location in each cell. This randomness creates local noise and removes an unnatural “banding” effect in the shadow.&lt;/p&gt;
+
+&lt;p&gt;The number of shadow ray samples taken determine global noisiness of the soft shadow. The more samples, the less noise.&lt;/p&gt;
+
+&lt;div class=&quot;half-images&quot;&gt;
+  &lt;div class=&quot;fit-image&quot;&gt;
+    &lt;img src=&quot;http://imgur.com/1NqO1K6.png&quot; /&gt;
+    &lt;div class=&quot;caption half-caption&quot;&gt;
+      Shadow from a point light.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fit-image&quot;&gt;
+    &lt;img src=&quot;http://imgur.com/rpO0kZ7.png&quot; /&gt;
+    &lt;div class=&quot;caption half-caption&quot;&gt;
+      Soft shadow from a wide area light. Rendered using 9 shadow ray samples per intersection.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;half-images&quot;&gt;
+  &lt;div class=&quot;fit-image&quot;&gt;
+    &lt;img src=&quot;http://imgur.com/H20Z8nV.png&quot; /&gt;
+    &lt;div class=&quot;caption half-caption&quot;&gt;
+      Soft shadow from a narrower area light. Rendered using 9 shadow ray samples per intersection.
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fit-image&quot;&gt;
+    &lt;img src=&quot;http://imgur.com/YE3LTLC.png&quot; /&gt;
+    &lt;div class=&quot;caption half-caption&quot;&gt;
+      Soft shadow from the same area light, but rendered using 4 shadow ray samples per intersection. Notice the increased noise on the shadow.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-8-adaptive-anti-aliasing&quot;&gt;Objective 8: Adaptive anti-aliasing&lt;/h2&gt;
+
+&lt;p&gt;Anti-aliasing eliminates an image artifact known as “jaggies” where straight lines appear to have a staircase like effect.&lt;/p&gt;
+
+&lt;p&gt;Anti-aliasing is performed by partitioning a pixel into uniformly sized subpixels and sending rays into the center of each subpixel. The final colour of a pixel is the average of the colours returned by its subpixel rays. The more samples taken per pixel, the smoother the final image looks.&lt;/p&gt;
+
+&lt;p&gt;In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that require anti-aliasing are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is just a normal ray trace. An edge detection algorithm is run over the first pass image to detect edge pixels and the second pass retraces detected edge pixels using anti-aliasing.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/ecxjBSi.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Image before anti-aliasing. Notice the jaggies.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/V5vOc4E.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Edge pixels detected through edge detection algorithm.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/3q6dyQN.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Image after anti-aliasing using 9 samples per anti-aliased pixel.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-9-bounding-volume-hierarchy-bvh&quot;&gt;Objective 9: Bounding Volume Hierarchy (BVH)&lt;/h2&gt;
+
+&lt;p&gt;This feature optimizes the speed of the ray tracer by eliminating unnecessary intersection checks. The algorithm starts out by bounding all objects in a scene in one Axis Aligned Bolume Box (AABB) and storing this AABB and the objects it contains in a root node. It then splits these objects into three groups based on location. An AABB and a corresponding child node are created for each group. This process is repeated recursively for each child node and stops when a node contains only one object. The resulting data structure is a tree.&lt;/p&gt;
+
+&lt;p&gt;We can speed up intersection checking using BVH through the observation that if a ray fails to intersect with a node’s AABB, it will fail to intersect any of the nodes descendent nodes. Because of the tree structure, BVH allows intersection testing of one ray to be run on $x$ number of model objects, where $x$ is logarithmic in the total number of model objects.&lt;/p&gt;
+
+&lt;p&gt;BVH’s performance is highly dependent on the object partitioning algorithm (i.e. tree balancing algorithm) used to create the BVH tree.&lt;/p&gt;
+
+&lt;p&gt;To demonstrate the performance increase through BVH, I generated scenes with 1000, 20000, and 50000 spheres. I rendered each scene using non-BVH mode and BVH mode and recorded render times. Here are the results.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Spheres&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;non-BVH&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;BVH&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1000&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;5s&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0s&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;20000&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;150s&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4s&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;50000&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;542s&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;13s&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;relaxed-image&quot;&gt;&lt;img src=&quot;http://imgur.com/PQIaBsX.png&quot; /&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;objective-10-final-scene&quot;&gt;Objective 10: Final scene&lt;/h2&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://imgur.com/qx2lIWN.png&quot; /&gt;&lt;/div&gt;
+
+&lt;div style=&quot;margin-top: 80px&quot;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Special thanks goes towards Professor Baranoski for being a great teacher and for entertaining all the questions I had after class and during office hours. I thoroughly enjoyed CS488 and learned a great deal.&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Mar 2017 02:55:48 -0400</pubDate>
+        <link>http://kevinpan.me/blog/2017/03/28/cs488-project-extended-ray-tracer/</link>
+        <guid isPermaLink="true">http://kevinpan.me/blog/2017/03/28/cs488-project-extended-ray-tracer/</guid>
+        
+        
+      </item>
     
       <item>
         <title>San Francisco Fleet Week 2016</title>

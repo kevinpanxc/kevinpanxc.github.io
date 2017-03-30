@@ -373,9 +373,37 @@ pre {
     margin-bottom: 20px; }
     .post-content .fit-image img {
       width: 100%; }
+    .post-content .fit-image .caption {
+      margin: 0 auto;
+      margin-top: 5px;
+      width: 65%;
+      text-align: center; }
+    .post-content .fit-image .wide-caption {
+      width: 65%;
+      min-width: 400px; }
+    .post-content .fit-image .half-caption {
+      width: 100%; }
     @media screen and (max-width: 800px) {
       .post-content .fit-image {
         padding: 0px !important; } }
+  .post-content .relaxed-image {
+    margin-bottom: 20px;
+    text-align: center; }
+  .post-content .half-images {
+    width: 100%; }
+    .post-content .half-images > div:first-child {
+      width: 49%;
+      float: left; }
+    .post-content .half-images > div:last-child {
+      width: 49%;
+      float: right; }
+  .post-content table {
+    border-collapse: collapse; }
+  .post-content th, .post-content td {
+    border: 1px solid black; }
+  .post-content th, .post-content td {
+    padding: 10px 24px;
+    text-align: left !important; }
 
 /**
  * Syntax highlighting styles
