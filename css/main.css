@@ -385,7 +385,10 @@ pre {
       width: 100%; }
     @media screen and (max-width: 800px) {
       .post-content .fit-image {
-        padding: 0px !important; } }
+        padding: 0px !important; }
+        .post-content .fit-image .wide-caption {
+          width: 95%;
+          min-width: 0px; } }
   .post-content .relaxed-image {
     margin-bottom: 20px;
     text-align: center; }
@@ -397,6 +400,9 @@ pre {
     .post-content .half-images > div:last-child {
       width: 49%;
       float: right; }
+    @media screen and (max-width: 800px) {
+      .post-content .half-images {
+        padding: 0px !important; } }
   .post-content table {
     border-collapse: collapse; }
   .post-content th, .post-content td {
