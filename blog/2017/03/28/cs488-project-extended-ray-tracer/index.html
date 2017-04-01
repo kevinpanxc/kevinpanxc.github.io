@@ -222,11 +222,11 @@
 
 <h2 id="objective-8-adaptive-anti-aliasing">Objective 8: Adaptive anti-aliasing</h2>
 
-<p>Anti-aliasing eliminates an image artifact known as “jaggies” where straight lines appear to have a staircase like effect.</p>
+<p>Anti-aliasing eliminates “jaggies”, a type of image artifact where straight or smooth lines have a staircase-like appearance. Note that all previous sample renderings were rendered with anti-aliasing.</p>
 
 <p>Anti-aliasing is performed by partitioning a pixel into uniformly sized subpixels and sending rays into the center of each subpixel. The final colour of a pixel is the average of the colours returned by its subpixel rays. The more samples taken per pixel, the smoother the final image looks.</p>
 
-<p>In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that require anti-aliasing are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is just a normal ray trace. An edge detection algorithm is run over the first pass image to detect edge pixels and the second pass retraces detected edge pixels using anti-aliasing.</p>
+<p>In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that need it are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is a standard ray trace. The resulting image is fed to an edge detection algorithm and a second pass, this time with anti-aliasing turned on, retraces the detected edge pixels.</p>
 
 <div class="fit-image">
   <img src="http://imgur.com/ecxjBSi.png" />

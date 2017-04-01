@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 Mar 2017 19:15:11 -0400</pubDate>
-    <lastBuildDate>Fri, 31 Mar 2017 19:15:11 -0400</lastBuildDate>
+    <pubDate>Fri, 31 Mar 2017 21:09:36 -0400</pubDate>
+    <lastBuildDate>Fri, 31 Mar 2017 21:09:36 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -140,11 +140,11 @@
 
 &lt;h2 id=&quot;objective-8-adaptive-anti-aliasing&quot;&gt;Objective 8: Adaptive anti-aliasing&lt;/h2&gt;
 
-&lt;p&gt;Anti-aliasing eliminates an image artifact known as “jaggies” where straight lines appear to have a staircase like effect.&lt;/p&gt;
+&lt;p&gt;Anti-aliasing eliminates “jaggies”, a type of image artifact where straight or smooth lines have a staircase-like appearance. Note that all previous sample renderings were rendered with anti-aliasing.&lt;/p&gt;
 
 &lt;p&gt;Anti-aliasing is performed by partitioning a pixel into uniformly sized subpixels and sending rays into the center of each subpixel. The final colour of a pixel is the average of the colours returned by its subpixel rays. The more samples taken per pixel, the smoother the final image looks.&lt;/p&gt;
 
-&lt;p&gt;In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that require anti-aliasing are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is just a normal ray trace. An edge detection algorithm is run over the first pass image to detect edge pixels and the second pass retraces detected edge pixels using anti-aliasing.&lt;/p&gt;
+&lt;p&gt;In adaptive anti-aliasing, not all pixels are anti-aliased. Ideally, only pixels that need it are anti-aliased. My adaptive anti-aliasing implementation uses two passes to generate the image. The first pass is a standard ray trace. The resulting image is fed to an edge detection algorithm and a second pass, this time with anti-aliasing turned on, retraces the detected edge pixels.&lt;/p&gt;
 
 &lt;div class=&quot;fit-image&quot;&gt;
   &lt;img src=&quot;http://imgur.com/ecxjBSi.png&quot; /&gt;
