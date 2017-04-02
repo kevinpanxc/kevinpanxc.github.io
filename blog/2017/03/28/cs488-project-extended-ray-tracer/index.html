@@ -112,7 +112,7 @@
 
 <p>Reflection is implemented by firing secondary reflection rays when light rays hit reflective objects. The new ray’s direction is determined using the law of reflection. Reflection rays can recursively generate more reflection rays if they hit reflective objects.</p>
 
-<p>Implementation-wise, refraction is similar to reflection. One key difference is the use of Snell’s law, instead of the law of reflection, to determine the direction of secondary rays. The law takes into account the indices of refraction between the two mediums that the ray is passing through.</p>
+<p>Refraction is similar to reflection, except that we use Snell’s law instead of the law of reflection to determine the direction of secondary rays. The law takes into account the indices of refraction between the two mediums that the ray is passing through.</p>
 
 <p>In this ray tracer, refractive objects are also reflective. Fresnel coefficients are used to determine the amount of light that is refracted and reflected at different points on the object.</p>
 

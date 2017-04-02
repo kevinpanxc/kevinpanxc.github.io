@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Apr 2017 15:48:20 -0400</pubDate>
-    <lastBuildDate>Sun, 02 Apr 2017 15:48:20 -0400</lastBuildDate>
+    <pubDate>Sun, 02 Apr 2017 15:48:42 -0400</pubDate>
+    <lastBuildDate>Sun, 02 Apr 2017 15:48:42 -0400</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -30,7 +30,7 @@
 
 &lt;p&gt;Reflection is implemented by firing secondary reflection rays when light rays hit reflective objects. The new ray’s direction is determined using the law of reflection. Reflection rays can recursively generate more reflection rays if they hit reflective objects.&lt;/p&gt;
 
-&lt;p&gt;Implementation-wise, refraction is similar to reflection. One key difference is the use of Snell’s law, instead of the law of reflection, to determine the direction of secondary rays. The law takes into account the indices of refraction between the two mediums that the ray is passing through.&lt;/p&gt;
+&lt;p&gt;Refraction is similar to reflection, except that we use Snell’s law instead of the law of reflection to determine the direction of secondary rays. The law takes into account the indices of refraction between the two mediums that the ray is passing through.&lt;/p&gt;
 
 &lt;p&gt;In this ray tracer, refractive objects are also reflective. Fresnel coefficients are used to determine the amount of light that is refracted and reflected at different points on the object.&lt;/p&gt;
 
