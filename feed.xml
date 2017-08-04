@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 03:51:00 -0400</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 03:51:00 -0400</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 00:29:04 -0700</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 00:29:04 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -212,9 +212,9 @@
 &lt;div style=&quot;margin-top: 80px&quot;&gt;&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;Special thanks goes towards Professor Baranoski for being a great teacher and for entertaining all the questions I had after class and during office hours. I thoroughly enjoyed CS488 and learned a great deal.&lt;/em&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 28 Mar 2017 02:55:48 -0400</pubDate>
-        <link>http://kevinpan.me/blog/2017/03/28/cs488-project-extended-ray-tracer/</link>
-        <guid isPermaLink="true">http://kevinpan.me/blog/2017/03/28/cs488-project-extended-ray-tracer/</guid>
+        <pubDate>Mon, 27 Mar 2017 23:55:48 -0700</pubDate>
+        <link>http://kevinpan.me/blog/2017/03/27/cs488-project-extended-ray-tracer/</link>
+        <guid isPermaLink="true">http://kevinpan.me/blog/2017/03/27/cs488-project-extended-ray-tracer/</guid>
         
         
       </item>
@@ -280,9 +280,9 @@
 
 &lt;div class=&quot;wide-image&quot;&gt;&lt;img src=&quot;http://i.imgur.com/zG4hRPj.jpg?1&quot; /&gt;&lt;/div&gt;
 </description>
-        <pubDate>Sun, 09 Oct 2016 02:00:05 -0400</pubDate>
-        <link>http://kevinpan.me/blog/2016/10/09/sf-fleet-week/</link>
-        <guid isPermaLink="true">http://kevinpan.me/blog/2016/10/09/sf-fleet-week/</guid>
+        <pubDate>Sat, 08 Oct 2016 23:00:05 -0700</pubDate>
+        <link>http://kevinpan.me/blog/2016/10/08/sf-fleet-week/</link>
+        <guid isPermaLink="true">http://kevinpan.me/blog/2016/10/08/sf-fleet-week/</guid>
         
         
       </item>
@@ -333,7 +333,7 @@
 
 &lt;p&gt;Overall, Mount Diablo was a challenging but fun and rewarding ride. After a busy week, I definitely enjoyed having some time to myself.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 04 Oct 2016 04:52:00 -0400</pubDate>
+        <pubDate>Tue, 04 Oct 2016 01:52:00 -0700</pubDate>
         <link>http://kevinpan.me/blog/2016/10/04/mt-diablo/</link>
         <guid isPermaLink="true">http://kevinpan.me/blog/2016/10/04/mt-diablo/</guid>
         
@@ -384,7 +384,7 @@
 
 &lt;div class=&quot;wide-image&quot;&gt;&lt;img src=&quot;http://imgur.com/OlB0uFO.jpg&quot; /&gt;&lt;/div&gt;
 </description>
-        <pubDate>Mon, 18 Jul 2016 22:09:25 -0400</pubDate>
+        <pubDate>Mon, 18 Jul 2016 19:09:25 -0700</pubDate>
         <link>http://kevinpan.me/blog/2016/07/18/in-and-around-livermore/</link>
         <guid isPermaLink="true">http://kevinpan.me/blog/2016/07/18/in-and-around-livermore/</guid>
         
@@ -454,7 +454,7 @@
 
 &lt;p&gt;I’m also going to go on a whim here and say that people are generally more interested in the results rather than how the results were achieved. Do car commercials ever spend significant time showing off how a car was built or how they were able to achieve that high mileage?&lt;/p&gt;
 </description>
-        <pubDate>Wed, 11 May 2016 14:05:37 -0400</pubDate>
+        <pubDate>Wed, 11 May 2016 11:05:37 -0700</pubDate>
         <link>http://kevinpan.me/blog/2016/05/11/thoughts-on-writing-a-resume/</link>
         <guid isPermaLink="true">http://kevinpan.me/blog/2016/05/11/thoughts-on-writing-a-resume/</guid>
         
@@ -491,7 +491,7 @@
 
 &lt;p&gt;I didn’t mention this before but a lot of my anxiety-driven fears have another common theme besides being weird and embarrassing, they were always about LOSS. Somehow, deep within me, there is a strong, primal fear for loss. And this is how acceptance really helped. Instead of fearing loss, I mentally accepted loss. This is really hard to put into words but basically, if I was going to lose something and was powerless to stop it, I will lose it and then this loss becomes a part of who I am. This whole time the one thing that is constant, the one solid thing that I can rely on, is that I am me and that will never change :)&lt;/p&gt;
 </description>
-        <pubDate>Sat, 12 Mar 2016 05:48:25 -0500</pubDate>
+        <pubDate>Sat, 12 Mar 2016 02:48:25 -0800</pubDate>
         <link>http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</link>
         <guid isPermaLink="true">http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</guid>
         
@@ -601,9 +601,9 @@ y &amp; = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
 
 &lt;p&gt;From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Nov 2014 01:22:42 -0500</pubDate>
-        <link>http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection/</link>
-        <guid isPermaLink="true">http://kevinpan.me/blog/2014/11/30/some-notes-on-the-mercator-projection/</guid>
+        <pubDate>Sat, 29 Nov 2014 22:22:42 -0800</pubDate>
+        <link>http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/</link>
+        <guid isPermaLink="true">http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/</guid>
         
         
       </item>
