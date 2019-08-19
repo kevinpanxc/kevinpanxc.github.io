@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Building AutochessTV.com</title>
+  <meta name="description" content="When Riot Games launched Teamfight Tactics, their version of the popular new game genre, “autochess”, I tried it out and was instantly hooked. Autochess game...">
+  <link href="/favicon.png" rel="icon">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kevinpan.me/blog/2019/08/19/building-autochesstv-com/">
+  <link rel="alternate" type="application/rss+xml" title="Mango Ice Cream" href="http://kevinpan.me/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- mathjax config similar to math.stackexchange -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <div class="site-title">
+      <a href="/">
+        <div>
+          M
+        </div>
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About Me</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header wrapper">
+    <h1 class="post-title" itemprop="name headline">Building AutochessTV.com</h1>
+    <p class="post-meta"><time datetime="2019-08-19T02:02:14-07:00" itemprop="datePublished">Aug 19, 2019</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>When Riot Games launched Teamfight Tactics, their version of the popular new game genre, “autochess”, I tried it out and was instantly hooked. Autochess games have a simple premise: pick units that the game randomly gives you and place them on a board. Each round, you are pitted against a random opponent in a free-for-all lobby (usually containing 7 other players) where the units on your board fight the opponent’s units. The losing team loses overall player health. If you lose all your health, you’re out. The winner of the game is the last remaining player in the lobby.</p>
+
+<div class="wide-image">
+  <img src="http://imgur.com/DUZUKHk.png" />
+</div>
+
+<p>When I get hopelessly addicted to something, I like to turn the addiction into a productive enterprise. For example, when I was addicted to cryptocurrencies during the bull market in 2017, I started a blog to write about everything I was learning about the technology. The blog became popular with readers donating thousands of dollars and companies paying for sponsored articles.</p>
+
+<p>With Teamfight Tactics, I chose to build <a href="https://www.autochesstv.com" target="_blank">AutochessTV.com</a>. Again, I wanted to funnel my addiction into a productive outlet, but I also wanted to grab business opportunities that present themselves every time a new game becomes popular.</p>
+
+<h1 id="high-level-design">High level design</h1>
+
+<p>I wanted AutochessTV.com to do one small, but delightful, thing really well. This is the direct application of a learning from <a href="https://www.smashvods.tv" target="_blank">SmashVODs.tv</a>, a previous website I built for Super Smash Bros Ultimate (SSBU). With SmashVODs.tv, the website tried to do too much in an already crowded space. Given my available free time, maintaining the website became untenable.</p>
+
+<p>For AutochessTV.com, I picked the clips feature from SmashVODs.tv and focused AutochessTV.com on just this feature. Essentially, SmashVODs.tv polled and saved popular SSBU clips from Twitch’s API, and presented these clips in an easy to discover and watch format, something that Twitch is not great at.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/SaFDZ2e.png" />
+</div>
+
+<h1 id="what-is-a-great-clips-discovery-and-watch-experience">What is a great clips discovery and watch experience?</h1>
+
+<p>Clips is one of Twitch’s best features (I might be biased) where viewers can click one button to create a short clip of the last 30 seconds to 1 minute of a live stream. When something amazing happens on stream, you bet that a legion of viewers will clip the moment and share. As such, Clips is a great system to find the most exciting moments on Twitch.</p>
+
+<p>Twitch has never invested in a great discovery and watch experience for clips, which presents opportunities for third party developers. I’ve spent way too much time thinking about what is a great clips discovery and watch experience. In my opinion, here’s what’s needed:</p>
+
+<p>Watch experience:</p>
+
+<ul>
+  <li>Continuous watching: easy to watch multiple clips at once</li>
+  <li>Community interaction: reacting, commenting, and saving clips make the experience even more delightful.</li>
+</ul>
+
+<p>Discovery experience:</p>
+
+<ul>
+  <li>Brainless: “show me the best trending clips, without redundancy”</li>
+  <li>Chronological discovery: “show me the best clips last month”, “show me the best clips 2 years ago”</li>
+  <li>Sentiment discovery: “show me the funniest clips”, “show me the most exciting clips”</li>
+  <li>Topical discovery: “show me clips of raid boss Shyvana”</li>
+  <li>Multivariate discovery: “show me the funniest fail clips of DisguisedToast for the last month”</li>
+</ul>
+
+<h1 id="clips-experience-on-autochesstvcom">Clips experience on AutochessTV.com</h1>
+
+<p>To enable a seamless continuous clips watching experience, I chose to go with row-by-row viewing, similar to Reddit’s post browsing experience. To watch the next clip, a user simply needs to click the next row. A couple benefits of this design: no additional page loads and a user can easily understand (spatially) where they are on the site when transitioning between clips.</p>
+
+<p>To enable community interaction, I added a clips saving feature (ported over from SmashVODs.tv) and a reactions bar (also ported over from SmashVODs.tv). To save or react, users need to be signed in. The reactions bar is interesting; to not make the site feel like a ghost town on launch, I built a sentiment analysis system that periodically assigns “fake” reactions to a clip, normalized by view count.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/PJ5YcCX.png" />
+</div>
+
+<p>For clips discovery, I wanted it to be, first and foremost, brainless. To do so, I created the “Top Gameplay” category. This category contains manually curated clips. As my cron job polls the Twitch API for recent popular Teamfight Tactics clips, I personally sift through the noise to find clips with great gameplay. This is fun and easy to do. For anyone that just wants to watch the most recent and best clips, they only need to use the “Top Gameplay” category, which is presented by default.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/LSOgWNZ.png" />
+</div>
+
+<p>Other ways to discover clips right now include sorting by recency or popularity for “All Clips” or “Top Gameplay” clips, and limited it to different time periods (e.g. last 48 hours, 30 days, or a specific month).</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/R1OYggm.png" />
+</div>
+
+<h1 id="a-note-on-sentiment-analysis">A note on sentiment analysis</h1>
+
+<p>From a technical perspective, I find the most interesting aspect of the site is the sentiment analysis for clips. When I set out to build the system, I decided that it needed to have two core requirements: reaction counts match the sentiment of the clip and reaction counts must feel realistic.</p>
+
+<p>I implement these two requirements with a few heuristics. To determine the sentiment of a clip, I poll the clip’s chat. For each chat message, I extract tokens and match each token with a fixed list of tokens per sentiment. For example, my list of tokens that match the “funny” sentiment include: “LUL”, “OMEGALUL”, “lol”, “haha”, etc. After classifying each token per message, I assign a sentiment to the message. Then, I calculate the overall sentiment of the clip by aggregating and normalizing the sentiments of all messages. It’s important to note that the sentiment I calculate for a clip is multidimensional (e.g. 30% funny, 10% exciting, 0% scary).</p>
+
+<p>Finally, I periodically assign fake reactions to the clip based on the sentiment analysis, normalized by the clip’s view count. Using the clip’s view count, I calculate the ideal total reaction count of the clip and the fake reaction assigner uses a logarithmic function to assign fake reactions to the clip. The vertical asymptote of the logarithmic function is the clip’s ideal total reaction count. In assigning fake reactions, I leverage the multidimensional sentiment of the clip and also heuristically introduce some noise to make the reactions feel real.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/FvgiRnp.png" />
+</div>
+
+<h1 id="growing-autochesstvcom">Growing AutochessTV.com</h1>
+
+<p>A website with a great user experience with no way to discover it is always worse than a website with a mediocre user experience but great discovery (is Reddit a good example?). My own copypasta website, <a href="https://www.twitchquotes.com">TwitchQuotes.com</a> is successfuly mostly because it ranks highly on a few high traffic Google search queries.</p>
+
+<p>To grow AutochessTV.com, I’m considering leaning into Google by building one or two features that are ideal for search engine indexing. Embedded Twitch clips is, unfortunately, not great for search engine indexing. One feature could be a forum to discuss Teamfight Tactics team compositions. Forum posts are text heavy and Google likes when there’s more text.</p>
+
+<p>To start, my existing audience funnels consist primarily of traffic from Reddit links and TwitchQuotes.com referrals. TwitchQuotes.com has 40k unique visitors a month and I’m advertising AutochessTV.com on TwitchQuotes.com. Reddit traffic can be insane. Successful link shares can result in thousands of visitors a day. This traffic, however, is short term and dies down the moment the link leaves a subreddit’s front page.</p>
+
+<p>The crux of website development is fast experimentation and securing that long term top of the funnel traffic.</p>
+
+  </div>
+
+</article>
+
+
+  <section>
+    <div class="wrapper">
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite">
+
+<script type="text/javascript">
+      var disqus_shortname = 'mangoicecream';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kevinpan.me/blog/2019/08/19/building-autochesstv-com/';
+        var disqus_url = 'http://kevinpan.me/blog/2019/08/19/building-autochesstv-com/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+</div>
+    </div>
+  </section>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mango Ice Cream</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:kevinpanxc@gmail.com">kevinpanxc@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Avid road cyclist. Aspiring product manager. Passionate software developer. Armchair political scientist. Couch economist.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
