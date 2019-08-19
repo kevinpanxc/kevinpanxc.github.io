@@ -6,13 +6,13 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Aug 2019 05:18:50 -0700</pubDate>
-    <lastBuildDate>Mon, 19 Aug 2019 05:18:50 -0700</lastBuildDate>
+    <pubDate>Mon, 19 Aug 2019 05:41:46 -0700</pubDate>
+    <lastBuildDate>Mon, 19 Aug 2019 05:41:46 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>Building AutochessTV.com</title>
-        <description>&lt;p&gt;When Riot Games launched Teamfight Tactics, their version of the popular new game genre, “autochess”, I tried it out and was instantly hooked. Autochess games have a simple premise: pick units that the game randomly gives you and place them on a board. Each round, you are pitted against a random opponent in a free-for-all lobby (usually containing 7 other players) where the units on your board fight the opponent’s units. The losing team loses overall player health. If you lose all your health, you’re out. The winner of the game is the last player in the lobby.&lt;/p&gt;
+        <description>&lt;p&gt;When Riot Games launched Teamfight Tactics, their version of the popular new game genre, “autochess”, I tried it out and was instantly hooked. Autochess games have a simple premise: pick units that the game randomly gives you and place them on a board. Each round, you are pitted against a random opponent in a free-for-all lobby (usually containing 7 other players) where the units on your board fight the opponent’s units. The losing team loses overall player health. If you lose all your health, you’re out. The winner of the game is the last surviving player in the lobby.&lt;/p&gt;
 
 &lt;div class=&quot;wide-image&quot;&gt;
   &lt;img src=&quot;http://imgur.com/DUZUKHk.png&quot; /&gt;
