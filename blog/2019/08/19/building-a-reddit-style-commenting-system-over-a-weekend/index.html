@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Building A Reddit-Style Commenting System Over A Weekend</title>
+  <meta name="description" content="As I was building SmashVODs.tv, I thought it would be a great idea to add commenting to clips and tournament VODs. What’s a great commenting system? I really...">
+  <link href="/favicon.png" rel="icon">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://kevinpan.me/blog/2019/08/19/building-a-reddit-style-commenting-system-over-a-weekend/">
+  <link rel="alternate" type="application/rss+xml" title="Mango Ice Cream" href="http://kevinpan.me/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- mathjax config similar to math.stackexchange -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <div class="site-title">
+      <a href="/">
+        <div>
+          M
+        </div>
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About Me</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header wrapper">
+    <h1 class="post-title" itemprop="name headline">Building A Reddit-Style Commenting System Over A Weekend</h1>
+    <p class="post-meta"><time datetime="2019-08-19T23:06:07-07:00" itemprop="datePublished">Aug 19, 2019</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>As I was building <a href="https://www.smashvods.tv" target="_blank">SmashVODs.tv</a>, I thought it would be a great idea to add commenting to clips and tournament VODs. What’s a great commenting system? I really enjoy Reddit’s nested comments. So I set out to build it for SmashVODs.</p>
+
+<p>Here are the requirements for a Reddit-style commenting system:</p>
+
+<ol>
+  <li>Recursive parent-child comment relationship and terminal condition for scalability</li>
+  <li>Comment upvotes</li>
+  <li>Efficient comment fetching</li>
+  <li>UI to upvote a comment / post a root comment / post a nested comment</li>
+  <li>UI to show a single comment thread (i.e. render a comment as if it’s the root comment) / navigate up the comment tree</li>
+</ol>
+
+<div class="fit-image">
+  <img src="http://imgur.com/78Z4F3Y.png" />
+</div>
+
+<p>I set out to implement this system with these requirements without knowing how long it’d take. With a lot of thinking, mashing at the keyboard, and anti-social juice, I managed to build out a fully functioning system in one weekend. You can play around with it <a href="https://www.smashvods.tv/matches/604" target="_blank">here</a>.</p>
+
+<h1 id="recursive-parent-child-comment-relationship-and-terminal-condition-for-scalability">1. Recursive parent-child comment relationship and terminal condition for scalability</h1>
+
+<p>It was easy to use a relational database (I used Postgres) and Ruby on Rails’s ORM to implement the recursive parent-child comment relationship. Every user had comments, a comment had a reference id to a parent comment. This reference id was nil if it’s a root comment.</p>
+
+<p>I spent some time thinking about the terminal condition for the recursion. Should it be infinitely nestable? Should I stop the recursion after a set number of nests? Infinite nestability is cool but there are difficult comment fetching and UI edge cases when the nesting gets extreme that I didn’t want to design and implement.</p>
+
+<p>I ended up settling with a maximum of 5 nested comments per root comment thread. This felt like a sufficient amount of allowance for nesting that it wouldn’t be a bad user experience, while minimizing the technical effort to implement.</p>
+
+<h1 id="comment-upvotes">2. Comment upvotes</h1>
+
+<p>This was straightforward to implement. Upvotes belonged to a user and a comment. The rest is setting up APIs, data plumbing, and UI design and implementation.</p>
+
+<h1 id="efficient-comment-fetching">3. Efficient comment fetching</h1>
+
+<p>I spent the most time thinking about how to implement efficient comment fetching. Ideally, you’d want to show the most popular comments first, not return too many comments, and allow the user to show more comments if there are more.</p>
+
+<p>With linear data sets, pagination works really well to make sure you don’t return too many comments. With nested comments, this becomes super tricky. I tried to figure out how Reddit handled this. With large comment threads, some nested comments would be truncated with a link like “6 more replies” and this truncation happened across multiple levels. I couldn’t figure out what heuristic Reddit used to determine when to truncate.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/ZVUnLx0.png" />
+  <div class="caption wide-caption">
+    I'm not sure when Reddit chooses when to show an "X more replies" link
+  </div>
+</div>
+
+<p>I also spent a long time thinking about how to fetch a comment tree efficiently without recursion.</p>
+
+<p>After much deliberation, I realized that I was spending too much time designing the comment fetching logic when it should <strong>start off simple</strong>. The system was guaranteed to have low usage to start and if I needed to solve scaling when more people are using it, that’s a good problem to have!</p>
+
+<p>I ended up implementing a naive recursive algorithm to fetch all comments for a comment thread. I returned the entire set of comments on page load. This was straightforward to implement and worked really well. To reduce potentially long pageloads, I fetched a page’s comments only after the rest of the page has loaded. The comment section was mostly below the fold and this had minimal effects on user experience.</p>
+
+<h1 id="ui-to-upvote-a-comment--post-a-root-comment--post-a-nested-comment">4. UI to upvote a comment / post a root comment / post a nested comment</h1>
+
+<p>Two difficult problems to solve with implementing a UI.</p>
+
+<p>The first is designing the UI. I’m bad at UI design and mediocre with CSS (I worship on the altar of <code class="highlighter-rouge">display: flex</code>). To fast track design, I took heavy inspiration from Reddit’s comment thread design.</p>
+
+<p>The second problem is architecting the frontend such that users can upvote comments, post root comments, and post nested comments without the code resembling an Italian pasta shop. There were many components to reuse, states to handle, and data pathways to set up and this required careful planning.</p>
+
+<div class="fit-image">
+  <img src="http://imgur.com/6wu0T3m.png" />
+  <div class="caption wide-caption">
+    Please no spaghetti!
+  </div>
+</div>
+
+<p>In the end, I was able to architect something that I was comfortable with, and implement it with minimal debugging.</p>
+
+<h1 id="ui-to-show-a-single-comment-thread-ie-render-a-comment-as-if-its-the-root-comment--navigate-up-the-comment-tree">5. UI to show a single comment thread (i.e. render a comment as if it’s the root comment) / navigate up the comment tree</h1>
+
+<p>This could be considered a nice-to-have feature but my completionist drive took a hold of me and I wanted to make it possible to expand into comment threads and show nested comments as root comments, similar to how Reddit does it. It turns out, this was mostly a matter of UI design as it only involved a minor tweak to the comment fetching logic in the backend.</p>
+
+<h1 id="bonus-points-soundcloud-style-comments-for-a-video">Bonus points: SoundCloud-style comments for a video</h1>
+
+<div class="fit-image">
+  <img src="http://imgur.com/nmRkJ6d.png" />
+</div>
+
+<p>I spent the first weekend building requirements 1-5 and tackled this afterwards. The trickiest aspect of this feature is rendering comment markers in a timeline under the video in a manageable way.</p>
+
+<p>Here are the requirements for timestamped commments and a video comment timeline:</p>
+
+<ol>
+  <li>Users can choose to attach a timestamp to a comment based on the video’s current time</li>
+  <li>Readers can see that a comment has an attached timestamp, and quickly navigate to that point in the video</li>
+  <li>The video comment timeline needs to be rendered such that comment markers don’t overlap and users can quickly display all comments at a particular point in time</li>
+</ol>
+
+<p>Requirement 3 proved to be the hardest to design and implement. I spent hours thinking about the best way to do this such that the edge cases are handled, e.g. if a user increases or decreases the browser’s width.</p>
+
+<p>I ended up deciding to batch comments and partitioning the video timeline into 20 fixed increments. Each batch of comments would thus be part of 4% of the video’s length. If a 4% video segment had more than one comment, I rendered a marker with the comment count on it. A user could view comments in this video segment by clicking on this marker, which causes a special comment view to be displayed such that only root comments within this 4% video segment are shown.</p>
+
+<p>This solution elegantly solves tow key problems. Because the comment markers are batched and shown at predictable non-overlapping points in the timeline, the overlapping comment marker issue is solved. By choosing a 4% increment, I can easily use a 4% CSS width for each comment marker so if a user increases or decreases the browser’s width, the comment markers elegantly adjust spacing between each other.</p>
+
+<h1 id="closing-thoughts">Closing thoughts</h1>
+
+<p>The commenting system initially felt daunting to build given all the complex pieces that needed to be combined together. Breaking the problem down into component parts and being explicit about requirements made it easy to manage. The best part about building this is that I can reuse the system across many different side projects which widens the type of website I can build and increases my efficiency in experimentation.</p>
+
+  </div>
+
+</article>
+
+
+  <section>
+    <div class="wrapper">
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite">
+
+<script type="text/javascript">
+      var disqus_shortname = 'mangoicecream';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://kevinpan.me/blog/2019/08/19/building-a-reddit-style-commenting-system-over-a-weekend/';
+        var disqus_url = 'http://kevinpan.me/blog/2019/08/19/building-a-reddit-style-commenting-system-over-a-weekend/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+</div>
+    </div>
+  </section>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mango Ice Cream</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="mailto:kevinpanxc@gmail.com">kevinpanxc@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Avid road cyclist. Aspiring product manager. Passionate software developer. Armchair political scientist. Couch economist.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

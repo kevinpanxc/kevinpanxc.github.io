@@ -6,9 +6,114 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 19 Aug 2019 05:41:46 -0700</pubDate>
-    <lastBuildDate>Mon, 19 Aug 2019 05:41:46 -0700</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2019 01:20:36 -0700</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2019 01:20:36 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Building A Reddit-Style Commenting System Over A Weekend</title>
+        <description>&lt;p&gt;As I was building &lt;a href=&quot;https://www.smashvods.tv&quot; target=&quot;_blank&quot;&gt;SmashVODs.tv&lt;/a&gt;, I thought it would be a great idea to add commenting to clips and tournament VODs. What’s a great commenting system? I really enjoy Reddit’s nested comments. So I set out to build it for SmashVODs.&lt;/p&gt;
+
+&lt;p&gt;Here are the requirements for a Reddit-style commenting system:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Recursive parent-child comment relationship and terminal condition for scalability&lt;/li&gt;
+  &lt;li&gt;Comment upvotes&lt;/li&gt;
+  &lt;li&gt;Efficient comment fetching&lt;/li&gt;
+  &lt;li&gt;UI to upvote a comment / post a root comment / post a nested comment&lt;/li&gt;
+  &lt;li&gt;UI to show a single comment thread (i.e. render a comment as if it’s the root comment) / navigate up the comment tree&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/78Z4F3Y.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I set out to implement this system with these requirements without knowing how long it’d take. With a lot of thinking, mashing at the keyboard, and anti-social juice, I managed to build out a fully functioning system in one weekend. You can play around with it &lt;a href=&quot;https://www.smashvods.tv/matches/604&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;recursive-parent-child-comment-relationship-and-terminal-condition-for-scalability&quot;&gt;1. Recursive parent-child comment relationship and terminal condition for scalability&lt;/h1&gt;
+
+&lt;p&gt;It was easy to use a relational database (I used Postgres) and Ruby on Rails’s ORM to implement the recursive parent-child comment relationship. Every user had comments, a comment had a reference id to a parent comment. This reference id was nil if it’s a root comment.&lt;/p&gt;
+
+&lt;p&gt;I spent some time thinking about the terminal condition for the recursion. Should it be infinitely nestable? Should I stop the recursion after a set number of nests? Infinite nestability is cool but there are difficult comment fetching and UI edge cases when the nesting gets extreme that I didn’t want to design and implement.&lt;/p&gt;
+
+&lt;p&gt;I ended up settling with a maximum of 5 nested comments per root comment thread. This felt like a sufficient amount of allowance for nesting that it wouldn’t be a bad user experience, while minimizing the technical effort to implement.&lt;/p&gt;
+
+&lt;h1 id=&quot;comment-upvotes&quot;&gt;2. Comment upvotes&lt;/h1&gt;
+
+&lt;p&gt;This was straightforward to implement. Upvotes belonged to a user and a comment. The rest is setting up APIs, data plumbing, and UI design and implementation.&lt;/p&gt;
+
+&lt;h1 id=&quot;efficient-comment-fetching&quot;&gt;3. Efficient comment fetching&lt;/h1&gt;
+
+&lt;p&gt;I spent the most time thinking about how to implement efficient comment fetching. Ideally, you’d want to show the most popular comments first, not return too many comments, and allow the user to show more comments if there are more.&lt;/p&gt;
+
+&lt;p&gt;With linear data sets, pagination works really well to make sure you don’t return too many comments. With nested comments, this becomes super tricky. I tried to figure out how Reddit handled this. With large comment threads, some nested comments would be truncated with a link like “6 more replies” and this truncation happened across multiple levels. I couldn’t figure out what heuristic Reddit used to determine when to truncate.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/ZVUnLx0.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    I&#39;m not sure when Reddit chooses when to show an &quot;X more replies&quot; link
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I also spent a long time thinking about how to fetch a comment tree efficiently without recursion.&lt;/p&gt;
+
+&lt;p&gt;After much deliberation, I realized that I was spending too much time designing the comment fetching logic when it should &lt;strong&gt;start off simple&lt;/strong&gt;. The system was guaranteed to have low usage to start and if I needed to solve scaling when more people are using it, that’s a good problem to have!&lt;/p&gt;
+
+&lt;p&gt;I ended up implementing a naive recursive algorithm to fetch all comments for a comment thread. I returned the entire set of comments on page load. This was straightforward to implement and worked really well. To reduce potentially long pageloads, I fetched a page’s comments only after the rest of the page has loaded. The comment section was mostly below the fold and this had minimal effects on user experience.&lt;/p&gt;
+
+&lt;h1 id=&quot;ui-to-upvote-a-comment--post-a-root-comment--post-a-nested-comment&quot;&gt;4. UI to upvote a comment / post a root comment / post a nested comment&lt;/h1&gt;
+
+&lt;p&gt;Two difficult problems to solve with implementing a UI.&lt;/p&gt;
+
+&lt;p&gt;The first is designing the UI. I’m bad at UI design and mediocre with CSS (I worship on the altar of &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt;). To fast track design, I took heavy inspiration from Reddit’s comment thread design.&lt;/p&gt;
+
+&lt;p&gt;The second problem is architecting the frontend such that users can upvote comments, post root comments, and post nested comments without the code resembling an Italian pasta shop. There were many components to reuse, states to handle, and data pathways to set up and this required careful planning.&lt;/p&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/6wu0T3m.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Please no spaghetti!
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the end, I was able to architect something that I was comfortable with, and implement it with minimal debugging.&lt;/p&gt;
+
+&lt;h1 id=&quot;ui-to-show-a-single-comment-thread-ie-render-a-comment-as-if-its-the-root-comment--navigate-up-the-comment-tree&quot;&gt;5. UI to show a single comment thread (i.e. render a comment as if it’s the root comment) / navigate up the comment tree&lt;/h1&gt;
+
+&lt;p&gt;This could be considered a nice-to-have feature but my completionist drive took a hold of me and I wanted to make it possible to expand into comment threads and show nested comments as root comments, similar to how Reddit does it. It turns out, this was mostly a matter of UI design as it only involved a minor tweak to the comment fetching logic in the backend.&lt;/p&gt;
+
+&lt;h1 id=&quot;bonus-points-soundcloud-style-comments-for-a-video&quot;&gt;Bonus points: SoundCloud-style comments for a video&lt;/h1&gt;
+
+&lt;div class=&quot;fit-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/nmRkJ6d.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I spent the first weekend building requirements 1-5 and tackled this afterwards. The trickiest aspect of this feature is rendering comment markers in a timeline under the video in a manageable way.&lt;/p&gt;
+
+&lt;p&gt;Here are the requirements for timestamped commments and a video comment timeline:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Users can choose to attach a timestamp to a comment based on the video’s current time&lt;/li&gt;
+  &lt;li&gt;Readers can see that a comment has an attached timestamp, and quickly navigate to that point in the video&lt;/li&gt;
+  &lt;li&gt;The video comment timeline needs to be rendered such that comment markers don’t overlap and users can quickly display all comments at a particular point in time&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Requirement 3 proved to be the hardest to design and implement. I spent hours thinking about the best way to do this such that the edge cases are handled, e.g. if a user increases or decreases the browser’s width.&lt;/p&gt;
+
+&lt;p&gt;I ended up deciding to batch comments and partitioning the video timeline into 20 fixed increments. Each batch of comments would thus be part of 4% of the video’s length. If a 4% video segment had more than one comment, I rendered a marker with the comment count on it. A user could view comments in this video segment by clicking on this marker, which causes a special comment view to be displayed such that only root comments within this 4% video segment are shown.&lt;/p&gt;
+
+&lt;p&gt;This solution elegantly solves tow key problems. Because the comment markers are batched and shown at predictable non-overlapping points in the timeline, the overlapping comment marker issue is solved. By choosing a 4% increment, I can easily use a 4% CSS width for each comment marker so if a user increases or decreases the browser’s width, the comment markers elegantly adjust spacing between each other.&lt;/p&gt;
+
+&lt;h1 id=&quot;closing-thoughts&quot;&gt;Closing thoughts&lt;/h1&gt;
+
+&lt;p&gt;The commenting system initially felt daunting to build given all the complex pieces that needed to be combined together. Breaking the problem down into component parts and being explicit about requirements made it easy to manage. The best part about building this is that I can reuse the system across many different side projects which widens the type of website I can build and increases my efficiency in experimentation.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Aug 2019 23:06:07 -0700</pubDate>
+        <link>http://kevinpan.me/blog/2019/08/19/building-a-reddit-style-commenting-system-over-a-weekend/</link>
+        <guid isPermaLink="true">http://kevinpan.me/blog/2019/08/19/building-a-reddit-style-commenting-system-over-a-weekend/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Building AutochessTV.com</title>
@@ -71,7 +176,7 @@
   &lt;img src=&quot;http://imgur.com/LSOgWNZ.png&quot; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Other ways to discover clips right now include sorting by recency or popularity for “All Clips” or “Top Gameplay” clips, and limited it to different time periods (e.g. last 48 hours, 30 days, or a specific month).&lt;/p&gt;
+&lt;p&gt;Other ways to discover clips include sorting by recency or popularity for “All Clips” or “Top Gameplay” clips, and users can specify different time periods to return clips from (e.g. last 48 hours, 30 days, or a specific month).&lt;/p&gt;
 
 &lt;div class=&quot;fit-image&quot;&gt;
   &lt;img src=&quot;http://imgur.com/R1OYggm.png&quot; /&gt;
@@ -660,116 +765,6 @@
         <pubDate>Sat, 12 Mar 2016 02:48:25 -0800</pubDate>
         <link>http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</link>
         <guid isPermaLink="true">http://kevinpan.me/blog/2016/03/12/on-growing-up-with-anxiety/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Notes on the Mercator projection</title>
-        <description>&lt;p&gt;A while back I was investigating on how I would build a Twitter mapping application similar to the &lt;a href=&quot;http://www.onemilliontweetmap.com/&quot;&gt;One Million Tweet Map&lt;/a&gt; project. One of the first topics I looked into was how I would plot and display each tweet on a map. I was hesitant on using the Google Maps API and wanted to build the project on top of the HTML5 Canvas.&lt;/p&gt;
-
-&lt;p&gt;The main challenge here was implementing an algorithm that would map latitude and longitude information into x and y coordinates onto the canvas. I looked into several map projections and decided to settle on the Mercator projection (arguably the most commonly used map projection in the world). I did a little bit of research into Mercator projections with the help of &lt;a href=&quot;http://en.wikipedia.org/wiki/Mercator_projection&quot;&gt;Wikipedia&lt;/a&gt; and here is a concise summary of what I’ve learnt.&lt;/p&gt;
-
-&lt;p&gt;The Mercator projection is a cylindrical map projection. This means that meridians are mapped to equally spaced vertical lines and circles of latitudes are mapped to equally spaced horizontal lines. The projection assumes that the Earth is a perfect sphere (in truth the Earth is best modelled by an oblate spheroid). Our map will be a Mercator projection of a scaled down version of the perfectly spherical Earth. This scaled down version of the Earth will be called the globe and it has a radius $R$.&lt;/p&gt;
-
-&lt;p&gt;The Mercator projection can be understood using small element geometry. The idea is that if we “unwrap” the globe and spread it flat as best we could, very small elements or sections on the globe can be modelled using a rectangle. The diagram below visualizes this idea ($\lambda$ represents the longitude and $\phi$ represents the latitude).&lt;/p&gt;
-
-&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/d/d0/CylProj_infinitesimals2.svg&quot; /&gt;&lt;/div&gt;
-
-&lt;p&gt;The perpendicular distance from the axis of rotation to any point on the globe at latitude $\phi$ is $R \cdot \cos\phi$ and so we get $R \cdot \cos\phi \cdot \delta\lambda$ as the horizontal distance between $P$ and $Q$ using the arc length formula.&lt;/p&gt;
-
-&lt;p&gt;The vertical distance between $P$ and $Q$ can also be explained using the same logic. Since latitudes are measured from the center of the globe and the difference in latitude between $P$ and $Q$ is $\delta\phi$, using the arc length formula again gives us $R \cdot \delta\phi$.&lt;/p&gt;
-
-&lt;p&gt;With this information, we define two scale factors from globe to cylinder:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
-k(\phi) &amp; =\frac{P&#39;M&#39;}{PM}=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}\tag{parallel scale factor} \\
-h(\phi) &amp; =\frac{P&#39;K&#39;}{PK}=\frac{\delta y}{R \cdot \delta\phi}\tag{meridian scale factor}
-\end{align} %]]&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;mapping-from-longitudes-to-x-coordinates&quot;&gt;Mapping from longitudes to x coordinates&lt;/h2&gt;
-
-&lt;p&gt;We note that for small $\delta\lambda$, $\delta x = R \cdot \delta\lambda$. From this equation, we can obtain the mapping function from longitudes to x coordinates (one half of the Mercator projection). $\delta x = R \cdot \delta\lambda$ is a very simple rearranged first order linear differential equation and we can solve it quickly.&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
-\delta x &amp; = R \cdot \delta\lambda \\
-\int \delta x &amp; = R \cdot \int \delta\lambda \\
-x + c_1 &amp; = R \cdot (\lambda + c_2) \\
-x &amp; = (R \cdot \lambda) + (R \cdot c_2) - c_1 \\
-&amp; = R(\lambda - \lambda_0)
-\end{align} %]]&gt;&lt;/script&gt;
-
-&lt;p&gt;Here $\lambda_0$ is the longitude of an arbitrary central meridian (this is usually Greenwich).&lt;/p&gt;
-
-&lt;h2 id=&quot;mapping-from-latitudes-to-y-coordinates&quot;&gt;Mapping from latitudes to y coordinates&lt;/h2&gt;
-
-&lt;p&gt;Before starting, it is important to understand that the Mercator projection is conformal. This means that the projection of points from the globe to the cylinder preserves angles. This property can be defined in two ways:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Equality of angles $\beta = \alpha$&lt;/li&gt;
-  &lt;li&gt;Isotropy of scale factors: $h = k$&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;From the above, we know that $\delta x = R \cdot \delta\lambda$ and substituting this into the expression for $k(\phi)$ gets us:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
-\frac{1}{\cos\phi} &amp; = k(\phi) \\
-&amp; = h(\phi)\tag{from (2)} \\
-&amp; = \frac{\delta y}{R \cdot \delta\phi} \\
-\frac{\delta y}{\delta\phi} &amp; = R \cdot \sec\phi
-\end{align} %]]&gt;&lt;/script&gt;
-
-&lt;p&gt;Solving this differential equation gives us the mapping function from latitudes to y coordinates:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;y = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]&lt;/script&gt;
-
-&lt;h2 id=&quot;finding-the-radius-of-the-globe-r&quot;&gt;Finding the radius of the globe, $R$&lt;/h2&gt;
-
-&lt;p&gt;But wait, there’s more! All this time we’ve been working with the radius of the globe, $R$, but what exactly is it’s value once we put the projection into practice?&lt;/p&gt;
-
-&lt;p&gt;Since the Mercator projection is cylindrical, the scale factor between the globe and the cylinder equals one only at the equator. This means that the circumference of the cylinder will equal the circumference of the globe and so the horizontal length of the physical map will equal $2 \cdot \pi \cdot R$.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;Finally, we can define the Mercator projection with these three equations (where z equals the horizontal length of the physical map):&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{align}
-R &amp; = \frac{z}{2 \cdot \pi} \\
-x &amp; = R(\lambda - \lambda_0) \\
-y &amp; = R \cdot \ln[\tan(\frac{\pi}{4} + \frac{\phi}{2})]
-\end{align} %]]&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;inaccuracies-with-the-projection&quot;&gt;Inaccuracies with the projection&lt;/h2&gt;
-
-&lt;p&gt;Interestingly, despite being one of the most popular projections in the world, the Mercator projection is grossly inaccurate in representing the relative sizes of different land masses. In particular, land masses get bloated the closer to the poles you go up to a point where the projection is not even capable of displaying the poles.&lt;/p&gt;
-
-&lt;div class=&quot;fit-image&quot;&gt;&lt;img src=&quot;http://media.economist.com/sites/default/files/imagecache/original-size/20101113_WOM943.gif&quot; /&gt;&lt;/div&gt;
-
-&lt;p&gt;This weird property of the projection can be understood by examining the parallel scale factor ($k(\phi)=\frac{\delta x}{R \cdot \cos\phi \cdot \delta\lambda}$). As we approach the poles, the latitudes approach $\pm 90^o$ and we know that $\cos\phi$ approaches $0$. Since $\cos\phi$ is in the denominator of the scale factor, the factor approaches $\infty$. An accurate projection will require the parallel scale factor to be $1$ everywhere.&lt;/p&gt;
-
-&lt;p&gt;This explains why land masses closer to the poles get bloated while the poles cannot be represented since they would technically have infinite width on the projection.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;sidenote&quot;&gt;Sidenote&lt;/h5&gt;
-
-&lt;p&gt;We can derive the latitude mapping function a second way.&lt;/p&gt;
-
-&lt;p&gt;For small elements, we note that $\measuredangle PKQ$ is a right angle and so we get the two equations:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
-\tan\delta = \frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi}, \tan\beta = \frac{\delta x}{\delta y}
-\end{aligned}&lt;/script&gt;
-
-&lt;p&gt;From $(1)$ equality of angles, we get the equation $\frac{R \cdot \cos\phi \cdot \delta\lambda}{R \cdot \delta\phi} = \frac{\delta x}{\delta y}$. We also know that $\delta x = R \cdot \delta\lambda$ for small elements. Using the latter fact and rearranging the former equation, we again reach $\frac{\delta y}{\delta\phi} = R \cdot \sec\phi$.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 29 Nov 2014 22:22:42 -0800</pubDate>
-        <link>http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/</link>
-        <guid isPermaLink="true">http://kevinpan.me/blog/2014/11/29/some-notes-on-the-mercator-projection/</guid>
         
         
       </item>
