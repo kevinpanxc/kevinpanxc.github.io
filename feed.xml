@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Aug 2019 01:20:36 -0700</pubDate>
-    <lastBuildDate>Tue, 20 Aug 2019 01:20:36 -0700</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2019 01:24:43 -0700</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2019 01:24:43 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -51,7 +51,7 @@
 &lt;div class=&quot;fit-image&quot;&gt;
   &lt;img src=&quot;http://imgur.com/ZVUnLx0.png&quot; /&gt;
   &lt;div class=&quot;caption wide-caption&quot;&gt;
-    I&#39;m not sure when Reddit chooses when to show an &quot;X more replies&quot; link
+    I&#39;m not sure how Reddit chooses when to show an &quot;X more replies&quot; link.
   &lt;/div&gt;
 &lt;/div&gt;
 
