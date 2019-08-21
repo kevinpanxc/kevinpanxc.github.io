@@ -125,7 +125,7 @@
 <div class="fit-image">
   <img src="http://imgur.com/ZVUnLx0.png" />
   <div class="caption wide-caption">
-    I'm not sure how Reddit chooses when to show an "X more replies" link.
+    I'm not sure how Reddit chooses when to truncate the number of comments returned and show "X more replies" links.
   </div>
 </div>
 
@@ -156,7 +156,7 @@
 
 <p>This could be considered a nice-to-have feature but my completionist drive took a hold of me and I wanted to make it possible to expand into comment threads and show nested comments as root comments, similar to how Reddit does it. It turns out, this was mostly a matter of UI design as it only involved a minor tweak to the comment fetching logic in the backend.</p>
 
-<h1 id="bonus-points-soundcloud-style-comments-for-a-video">Bonus points: SoundCloud-style comments for a video</h1>
+<h1 id="bonus-points-soundcloud-style-comments-for-videos">Bonus points: SoundCloud-style comments for videos</h1>
 
 <div class="fit-image">
   <img src="http://imgur.com/nmRkJ6d.png" />
@@ -169,18 +169,19 @@
 <ol>
   <li>Users can choose to attach a timestamp to a comment based on the video’s current time</li>
   <li>Readers can see that a comment has an attached timestamp, and quickly navigate to that point in the video</li>
-  <li>The video comment timeline needs to be rendered such that comment markers don’t overlap and users can quickly display all comments at a particular point in time</li>
+  <li>Comment markers on the video comment timeline cannot overlap, even if there are many markers in a small location. This constraint should dynamically hold even as users change the size of the browser</li>
+  <li>Users can quickly display all comments at a particular point in time</li>
 </ol>
 
 <p>Requirement 3 proved to be the hardest to design and implement. I spent hours thinking about the best way to do this such that the edge cases are handled, e.g. if a user increases or decreases the browser’s width.</p>
 
 <p>I ended up deciding to batch comments and partitioning the video timeline into 20 fixed increments. Each batch of comments would thus be part of 4% of the video’s length. If a 4% video segment had more than one comment, I rendered a marker with the comment count on it. A user could view comments in this video segment by clicking on this marker, which causes a special comment view to be displayed such that only root comments within this 4% video segment are shown.</p>
 
-<p>This solution elegantly solves tow key problems. Because the comment markers are batched and shown at predictable non-overlapping points in the timeline, the overlapping comment marker issue is solved. By choosing a 4% increment, I can easily use a 4% CSS width for each comment marker so if a user increases or decreases the browser’s width, the comment markers elegantly adjust spacing between each other.</p>
+<p>This solution elegantly solves two key problems. Because the comment markers are batched and shown at predictable non-overlapping points in the timeline, the overlapping comment marker issue is solved. By choosing a 4% increment, I can simply use a 4% CSS width for each comment marker which ensures that comment markers elegantly adjust spacing between each other, even as users change the size of the browser.</p>
 
 <h1 id="closing-thoughts">Closing thoughts</h1>
 
-<p>The commenting system initially felt daunting to build given all the complex pieces that needed to be combined together. Breaking the problem down into component parts and being explicit about requirements made it easy to manage. The best part about building this is that I can reuse the system across many different side projects which widens the type of website I can build and increases my efficiency in experimentation.</p>
+<p>The commenting system initially felt daunting to build given all the complex pieces that needed to be combined together. Breaking the problem down into component parts and articulating clear requirements made it easy to manage. The best part about building this is that I can reuse the system across many different side projects which widens the type of website I can build and increases my efficiency in experimentation.</p>
 
   </div>
 
