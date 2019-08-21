@@ -6,12 +6,12 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Aug 2019 01:24:43 -0700</pubDate>
-    <lastBuildDate>Tue, 20 Aug 2019 01:24:43 -0700</lastBuildDate>
+    <pubDate>Wed, 21 Aug 2019 01:15:31 -0700</pubDate>
+    <lastBuildDate>Wed, 21 Aug 2019 01:15:31 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
-        <title>Building A Reddit-Style Commenting System Over A Weekend</title>
+        <title>Weekend Project: Building A Reddit-Style Commenting System</title>
         <description>&lt;p&gt;As I was building &lt;a href=&quot;https://www.smashvods.tv&quot; target=&quot;_blank&quot;&gt;SmashVODs.tv&lt;/a&gt;, I thought it would be a great idea to add commenting to clips and tournament VODs. What’s a great commenting system? I really enjoy Reddit’s nested comments. So I set out to build it for SmashVODs.&lt;/p&gt;
 
 &lt;p&gt;Here are the requirements for a Reddit-style commenting system:&lt;/p&gt;
