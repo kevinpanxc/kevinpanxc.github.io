@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Aug 2019 01:25:58 -0700</pubDate>
-    <lastBuildDate>Wed, 21 Aug 2019 01:25:58 -0700</lastBuildDate>
+    <pubDate>Sat, 24 Aug 2019 21:02:33 -0700</pubDate>
+    <lastBuildDate>Sat, 24 Aug 2019 21:02:33 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -65,7 +65,7 @@
 
 &lt;p&gt;Two difficult problems to solve with implementing a UI.&lt;/p&gt;
 
-&lt;p&gt;The first is designing the UI. I’m bad at UI design and mediocre with CSS (I worship on the altar of &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt;). To fast track design, I took heavy inspiration from Reddit’s comment thread design.&lt;/p&gt;
+&lt;p&gt;The first is designing the UI. I’m bad at design and mediocre with CSS (I worship on the altar of &lt;code class=&quot;highlighter-rouge&quot;&gt;display: flex&lt;/code&gt;). To fast track design, I took heavy inspiration from the design of Reddit’s comment threads.&lt;/p&gt;
 
 &lt;p&gt;The second problem is architecting the frontend such that users can upvote comments, post root comments, and post nested comments without the code resembling an Italian pasta shop. There were many components to reuse, states to handle, and data pathways to set up and this required careful planning.&lt;/p&gt;
 
