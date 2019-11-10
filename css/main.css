@@ -413,6 +413,9 @@ pre {
   .post-content th, .post-content td {
     padding: 10px 24px;
     text-align: left !important; }
+  .post-content hr {
+    margin-top: 30px;
+    margin-bottom: 30px; }
 
 /**
  * Syntax highlighting styles
