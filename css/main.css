@@ -377,23 +377,23 @@ pre {
     margin-bottom: 20px; }
     .post-content .fit-image img {
       width: 100%; }
-    .post-content .fit-image .caption {
-      margin: 0 auto;
-      margin-top: 5px;
-      width: 65%;
-      text-align: center;
-      font-style: italic; }
-    .post-content .fit-image .wide-caption {
-      width: 65%;
-      min-width: 400px; }
-    .post-content .fit-image .half-caption {
-      width: 100%; }
-    @media screen and (max-width: 800px) {
-      .post-content .fit-image {
-        padding: 0px !important; }
-        .post-content .fit-image .wide-caption {
-          width: 95%;
-          min-width: 0px; } }
+  .post-content .fit-image .caption, .post-content .wide-image .caption {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 65%;
+    text-align: center;
+    font-style: italic; }
+  .post-content .fit-image .wide-caption, .post-content .wide-image .wide-caption {
+    width: 65%;
+    min-width: 400px; }
+  .post-content .fit-image .half-caption, .post-content .wide-image .half-caption {
+    width: 100%; }
+  @media screen and (max-width: 800px) {
+    .post-content .fit-image, .post-content .wide-image {
+      padding: 0px !important; }
+      .post-content .fit-image .wide-caption, .post-content .wide-image .wide-caption {
+        width: 95%;
+        min-width: 0px; } }
   .post-content .fit-iframe {
     margin-bottom: 20px; }
     .post-content .fit-iframe .iframe-parent {
