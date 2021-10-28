@@ -6,8 +6,8 @@
 </description>
     <link>http://kevinpan.me/</link>
     <atom:link href="http://kevinpan.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 28 Oct 2021 10:57:09 -0700</pubDate>
-    <lastBuildDate>Thu, 28 Oct 2021 10:57:09 -0700</lastBuildDate>
+    <pubDate>Thu, 28 Oct 2021 11:10:13 -0700</pubDate>
+    <lastBuildDate>Thu, 28 Oct 2021 11:10:13 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -57,6 +57,13 @@
   &lt;img src=&quot;https://i.imgur.com/nvYj450.jpg&quot; /&gt;
   &lt;div class=&quot;caption wide-caption&quot;&gt;
     SOMA / South San Francisco dawn
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;wide-image&quot;&gt;
+  &lt;img src=&quot;http://imgur.com/tV0YN7U.png&quot; /&gt;
+  &lt;div class=&quot;caption wide-caption&quot;&gt;
+    Livermore wind farm
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
